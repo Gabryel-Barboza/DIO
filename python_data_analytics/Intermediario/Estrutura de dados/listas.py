@@ -75,6 +75,69 @@ quadrado = [numero ** 2 for numero in numeros]
 print(quadrado)
 
 
-# Listas referenciadas
+# Atribuições de mesma lista
 quadrado = [quadrado for numero in numeros]
 print(quadrado)
+
+print("="*30)
+# MÉTODOS DE LISTAS
+
+# Adicionando valores
+lista = []
+lista.append(1)
+lista.append("Python")
+lista.append([20, 3, 5])
+
+# Copiando listas
+print(lista)
+l2 = lista.copy()
+print(f"Id lista: {id(lista)}\n Id l2: {id(l2)}")
+
+# Removendo items e listas
+lista.clear()
+print(lista)
+print(l2)
+l2.pop() 
+print(l2)
+
+
+pais = ["Brasil", "Estados Unidos", "Canadá", "Brasil", "México", "Chile", "Suécia", "Alemanhã", "Bolívia", "Brasil", "Estados Unidos", "Azerbaijão", "Rússia", "México"]
+
+# Verificando quantidades e índices
+print(pais.count("Brasil"))
+pais.extend(["França", "Rússia", "Inglaterra", "Japão", "China"])
+print(pais)
+
+pais2 = pais.copy()
+print(pais.index("Brasil"))
+
+# Removendo elementos pela posição
+while pais2.count("Brasil") > 0:
+    indice = pais2.index("Brasil")
+    print(indice)
+    pais2.pop(indice)
+
+pais2.remove("Estados Unidos")
+print(pais2)
+
+# Ordenação de listas
+linguagens = ["python", "js", "c", "java", "csharp"]
+linguagens.reverse()
+print(linguagens)
+linguagens.reverse()
+print(linguagens)
+
+
+linguagens.sort()
+print(linguagens)
+linguagens.sort(reverse=True)
+print(linguagens)
+linguagens.sort(key=lambda x: len(x)) #retorna o tamanho de cada string, ordena em ordem crescente
+print(linguagens)
+linguagens.sort(key=lambda x: len(x), reverse=True)
+print(linguagens)
+
+#
+print(len(linguagens))
+sorted(linguagens) # key= , reverse=
+print(linguagens)
