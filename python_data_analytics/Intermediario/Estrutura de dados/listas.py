@@ -137,7 +137,7 @@ print(linguagens)
 linguagens.sort(key=lambda x: len(x), reverse=True)
 print(linguagens)
 
-#
+# funções built-in 
 print(len(linguagens))
 sorted(linguagens) # key= , reverse=
 print(linguagens)
