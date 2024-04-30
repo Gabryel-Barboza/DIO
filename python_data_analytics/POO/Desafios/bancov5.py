@@ -22,6 +22,7 @@ class Cliente:
             return False
         elif transacao.registrar(conta):
             return True
+        return False
 
     
     # Instanciar ContaCorrente e adicionar a contas, retorno para tratar em cadastro()
