@@ -33,3 +33,11 @@ Foi adicionado decoradores, iteradores e geradores para o programa, permitindo m
 * Um Iterador para retornar todas as contas de um cliente.
 
 [BancoV4.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/POO/Desafios/bancov4.py)
+
+## Adicionando o módulo de data 📅
+Está implementado no histórico das transações a data de realização. Também foi adicionado um novo limite para transações diárias.
+* A função extrato agora mostra a data em que a operação foi realizada.
+* Antes de realizar uma transação, é verificado se a quantidade de transações daquele dia ultrapassa o limite de 10 transações diárias.
+* É exibido ao usuário e cancelada a transação, caso exceda o limite diário.
+
+[BancoV5.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/POO/Desafios/bancov5.py)
