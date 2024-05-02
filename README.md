@@ -46,7 +46,7 @@ Está implementado no histórico das transações a data de realização. També
 O sistema agora conta com a capacidade de armazenar seus usuários e respectivas contas em arquivos.csv, após a reinicialização do programa os usuários são reconstruidos no sistema bancário, além de guardar um log com data das operações realizadas. O programa também obteve uma refatoração de código, mudando algumas de suas funcionalidades.
 * O decorador gerador de log agora armazena suas informações em um arquivo log.txt, além de exibir-lás no terminal.
 * Novas funções abrir_arquivo, inicializar_classe, cadastrar_cliente e cadastrar_conta para melhor modularização do código. Inicializar_classe recria as informações obtidas do arquivo no sistema.
-* Algumas refatorações em códigos existentes para adequação ao programa
+* Algumas refatorações em códigos existentes para adequação ao programa.
 * O histórico de transações ainda não é salvo entre execuções, então será perdido na saida do programa.
 
-[BancoV6.py]()
+[BancoV6.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/POO/Desafios/bancov6.py)
