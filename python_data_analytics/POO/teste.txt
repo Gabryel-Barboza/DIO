@@ -1,0 +1,4 @@
+Escrevendo dados em um novo arquivo com Python
+Interagindo
+com
+o arquivo

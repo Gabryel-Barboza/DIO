@@ -1,0 +1,19 @@
+<2024-05-02 00:57:57.946516-03:00>--<CADASTRAR_CLIENTE>--<Clientes:0>--<None>
+<2024-05-02 00:58:04.712699-03:00>--<CADASTRAR_CONTA>--<Clientes:1>--<None>
+<2024-05-02 00:58:22.967525-03:00>--<CADASTRAR_CONTA>--<Clientes:1>--<None>
+<2024-05-02 00:58:32.097744-03:00>--<DEPOSITAR>--<Clientes:1>--<None>
+<2024-05-02 01:00:28.114792-03:00>--<CADASTRAR_CLIENTE>--<Clientes:1>--<None>
+<2024-05-02 01:00:32.847818-03:00>--<CADASTRAR_CONTA>--<Clientes:2>--<None>
+<2024-05-02 01:00:52.176828-03:00>--<DEPOSITAR>--<Clientes:2>--<None>
+<2024-05-02 01:03:53.525458-03:00>--<CADASTRAR_CLIENTE>--<Clientes:2>--<None>
+<2024-05-02 01:04:00.155896-03:00>--<CADASTRAR_CONTA>--<Clientes:3>--<None>
+<2024-05-02 01:04:10.409060-03:00>--<DEPOSITAR>--<Clientes:3>--<None>
+<2024-05-02 08:43:56.052012-03:00>--<CADASTRAR_CLIENTE>--<3>--<Args:([<__main__.PessoaFisica object at 0x000001D4AFB442D0>, <__main__.PessoaFisica object at 0x000001D4AFB44250>, <__main__.PessoaFisica object at 0x000001D4AFB447D0>],)>--<['José', 11111111111, '24/12/1990', 'Valparaiso Valparaiso I R 00 Q 00 L 00 - GO']>
+<2024-05-02 08:44:02.094983-03:00>--<CADASTRAR_CONTA>--<4>--<Args:([<__main__.PessoaFisica object at 0x000001D4AFB442D0>, <__main__.PessoaFisica object at 0x000001D4AFB44250>, <__main__.PessoaFisica object at 0x000001D4AFB447D0>, <__main__.PessoaFisica object at 0x000001D4AFB33F50>], [ContaCorrente:10000.0:1:500:3:0, ContaCorrente:0:2:500:3:0]], ContaCorrente:10000.0:3:500:3:0]], ContaCorrente:4000.0:4:500:3:0]], ContaCorrente:0:5:500:3:0])>--<True>
+<2024-05-02 09:15:13.688372-03:00> ERRO NA CRIAÇÃO DO LOG...<CADASTRAR_CLIENTE>
+<2024-05-02 09:15:27.011655-03:00> ERRO NA CRIAÇÃO DO LOG...<CADASTRAR_CONTA>
+<2024-05-02 09:18:31.144926-03:00> ERRO NA CRIAÇÃO DO LOG...<CADASTRAR_CONTA>
+<2024-05-02 09:22:01.940208-03:00>--<CADASTRAR_CONTA>--<Clientes:4>--<Args:([PessoaFisica: 99999999999, PessoaFisica: 77777777777, PessoaFisica: 12345678900, PessoaFisica: 11111111111], [ContaCorrente:10000.0:1:500:3:0, ContaCorrente:0.0:2:500:3:0, ContaCorrente:10000.0:3:500:3:0, ContaCorrente:4000.0:4:500:3:0, ContaCorrente:0.0:5:500:3:0, ContaCorrente:0.0:6:500:3:0])>--<True>
+<2024-05-02 09:28:26.621913-03:00>--<DEPOSITAR>--<Clientes:4>--<<class 'tuple'>>--<True>
+<2024-05-02 09:31:24.567948-03:00>--<CADASTRAR_CLIENTE>--<Clientes:4>--<['Gabriela', 88888888888, '19/10/2003', 'Valparaiso de Goiás Céu Azul R 00 Q -- L -- - Go']>
+<2024-05-02 09:31:31.010238-03:00>--<CADASTRAR_CONTA>--<Clientes:5>--<True>
