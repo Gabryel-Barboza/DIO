@@ -1,8 +1,8 @@
+import csv
 from abc import ABC, abstractmethod
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from time import sleep
-from datetime import datetime, timedelta, timezone
-import csv
 
 # Modifique o decorador de log para salvar as informações em um arquivo
 # O decorador deve registrar o seguinte para cada chamada de função:
@@ -18,31 +18,40 @@ class Cliente:
         self.endereco = kw["endereco"]
         self.contas = []
 
-    
     # Realiza as operações de depósito e saque. Utiliza cliente, Deposito ou Saque e Conta de Cliente
+
     def realizar_transacao(self, transacao, conta):
         transacoes_diarias = len(conta.historico.transacoes_diarias())
         if transacoes_diarias == 10:
-            print(f"Limite de transações diárias excedido! {transacoes_diarias} operações realizadas.")
+            print(
+                f"Limite de transações diárias excedido! {transacoes_diarias} operações realizadas."
+            )
             return False
         elif transacao.registrar(conta):
             return True
         return False
 
-    
     # Instanciar ContaCorrente e adicionar a contas, retorno para tratar em cadastro()
+
     def adicionar_conta(self, **kwargs):
         # Necessário receber argumentos por key-value com os campos entre [""] a seguir
-        conta = ContaCorrente(cliente=self, saldo=kwargs["saldo"], numero=kwargs["numero"], limite=kwargs["limite"], limite_saques=kwargs["limite_saques"], saques_diarios=kwargs["saques_diarios"],   historico=Historico())
+        conta = ContaCorrente(
+            cliente=self,
+            saldo=kwargs["saldo"],
+            numero=kwargs["numero"],
+            limite=kwargs["limite"],
+            limite_saques=kwargs["limite_saques"],
+            saques_diarios=kwargs["saques_diarios"],
+            historico=Historico(),
+        )
         self.contas.append(conta)
         return conta
-    
 
     # Método para retornar as contas para cada instância
+
     def mostrar_contas(self):
         for conta in ContaIterador(self.contas):
             print(conta)
-
 
     def __str__(self):
         return f"Endereço : {self.endereco}, Contas: {len(self.contas)}"
@@ -56,13 +65,20 @@ class PessoaFisica(Cliente):
         self.nome = kw["nome"]
         self.data_nascimento = kw["data_nascimento"]
 
-
     def __repr__(self):
         return f"{self.__class__.__name__}: {self.cpf}"
 
-
     def __str__(self):
-        return ', '.join([f'Nome : {self.nome}', f'CPF : {self.cpf}', f'Data de nascimento : {self.data_nascimento}, ']) + super().__str__()
+        return (
+            ", ".join(
+                [
+                    f"Nome : {self.nome}",
+                    f"CPF : {self.cpf}",
+                    f"Data de nascimento : {self.data_nascimento}, ",
+                ]
+            )
+            + super().__str__()
+        )
 
 
 class Conta:
@@ -74,27 +90,22 @@ class Conta:
         self._numero = int(kw["numero"])
         self._historico = kw["historico"]
 
-
     # Propriedades
     @property
     def saldo(self):
         return self._saldo
-    
 
     @property
     def agencia(self):
         return self._agencia
-    
 
     @property
     def numero(self):
         return self._numero
-    
 
     @property
     def historico(self):
         return self._historico
-
 
     # método de classe para adicionar nova conta a cliente existente
     # herdado por conta corrente
@@ -102,7 +113,6 @@ class Conta:
     def nova_conta(cls, **kw):
         return cls(**kw)
 
-    
     # Depositar e Sacar de Conta
     # Verificar as restrições impostas em desafios anteriores
     def depositar(self, valor):
@@ -112,7 +122,6 @@ class Conta:
         else:
             print("Valor inválido")
         return False
-
 
     # Veja em main() para realizar as operações
     def sacar(self, valor):
@@ -127,10 +136,9 @@ class Conta:
             return True
         return False
 
-
     def __str__(self):
         return f"{self.__class__.__name__}: {', '.join([f'Número da conta : {self.numero}', f'Saldo : {self.saldo}', f'Agência : {self.agencia}', f'Histórico de Transações : {self.historico.historico}'])}"
-    
+
 
 class ContaCorrente(Conta):
     # Criando ContaCorrente com seus atributos e instanciando Conta
@@ -139,7 +147,6 @@ class ContaCorrente(Conta):
         self.limite = int(kw["limite"])
         self.LIMITE_SAQUES = int(kw["limite_saques"])
         self.saques_diario = int(kw["saques_diarios"])
-        
 
     def sacar(self, valor):
         # Se quantidade de saques diário maior que o limite diário
@@ -153,7 +160,6 @@ class ContaCorrente(Conta):
         else:
             print("Limite de saques diários atingido!")
         return False
-    
 
     def __repr__(self):
         return f"{self.__class__.__name__}:{self.saldo}:{self.numero}:{self.limite}:{self.LIMITE_SAQUES}:{self.saques_diario}"
@@ -166,22 +172,19 @@ class Transacao(ABC):
     def valor(self):
         pass
 
-
     @classmethod
     @abstractmethod
     def registrar(self, conta):
         pass
-    
+
 
 class Deposito(Transacao):
     def __init__(self, valor):
         self._valor = valor
 
-
     @property
     def valor(self):
         return self._valor
-    
 
     # Realiza operação de depositar em conta, se retornado sucesso adiciona ao histórico
     def registrar(self, conta):
@@ -189,17 +192,15 @@ class Deposito(Transacao):
         if sucesso:
             conta.historico.adicionar_transacao(self)
             return True
-    
+
 
 class Saque(Transacao):
     def __init__(self, valor):
         self._valor = valor
 
-
     @property
     def valor(self):
         return self._valor
-
 
     # Realiza operação de saque em conta, se retornado sucesso adiciona ao histórico
     def registrar(self, conta):
@@ -214,38 +215,43 @@ class Historico:
     def __init__(self):
         self._historico = []
 
-
     # Propriedades para retorno da quantidade de transações feitas
     @property
     def historico(self):
         return len(self._historico)
-    
-    
+
     # Recebendo transação e guardando um dicionário no histórico
     def adicionar_transacao(self, transacao):
-        self._historico.append({
-            "tipo": transacao.__class__.__name__,
-            "valor": transacao.valor,
-            "data": datetime.now().strftime("%d/%m/%Y %H:%M")
-            })
-        
+        self._historico.append(
+            {
+                "tipo": transacao.__class__.__name__,
+                "valor": transacao.valor,
+                "data": datetime.now().strftime("%d/%m/%Y %H:%M"),
+            }
+        )
 
     def gerador_historico(self, tipo=None):
         # Retorna uma transação do tipo definido pelo parametro ou todas se None
         for transacao in self._historico:
-            if tipo == None or transacao["tipo"] == tipo:
+            if tipo is None or transacao["tipo"] == tipo:
                 yield transacao
-
 
     # Retornar a quantidade de transações diárias
     def transacoes_diarias(self):
         data_hoje = datetime.now().date()
         # Retorna uma lista com transações que correspondam a data_hoje
         # Pega a string de transacao["data"], converte para um objeto datetime e compara a sua parte de data com data_hoje
-        transacao_diaria = [transacao if datetime.strptime(transacao["data"], "%d/%m/%Y %H:%M").date() ==
-                             data_hoje else None for transacao in self._historico]
+        transacao_diaria = [
+            (
+                transacao
+                if datetime.strptime(transacao["data"], "%d/%m/%Y %H:%M").date()
+                == data_hoje
+                else None
+            )
+            for transacao in self._historico
+        ]
         return transacao_diaria
-                
+
 
 class ContaIterador:
     # Iterador para as contas de Cliente
@@ -253,42 +259,42 @@ class ContaIterador:
         self.contas = contas
         self.contador = 0
 
-
     def __iter__(self):
         return self
-    
 
     def __next__(self):
         try:
             conta = self.contas[self.contador]
             self.contador += 1
             return conta
-        except:
+        except IndexError:
             raise StopIteration
 
 
 # Programa principal
 
+
 def retornar_cliente(clientes, cpf):
-    try:
+    # Retorna um cliente especifico de uma lista
+    if clientes:
         for cliente in clientes:
             if cpf == cliente.cpf:
                 return cliente
-    except:
-        return None
+    return None
 
 
 def retornar_conta(nro_conta, contas):
     # Retorna uma conta especifica de uma lista
-    try:
+    if contas:
         for conta in contas:
             if conta.numero == nro_conta:
                 return conta
-    except:
-        return None
+    return None
 
 
 # Decorador para retornar a operação e hora da operação
+
+
 def gerador_log(funcao):
     def criar_log(*args):
         retorno = funcao(*args)
@@ -298,25 +304,28 @@ def gerador_log(funcao):
 
             # Data e hora com fuso-horário GMT-3.
             # Não foi utilizado Pytz apenas para permitir sua execução a qualquer momento sem necessidade de instalação de terceiros
-            data = datetime.now(timezone(timedelta(hours=-3), 'BRT'))
+            data = datetime.now(timezone(timedelta(hours=-3), "BRT"))
 
             # Se arquivo não existir, cria um novo e retorna o arquivo aberto
             with abrir_arquivo("log.txt", "a") as log:
                 try:
                     # Nome função, argumentos função, valor closure função
-                    log.write(f"<{data}>--<{funcao.__name__.upper()}>--<Clientes:{len(args[0])}>--<{retorno}>\n")
-                except:
-                    log.write(f"<{data}> ERRO NA CRIAÇÃO DO LOG...<{funcao.__name__.upper()}>\n")
+                    log.write(
+                        f"<{data}>--<{funcao.__name__.upper()}>--<Clientes:{len(args[0])}>--<{retorno}>\n"
+                    )
+                except IOError:
+                    log.write(
+                        f"<{data}> ERRO NA CRIAÇÃO DO LOG...<{funcao.__name__.upper()}>\n"
+                    )
 
-            print("="*40)
+            print("=" * 40)
             print(f"Operação de {funcao.__name__.upper()} realizada com sucesso...")
             print(data)
-            print("="*40)
+            print("=" * 40)
 
         # Retorna o mesmo, independente do valor. Realizar o teste na chamada da função
         return retorno
-        
-        
+
     return criar_log
 
 
@@ -332,13 +341,14 @@ def depositar(clientes):
         if conta:
             print("Qual o valor para depósito?")
             valor = validacao_float()
-            if valor == 0: return False
+            if valor == 0:
+                return False
             try:
                 deposito = Deposito(valor)
                 if cliente.realizar_transacao(deposito, conta):
                     print(f"Saldo: R${conta.saldo}")
                     return True
-            except:
+            except IOError:
                 return False
         else:
             print("Nenhuma conta registrada")
@@ -364,19 +374,20 @@ def sacar(clientes):
                 print(f"Saldo: R${conta.saldo}")
                 print("Qual o valor para saque?")
                 valor = validacao_float()
-                if valor == 0: return True
+                if valor == 0:
+                    return True
                 try:
                     saque = Saque(valor)
                     if cliente.realizar_transacao(saque, conta):
                         return True
-                except:
+                except IOError:
                     return False
             else:
                 print(f"Saldo: R${conta.saldo}\nSaldo insuficiente para saque ")
         else:
             print("Nenhuma conta registrada")
     else:
-        print("Cadastro não encontrado...") 
+        print("Cadastro não encontrado...")
     return False
 
 
@@ -393,32 +404,39 @@ def extrato(clientes):
             # Se histórico não estiver vazio
             if conta.historico.historico > 0:
                 # Selecione uma opção para filtrar as transações
-                print("Selecione uma opção :\n [1] Transações\n [2] Depósitos\n [3] Saques")
+                print(
+                    "Selecione uma opção :\n [1] Transações\n [2] Depósitos\n [3] Saques"
+                )
                 opcao = validacao_int()
                 match opcao:
-                    case 1: tipo = None
-                    case 2: tipo = "Deposito"
-                    case 3: tipo = "Saque"
-                    case _: 
+                    case 1:
+                        tipo = None
+                    case 2:
+                        tipo = "Deposito"
+                    case 3:
+                        tipo = "Saque"
+                    case _:
                         print("Opção inválida! Retornando todas as transações...")
                         tipo = None
-                
+
                 sleep(1)
                 # Variável para verificar movimentações
                 tem_transacao = False
                 # Chama o método gerador para retornar o histórico
-                for cont, transacao in enumerate(conta.historico.gerador_historico(tipo)):
+                for cont, transacao in enumerate(
+                    conta.historico.gerador_historico(tipo)
+                ):
                     print(f"{cont+1}º Transação:\n \t{transacao}")
                     tem_transacao = True
                 # Se nenhuma transacao do tipo é retornada, o for não inicia e tem_transacao continua falso
                 if not tem_transacao:
                     print("Nenhuma movimentação realizada")
-                
+
                 # Sair da visualização
                 while True:
                     print("Digite algo para sair : ")
                     resp = input()
-                    if resp != None:
+                    if resp is not None:
                         break
             else:
                 print("Nenhuma movimentação realizada")
@@ -435,7 +453,7 @@ def validacao_int():
         try:
             escolha = int(escolha)
             break
-        except:
+        except ValueError:
             print("\033[31mDigite um número\033[m")
     return escolha
 
@@ -446,7 +464,7 @@ def validacao_float():
         try:
             valor = float(valor)
             break
-        except:
+        except ValueError:
             print("\033[31mDigite um número decimal válido\033[m")
     return valor
 
@@ -457,8 +475,8 @@ def validacao_cpf():
         try:
             cpf = int(cpf)
             break
-        except:
-            print("CPF inválido. Digite novamente")
+        except ValueError:
+            print("CPF inválido! Digite novamente...")
     return cpf
 
 
@@ -471,8 +489,8 @@ def cadastrar_cliente(clientes):
         print("CPF já cadastrado!")
         cliente = None
         return cliente
-    
-    nome = str(input("Nome : " ))
+
+    nome = str(input("Nome : "))
     data_nascimento = str(input("Data de nascimento : "))
 
     print("--- Endereço ---")
@@ -480,8 +498,8 @@ def cadastrar_cliente(clientes):
     cidade = str(input("Cidade : "))
     bairro = str(input("Bairro : "))
     logradouro = str(input("Logradouro : "))
-    
-    endereco = ' '.join([cidade, bairro, logradouro, '-', uf])
+
+    endereco = " ".join([cidade, bairro, logradouro, "-", uf])
     cliente = [nome, cpf, data_nascimento, endereco]
 
     return cliente
@@ -493,12 +511,20 @@ def cadastrar_conta(clientes, contas):
     cpf = validacao_cpf()
     # Retorna o cliente com o cpf informado
     cliente = retornar_cliente(clientes, cpf)
-    
+
     if cliente:
         # Limite máximo de contas
         if len(cliente.contas) < 3:
             nro_conta = len(contas) + 1
-            contas.append(cliente.adicionar_conta(numero=nro_conta, saldo=0, limite=500, limite_saques=3, saques_diarios=0))
+            contas.append(
+                cliente.adicionar_conta(
+                    numero=nro_conta,
+                    saldo=0,
+                    limite=500,
+                    limite_saques=3,
+                    saques_diarios=0,
+                )
+            )
             return True
         else:
             print("Você só pode criar até três contas.")
@@ -521,7 +547,7 @@ def abrir_arquivo(caminho, modo, newline=None):
 
 
 def cadastro(clientes, contas):
-    print("="*10 + "CADASTRO" + "="*10)
+    print("=" * 10 + "CADASTRO" + "=" * 10)
     print(" [1] Cadastrar Cliente\n [2] Cadastrar Conta\n [3] Listar Contas")
     escolha = validacao_int()
     match escolha:
@@ -531,7 +557,14 @@ def cadastro(clientes, contas):
             # Chamar função cadastrar cliente e receber informações
             cliente = cadastrar_cliente(clientes)
             if cliente:
-                clientes.append(PessoaFisica(nome=cliente[0], cpf=cliente[1], data_nascimento=cliente[2], endereco=cliente[3]))
+                clientes.append(
+                    PessoaFisica(
+                        nome=cliente[0],
+                        cpf=cliente[1],
+                        data_nascimento=cliente[2],
+                        endereco=cliente[3],
+                    )
+                )
                 if cadastrar_conta(clientes, contas):
                     return True
             return False
@@ -543,7 +576,7 @@ def cadastro(clientes, contas):
             else:
                 print("Nenhum cadastro encontrado, cadastre um cliente primeiro")
             return False
-        
+
         # Mostrar contas
         case 3:
             if len(clientes):
@@ -552,9 +585,9 @@ def cadastro(clientes, contas):
 
                 if cliente:
                     # Titulo
-                    print("="*30)
+                    print("=" * 30)
                     print(cliente)
-                    print("="*12 + "CONTAS" + "="*12)
+                    print("=" * 12 + "CONTAS" + "=" * 12)
                     # Se cliente tem contas
                     if cliente.contas:
                         cliente.mostrar_contas()
@@ -562,7 +595,7 @@ def cadastro(clientes, contas):
                         while True:
                             print("Digite algo para sair : ")
                             resp = input()
-                            if resp != None:
+                            if resp is not None:
                                 break
                     else:
                         print("Nenhuma conta registrada")
@@ -578,8 +611,10 @@ def cadastro(clientes, contas):
 
 
 def menu():
-    print("="*30 + f"\n{'MENU'.center(30)}\n" + "="*30)
-    print("Escolha a opção desejada : \n [0] Salvar e Sair\n [1] Cadastro\n [2] Depositar\n [3] Sacar\n [4] Extrato")
+    print("=" * 30 + f"\n{'MENU'.center(30)}\n" + "=" * 30)
+    print(
+        "Escolha a opção desejada : \n [0] Salvar e Sair\n [1] Cadastro\n [2] Depositar\n [3] Sacar\n [4] Extrato"
+    )
     escolha = validacao_int()
     return escolha
 
@@ -591,7 +626,12 @@ def inicializar_classe(clientes, contas):
         leitor = csv.DictReader(arquivo_clientes)
         for row in leitor:
             # Instanciando uma PessoaFisica com os dados recebidos
-            cliente = PessoaFisica(nome=row["nome"], cpf=row["cpf"], data_nascimento=row["data_nascimento"], endereco=row["endereco"])
+            cliente = PessoaFisica(
+                nome=row["nome"],
+                cpf=row["cpf"],
+                data_nascimento=row["data_nascimento"],
+                endereco=row["endereco"],
+            )
             clientes.append(cliente)
             # Tratando a coluna de contas
             # Dividindo a coluna contas em várias contas separadas por ,
@@ -600,7 +640,13 @@ def inicializar_classe(clientes, contas):
                 # Dividindo os valores dentro de cada conta separadas por :
                 valores = conta.split(":")
                 # Instanciando ContaCorrente com método de Cliente
-                cc = cliente.adicionar_conta(saldo=valores[1], numero=valores[2], limite=valores[3], limite_saques=valores[4], saques_diarios=valores[5].replace("]", ""))
+                cc = cliente.adicionar_conta(
+                    saldo=valores[1],
+                    numero=valores[2],
+                    limite=valores[3],
+                    limite_saques=valores[4],
+                    saques_diarios=valores[5].replace("]", ""),
+                )
                 contas.append(cc)
 
 
@@ -620,20 +666,30 @@ def main():
                         # Escrevendo Registros
                         escritor = csv.writer(arquivo_clientes)
                         # Para cada cliente é escrito uma linha
-                        escritor.writerow(["nome", "cpf", "data_nascimento", "endereco", "contas"])
+                        escritor.writerow(
+                            ["nome", "cpf", "data_nascimento", "endereco", "contas"]
+                        )
                         for cliente in clientes:
-                            escritor.writerow([cliente.nome, cliente.cpf, cliente.data_nascimento, cliente.endereco, cliente.contas])
+                            escritor.writerow(
+                                [
+                                    cliente.nome,
+                                    cliente.cpf,
+                                    cliente.data_nascimento,
+                                    cliente.endereco,
+                                    cliente.contas,
+                                ]
+                            )
                     except IOError as exc:
                         print(exc.strerror)
                     break
 
-            case 1: # Cadastro
-                
+            case 1:  # Cadastro
+
                 if not cadastro(clientes, contas):
                     print("Falha ao realizar o cadastro")
                 sleep(1)
 
-            case 2: # Deposito
+            case 2:  # Deposito
 
                 if len(clientes):
                     if not depositar(clientes):
@@ -642,7 +698,7 @@ def main():
                     print("Nenhuma conta cadastrada, realize o cadastro primeiro")
                 sleep(1)
 
-            case 3: # Saque
+            case 3:  # Saque
 
                 if len(clientes):
                     if not sacar(clientes):
@@ -651,17 +707,17 @@ def main():
                     print("Nenhuma conta cadastrada, realize o cadastro primeiro")
                 sleep(1)
 
-            case 4: # Extrato
+            case 4:  # Extrato
 
                 if len(clientes):
                     extrato(clientes)
                 else:
-                    print("Nenhuma conta cadastrada, realize o cadastro primeiro")  
+                    print("Nenhuma conta cadastrada, realize o cadastro primeiro")
                 sleep(1)
 
             case _:
                 print("Opção inválida")
-        
+
 
 ROOT_PATH = Path(__file__).parent
 main()

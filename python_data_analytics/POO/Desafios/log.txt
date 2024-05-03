@@ -17,3 +17,14 @@
 <2024-05-02 09:28:26.621913-03:00>--<DEPOSITAR>--<Clientes:4>--<<class 'tuple'>>--<True>
 <2024-05-02 09:31:24.567948-03:00>--<CADASTRAR_CLIENTE>--<Clientes:4>--<['Gabriela', 88888888888, '19/10/2003', 'Valparaiso de Goiás Céu Azul R 00 Q -- L -- - Go']>
 <2024-05-02 09:31:31.010238-03:00>--<CADASTRAR_CONTA>--<Clientes:5>--<True>
+<2024-05-03 11:01:13.212816-03:00>--<SACAR>--<Clientes:5>--<True>
+<2024-05-03 11:05:05.659787-03:00>--<CADASTRAR_CLIENTE>--<Clientes:5>--<['Cleber', 22222222222, '25/10/1985', 'Novo-Gama Parque Estrela Dalva VI R -- Q -- L -- - GO']>
+<2024-05-03 11:05:10.966757-03:00>--<CADASTRAR_CONTA>--<Clientes:6>--<True>
+<2024-05-03 11:05:35.267107-03:00>--<DEPOSITAR>--<Clientes:6>--<True>
+<2024-05-03 11:05:50.309501-03:00>--<DEPOSITAR>--<Clientes:6>--<True>
+<2024-05-03 11:06:01.107314-03:00>--<DEPOSITAR>--<Clientes:6>--<True>
+<2024-05-03 11:06:08.399544-03:00>--<DEPOSITAR>--<Clientes:6>--<True>
+<2024-05-03 11:08:37.396168-03:00>--<CADASTRAR_CLIENTE>--<Clientes:5>--<['Cleber', 22222222222, '25/10/1985', 'Novo Gama Parque Estrela Dalva VI R -- Q -- L -- - Go']>
+<2024-05-03 11:08:43.369014-03:00>--<CADASTRAR_CONTA>--<Clientes:6>--<True>
+<2024-05-03 11:11:08.996806-03:00>--<CADASTRAR_CLIENTE>--<Clientes:5>--<['Cleber', 22222222222, '25/10/1985', 'Novo Gama Parque Estrela Dalva VI R -- Q -- L --  - GO']>
+<2024-05-03 11:11:13.719814-03:00>--<CADASTRAR_CONTA>--<Clientes:6>--<True>
