@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Inicial</title>
+</head>
+<body>
+    <h1 id="inicio">Tags HTML Primeiros Passos</h1>
+    <hr />
+    <h2>Índice</h2>
+    <ul>
+        <li><a href="#secao_1">Tags Principais</a></li>
+        <li><a href="#secao_2">Tags de Conteúdo</a></li>
+        <li><a href="#secao_3">Tags de Estilo</a></li>
+    </ul>
+    <p>Serão apresentadas, separadas por tópicos, as marcações HTML aprendidas até o momento. Cada uma sendo apresentada com suas peculiaridades e atributos principais.</p>
+    <h2 id="secao_1">Tags Principais</h2>
+    <p>São as marcações primordiais para o <mark>funcionamento de um documento HTML</mark> e permitem definir configurações importantes para o mesmo. Estão presentes em qualquer documento HTML.</p>
+    <ul>
+        <li> &lt;html&gt; - Delimita todo o documento html e é definida a linguagem padrão do site com o atributo <strong>lang=""</strong>. Possui fechamento &lt;/html&gt;</li>
+        <li> &lt;head&gt; - Delimita o cabeçalho do documento, onde podem ser definidas configurações importantes para indicar o comportamento do site. Possui fechamento &lt;/head&gt;
+            <ul>
+                <li> &lt;title&gt; - Indica o título que será apresentado na aba do site, na parte superior. Possui fechamento &lt;/title&gt;</li>
+                <li>&lt;meta&gt; - São os metadados do documento, é utilizada para acrescentar e definir configurações, tais como o tamanho da tela utilizada pelo navegador e entre outros. Não possui fechamento.</li>
+            </ul>
+        </li>
+        <li> &lt;body&gt; - Delimita o corpo do documento que será inserido todo o conteúdo, como esse que está sendo visualizado. Possui fechamento &lt;/body&gt;</li>
+    </ul>
+
+    <h2 id="secao_2">Tags de Conteúdo</h2>
+    <p>São marcações utilizadas para acrescentar conteúdo a página, tais como textos, títulos, parágrafos, listas e mídias no geral.</p>
+    <ul>
+        <li> &lt;h1-h6&gt; - Indica os títulos da página, possuindo <strong>níveis de 1 à 6</strong> que organizam os títulos e subtítulos. Possui fechamento &lt;/h1-h6&gt;</li>
+        <li>&lt;p&gt; - Delimita um novo parágrafo ao corpo do HTML, para cada parágrafo é utilizada uma nova linha. Possui fechamento &lt;/p&gt;</li>
+        <li>&lt;img&gt; - Define um elemento de imagem no documento, com o local do arquivo descrito pelo atributo <strong>src=""</strong>. Não possui fechamento.</li>
+        <li>&lt;blockquote&gt; - Delimita um espaço para uma citação, com o atributo <strong>cite=""</strong> pode-se referenciar o local da citação. Possui fechamento &lt;/blockquote&gt;</li>
+        <li>&lt;ul&gt; - Define uma lista não ordenada, podem ser modificados os marcadores com o atributo <strong>type=""</strong>. Possui fechamento &lt;/ul&gt;
+            <ul>
+                <li>&lt;li&gt; - É o item da lista. Possui fechamento &lt;/li&gt;</li>
+            </ul>
+        </li>
+        <li>&lt;ol&gt; - Define uma lista ordenada, podem ser modificados os marcadores com atributo <strong>type=""</strong>. Possui fechamento &lt;/ol&gt;
+            <ul>
+                <li>&lt;li&gt; &lt;/li&gt;</li>
+            </ul>
+        </li>
+        <li>&lt;a&gt; - Vincula um outro elemento de hipertexto à marcação, em outras palavras, realiza uma ancoragem ao caminho definido por <strong>href=""</strong>. Possui fechamento &lt;/a&gt;</li>
+    </ul>
+    
+    <h2 id="secao_3">Tags de Estilo</h2>
+    <p>São marcações que acrescentam estilos de fonte ao texto. Esses estilos sofreram uma alteração na parte semântica, criando-se novas tags para sua utilização.</p>
+    <ul>
+        <li>&lt;strong&gt; - Adiciona o estilo de <strong>negrito</strong> ao texto, antes utilizada como &lt;b&gt; e &lt;/b&gt;. Possui fechamento &lt;/strong&gt;</li>
+        <li>&lt;em&gt; - Adiciona o estilo de <em>itálico</em> ao texto, antes utilizada como &lt;i&gt; e &lt;/i&gt;. Possui fechamento &lt;/em&gt;</li>
+        <li>&lt;ins&gt; - Adiciona o estilo de <ins>sublinhado</ins> ao texto, antes utilizado como &lt;u&gt; e &lt;/u&gt;. Possui fechamento &lt;/ins&gt;</li>
+        <li>&lt;del&gt; - Adiciona o estilo de <del>removido</del> ao texto, antes utilizado como &lt;strike&gt; e &lt;/strike&gt;. Possui fechamento &lt;/del&gt;</li>
+        <li>&lt;mark&gt; - Adiciona o estilo de <mark>texto marcado</mark>. Possui fechamento &lt;/mark&gt;</li>
+        <li>&lt;sup&gt; - Adiciona o estilo de texto <sup>sobrescrito</sup>. Possui fechamento &lt;/sup&gt;</li>
+        <li>&lt;sub&gt; - Adiciona o estilo de texto <sub>subscrito</sub>. Possui fechamento &lt;/sub&gt;</li>
+        <li>&lt;small&gt; - Adiciona o estilo de texto <small>pequeno</small>. Possui fechamento &lt;/small&gt;</li>
+        <li>&lt;abbr&gt; - Define uma <abbr title="caixa de texto">caixa de texto</abbr> para resolucionar a abreviação de algum elemento. Possui fechamento &lt;/abbr&gt;</li>
+    </ul>
+    <small><a href="#inicio">Voltar</a></small>
+    <p>Material complementar sobre <mark>HTML e a internet</mark> no geral:</p>
+    <a target="_blank" href="https://rockcontent.com/br/blog/historia-da-internet/">RockContent</a>
+    <a target="_blank" href="https://tecnoblog.net/responde/o-que-e-html-guia-para-iniciantes/">Tecnoblog</a>
+    <a target="_blank" href="https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica">Alura</a>
+</body>
+</html>
