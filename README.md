@@ -2,6 +2,8 @@
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos.
 
+# Trabalhando com Python 🐍
+
 ## Criação de um sistema bancário 💸
 Primeiro desafio do módulo, implementando um sistema bancário com as funções de depositar, sacar e extrato.
 * É permitido o saque máximo de R$500,00 e possui um limite diário de 3 operações.
