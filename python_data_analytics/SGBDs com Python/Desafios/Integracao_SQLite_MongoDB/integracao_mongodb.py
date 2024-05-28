@@ -11,6 +11,7 @@ def create_clientes():
     :return: Retorna uma lista com todos os dicionários de Cliente.
     """
     # Recebendo dados
+    # Os campos são retornados conforme o método __repr__ de cada classe
     lista_clientes = []
     lista_dicionarios = []
     clientes = return_data(Cliente)
