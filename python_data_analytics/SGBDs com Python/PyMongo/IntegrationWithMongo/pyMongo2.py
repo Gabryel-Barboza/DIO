@@ -3,9 +3,7 @@ from time import sleep
 
 import pymongo as pym
 
-cliente = pym.MongoClient(
-    "#"
-)
+cliente = pym.MongoClient("#")
 
 db = cliente.test
 posts = db.posts
