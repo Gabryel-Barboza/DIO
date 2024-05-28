@@ -52,3 +52,22 @@ O sistema agora conta com a capacidade de armazenar seus usuários e respectivas
 * O histórico de transações ainda não é salvo entre execuções, então será perdido na saida do programa.
 
 [BancoV6.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/POO/Desafios/bancov6.py)
+
+# Frameworks em Python 🐍
+Para este módulo, será desenvolvido programas em python juntamente com bibliotecas para integração com outros sistemas da computação, tais como os bancos de dados, desenvolvimento web e entre outros.
+## Integração com Banco de Dados 🏦
+Nesse tópico foi desenvolvidos programas para aprender sobre o **Python DBAPI**, como também a utilização de frameworks para integração com bancos de dados relacionais (**SQLite**) e não relacionais (**MongoDB**). Os frameworks utilizados, respectivamente, foram SQLAlchemy e Pymongo. <br>
+Para acessar os programas realizados, navegue até a pasta [SGBDs com Python](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/SGBDs%20com%20Python). <br>
+<hr>
+Como desafio desse tópico, foi criado aplicações para integrar com o SQLite e MongoDB e também realizar as respectivas operações. A seguir está a modelagem do banco de dados desenvolvido nesse desafio:
+<br>
+
+![modelo_database_desafio](https://github.com/Gabryel-Barboza/DIO/assets/73187678/53044ffd-cc8a-41ef-ac1e-b38706af81ed)
+
+<br>
+
+* Uma aplicação de integração com SQLite, permitindo manipular dados dentro do banco relacional.
+* Schema desenvolvido com ORM do SQLAlchemy, permitindo mapeamento de classes e objetos.
+* Uma aplicação de integração com MongoDB Cloud, para inserir dados do banco SQL em um cluster na nuvem do MongoDB.
+* Os dados inseridos dentro do SQLite são automaticamente convertidos para documentos e inseridos em coleções do MongoDB.
+
