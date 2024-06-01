@@ -16,7 +16,11 @@ Primeiro site do curso, com um conjunto de tags HTML e suas especificações. <b
 [Fórmularios](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/formularios.html) --
 [Estruturando HTML](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/estruturando_html.html) --
 [Trabalhando com Mídias](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/trabalhando_com_midias.html) --
-[Tabelas](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/tabelas.html)  
+[Tabelas](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/tabelas.html) --
+[HTML5](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/html5.html) --
+[Recursos Especiais](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/recursos_especiais.html)
 
 ## Primeiro site completo em HTML 🖼
 [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/Desafios/clinica_medica/index.html)
+
+## Wikipedia com design moderno 📖
