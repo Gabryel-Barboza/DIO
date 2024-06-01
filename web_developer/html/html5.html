@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferenças do HTML4</title>
+</head>
+<!--Tags e atributos em vermelho estão descontinuados e vão parar de funcionar-->
+<body bgcolor="#f5f5f5">
+    <font face="Arial" color="#FFF">Dio.me - Trilha HTML</font>
+    <!--Semântica de um site é de grande importância para acessibilidade e SEO-->
+
+    <!--Grouping tags-->
+    <!--Estrutura semântica do site-->
+    <!--Pesquise sobre HTML semântico ou consulte guias como o mozilla web docs ou W3C-->
+
+    <header>
+        <!--Cabeçalho da página, pode ser filha de outras grouping tags-->
+        <nav>
+            <!--Utilizado para criar um menu de navegação de páginas-->
+            <ul>
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a target="_blank" href="tel:+5561999999999">Telefone</a></li>
+                <!--Abre um aplicativo de ligação-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Corpo principal da página, não pode ser filha de outras grouping tags ou possuir mais de um main na página-->
+        <section>
+            <!--Seções de uma página, podem possuir várias sections dividindo o assunto da página-->
+            <article>
+                <!--Define o conteúdo de algum site-->
+
+                <!--Define semanticamente a data de um artigo-->
+                <p>Publicação do artigo em <time pubdate>01/06/2024 17:00</time></p>
+
+                <article>
+                    <!--Articles podem ser aninhados, semanticamente estão relacionados ao mesmo assunto-->
+                </article>
+            </article>
+        </section>
+        <section>
+            <!--Define um campo de imagem/video e legenda, relacionando semanticamente as informações-->
+            <figure>
+                <img src="imagens/CSS3_logo_.png" alt="Logo da CSS3">
+                <figcaption>CSS é uma linguagem de estilização para o HTML</figcaption>
+            </figure>
+
+            <picture>
+                <!--Permite definir qual imagem deve aparecer para um tamanho de tela-->
+                <source srcset="imagens/CSS3_logo_small.png" media="(max-width: 700px)">
+                <img src="imagens/CSS3_logo_.png" alt="Logo da CSS3">
+                <!--img é a padrão, diminua o tamanho do navegador para ver o funcionamento-->
+            </picture>
+        </section>
+
+        <aside>
+            <!--Utilizado para assuntos complementares ou relacionados ao conteúdo, não é o principal-->
+        </aside>
+    </main>
+    <footer>
+        <!--Rodapé da página-->
+    </footer>
+
+    <!-- Questões de acessibilidade, veja o documento WCAG para um guia de criação de sites com acessibilidade.-->
+    <!--Veja sobre o Aria e acessiblity tree-->
+    <!--Utilize um programa de narração de tela para entender como é identificado os elementos semânticos-->
+</body>
+</html>

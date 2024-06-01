@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcações Especiais HTML</title>
+    <style>
+        kbd {
+            border: solid 1px black;
+            padding: 2px;
+        }
+        code {
+            background-color: lightgray;
+            color: red;
+            padding: 2px;
+        }
+        pre {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Combo box ou Select box, utilizado para selecionar uma opção de uma lista-->
+    <!--Para listas extensas se torna difícil a navegação-->
+    <select name="browsers">
+        <option value="">Selecione uma opção</option>
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="safari">Safari</option>
+        <option value="opera">Opera</option>
+    </select>
+
+    <br />
+    <!--O datalist funciona como um select, porém com a utilização de um input de busca-->
+    <!--Contudo, o CSS desse elemento é limitado-->
+    <input list="browsers" type="search" name="busca" />
+    <!--Vincule os campos com list e id iguais-->
+    <datalist id="browsers">
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="safari">Safari</option>
+    </datalist>
+    <br />
+
+    <!--Formatações-->
+    <!--kbd indica entradas de teclado, troca para fonte monoespaçada-->
+    <p>Para copiar esta informação, pressione <kbd>CTRL</kbd> + <kbd>C</kbd></p>
+    <!--code para códigos, fonte monoespaçada-->
+    <p>Para trocar o fundo de um elemento, utilize o comando <code>background-color: color;</code></p>
+
+    <!--pre indica texto pré-formatado -->
+    <pre>
+        code {
+            background-color: lightgray;
+            color: red;
+            padding: 2px;
+        }
+    </pre>
+
+    <!--Cria um elemento de toggle, summary muda o texto padrão-->
+    <details>
+        <summary>Como troco a cor de fundo de um elemento HTML?</summary>
+        <p>Para executar essa ação, utilize o comando <code>background-color</code> no CSS.</p>
+    </details>
+
+    <!--Meter e progress são visualmente parecidos, no entanto meter é para indicar métricas e progress para visualizar um progresso de carregamento, por exemplo-->
+    <meter value="1" min="0" max="10"></meter> <br />
+
+    <!--Defina o value de progress para pausar o elemento-->
+    <!--Pode ser modificado com JavaScript para criar uma barra de loading-->
+    <progress max="100" min="0" ></progress>
+
+    <br />
+
+    <!--Marcação para manipulação de gráficos, bem utilizada para desenvolvimento de jogos-->
+    <!--Veja o W3Schools para exemplos-->
+    <canvas id="myCanvas" width="200px" height="100px" style="border: 1px solid black;">
+    </canvas>
+
+    <!--Atributos novos-->
+    <form action="#" id="form">
+        <fieldset>
+            <!--autofocus: coloca o cursos no campo ao carregar a página, placeholder: texto de exemplo, required: torna o campo obrigatório para envio-->
+            <input type="text" autofocus /> <br />
+            <input type="text" placeholder="texto qualquer" /> <br />
+            <input type="text" required />
+        </fieldset>
+        <!--disabled para fieldsets-->
+        <fieldset disabled>
+            <input type="text">
+        </fieldset>
+        <!--limite de caracteres, funciona com inputs-->
+        <textarea name="" maxlength="100"></textarea>
+    </form>
+    <!--Atributo form para indicar qual o formúlario referenciado, elementos não precisam estar dentro do formulário-->
+    <input type="text" form="form">
+
+    <!--Permite editar o conteúdo-->
+    <h2 contenteditable>Edite seu título</h2>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+    </script>
+</body>
+</html>
