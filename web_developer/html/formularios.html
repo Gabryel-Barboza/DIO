@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Formulários em HTML</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <!-- Tag form para criar a estrutura do formulário
+    parametros name: nome para o elemento, onsubmit: Emite um evento ao enviar o formulário, target: Abre o formulário em uma nova aba, method: método HTTP utilizado, action: Destino de envio do formulário, autocomplete: Desativar ou ativar autocomplete de campos utilizados anteriormente.-->
+    <form name="signup" onsubmit="alert()" target="_blank" method="POST" action="#" autocomplete="off">
+
+        Este é o formulário
+
+        <!-- Inputs são campos para entrada de dados. Para consultar todos os inputs, veja o W3Schools-->
+        <!-- Nem todos as tags são compatíveis com os navegadores, pesquise por compatibilidade de tags-->
+
+        <!-- Text, campo de texto simples-->
+        Text: <input type="text" name="name" /> <br />
+        <!-- Number, campo apenas para números, permite definir o mínimo, máximo e passo-->
+        Number: <input type="number" name="age" min="0" max="100" step="2" /> <br />
+        <!--Password, campo de senha que oculta o valor digitado-->
+        Password: <input type="password" name="password" /> <br />
+        <!--Range, campo com um seletor de valores númericos, similar a Number-->
+        Range: <input type="range" name="range" min="0" max="10" value="2" /> <br />
+        <!--Color, campo para seleção de cores-->
+        Color :<input type="color" /> <br />
+        <!--Email, campo que permite apenas endereços de email válidos, e.g: @.com-->
+        Email :<input type="email" /> <br />
+        <!--URL, campo que permite apenas URLs válidas-->
+        URL :<input type="url" /> <br />
+        <!--Date, campo para selecionar datas-->
+        Date :<input type="date" /> <br />
+        <!--Week, campo para selecionar semanas-->
+        Week :<input type="week" /> <br />
+        <!--Month, campo para selecionar meses-->
+        Month :<input type="month" /> <br />
+        <!--Checkbox, campo para múltiplas escolhas-->
+        Checkbox :<input type="checkbox" /> <input type="checkbox" /> <br />
+        <!--Radio, campo para múltiplas escolhas, porém se sincronizado o parametro name permite apenas uma única escolha-->
+        Radio :<input type="radio" name="1" /> <input type="radio" name="1" /> <br />
+        <!--Hidden, campo para esconder alguma informação a ser enviada pelo formulário-->
+        Hidden :<input type="hidden" /> <br />
+        <!--File, campo para realizar o upload de arquivos, multiple permite escolher mais de um arquivo-->
+        File :<input type="file" multiple /> <br />
+        <!--Search, campo para busca do texto digitado-->
+        Search :<input type="search" /> <br />
+        <!--Button, mesma função de <button>, porém não semântico-->
+        Button :<input type="button" value="Enviar" /> <br />
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Radio e Checkbox Input</h2>
+
+    <form method="GET" action="#">
+        <!-- O checkbox pode ser interpretado como uma variável definida por name, que pode receber valores. Porém, caso seja necessário enviar uma lista de valores, é adicionado ao name [] para indicar uma lista, isso para método POST-->
+        <!-- Com o método GET é possível visualizar na barra de endereço os valores enviados pela checkbox-->
+
+         <!--Value é o que aparece no documento enviado pelo formulário. "name:value"-->
+         <!--disabled desativa a opção-->
+        Escolha o que deseja adicionar: 
+        <br />
+        Opção 1<input type="checkbox" disabled name="opcao[]" value="opcao 1" /> <br>
+        Opção 2<input type="checkbox" name="opcao[]" value="opcao 2" /> <br>
+        Opção 3<input type="checkbox" name="opcao[]" value="opcao 3" /> <br>
+        Opção 4<input type="checkbox" name="opcao[]" value="opcao 4" /> <br>
+
+        <!--Para o radio button, se os valores tiverem o mesmo name, somente um dos inputs pode ser selecionado-->
+        Escolha um:
+        <br />
+        1 <input type="radio" name="escolha" value="1" /> <br>
+        2 <input type="radio" name="escolha" value="2" /> <br>
+        3 <input type="radio" name="escolha" value="3" /> <br>
+
+
+        <h2>Buttons</h2>
+
+        <!--Botão simples, sem funcionalidades, onclick emite um evento ao clicar-->
+        <button type="button" onclick="alert('Cliquei aqui')">Clicável</button>
+        <!--Limpa os campos do formulário que o botão está-->
+        <button type="reset">Limpar</button>
+        <!--Enviar o formulário que o botão está, tipo padrão de botão-->
+        <button type="submit">Enviar</button> <br />
+
+        <h2>Selects</h2>
+
+        <!--Campo de seleção de valores. Tag filha option para adicionar opções, parametros value: ignora a 1º opção se nula, selected: deixa a opção marcada por padrão-->
+        <select name="assunto" multiple>
+            <option value="">Selecione uma opção</option>
+            <option selected value="administrativo">Administrativo</option>
+            <option value="gerencia">Gerência</option>
+            <option value="rh">Recursos Humanos</option>
+        </select>
+
+        <h2>Textarea</h2>
+
+        <!--Campo de texto, cols: colunas do campo, rows: linhas do campo. Pode ser redimensionado no campo inferior direito, opção bloqueada quando definido no CSS-->
+        <textarea name="texto" cols="20" rows="10"></textarea>
+
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table tr:nth-child(even) {
+            background-color: burlywood;
+        }
+
+        table thead th {
+            background-color: black;
+            color: white;
+        }
+
+        table tfoot {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas Simples</h1>
+
+    <!--Table -> table row -> table heading, table data-->
+    <!--summary: resumo para o leitor de tela, border: ativa a borda da tabela, não recomendado utilize CSS para isso; cellspacing: espaçamento entre a tabela e as células, cellpadding: espaçamento entre conteúdo da célula e a célula-->
+    <table summary="Tabela com dados pessoais de alunos" border="1" width="250px" align="center" cellspacing="10px" cellpadding="10px">
+        <tr>
+            <th title="Nome Completo">Nome</th>
+            <th title="Sua idade">Idade</th>
+        </tr>
+        <tr>
+            <td>Gabryel</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Kaio</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>16</td>
+        </tr>
+    </table>
+
+    <h1>Tabelas Completas</h1>
+    <!--Pode-se definir a estrutura da tabela com as tags thead, tbody e tfoot. Além de se tornar uma tabela semântica, caso a ordem da estrutura seja alterada o resultado ainda será o mesmo-->
+    <!--A mesclagem de células é feita com colspan para colunas e rowspan para linhas, permitindo expandir células para outros colunas-->
+
+    <table width="250px" align="center">
+        <caption>Informações dos alunos</caption>
+        <!--O rodapé será criado ao final da tabela, mesmo antes dos elementos-->
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th colspan="2">Dados Pessoais</th>
+            </tr>
+            <tr>
+                <th title="Nome Completo">Nome</th>
+                <th title="Sua idade">Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gabryel</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Kaio</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>16</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

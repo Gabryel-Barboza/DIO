@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+}
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+span {
+    font-weight: bold;
+    color: rgb(5, 108, 108);
+}
+.wrapper {
+    width: 1300px;
+    display: flex;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%;
+}
+.menu {
+    width: 15%;
+    background-color: #fa0000;
+    padding: 10px 20px 0px;
+}
+.header {
+    background-color: rgb(5, 108, 108);
+    padding-top: 10px;
+    min-height: 150px;
+}
+.header q {
+    display: inline-block;
+    margin-left: 200px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+.content {
+    background-color: white;
+    min-height: 300px;
+    padding: 20px;
+    font-size: 22px;
+}
+.content table {
+    text-align: right;
+    border: 1px solid gray;
+}
+.content table th, td {
+    border: 1px solid rgba(0, 0, 0, 0.616);
+    padding: 10px 20px 10px 10px;
+}
+.content table th {
+    background-color: black;
+    color: white;
+}
+.testimonials {
+    background-color: gray;
+    padding: 10px;
+    font-size: 15px;
+}
+.testimonials > div {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+}
+.workers {
+    background-color: gray;
+    padding: 10px;
+    font-size: 15px;
+}
+.workers > div {
+    display: inline-block;
+} 
+.workers p {
+    background-color: white;
+    margin-top: 0;
+    padding: 10px;
+    width: 250px;
+}
+.footer {
+    background-color: rgb(27, 25, 25);
+    min-height: 150px;
+    text-align: center;
+    color: white;
+}

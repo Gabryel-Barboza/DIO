@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body style="background-color: lightgray">
+    <h1>Imagens</h1>
+    <!--São tipos de mídias disponíveis em diversos formatos, tais formatos devem ser suportados pelo navegador para carregarem a imagem-->
+    <!--Formatos comuns como JPG e PNG são suportados por todos os navegadores, JPG é um formato de alta compressão de imagem tornando o arquivo mais leve, PNG possui uma compressão menor e dá suporte ao canal alpha, permitindo transparência na imagem-->
+
+    <!-- src:caminho da imagem, title:mensagem de caixa de texto, alt: texto alternativo, bem utilizado para acessibilidade, align: alinha o texto na posição indicada, não recomendado, prefira utilizar CSS-->
+    <img title="Logotipo HTML" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt="texto alternativo para caso imagem não carregue, usado com leitores de tela" width="300px" align="center"/>
+
+    <img title="Logotipo CSS" src="./imagens/CSS3_logo_.png" alt="Logo PNG CSS3" />
+
+    <!--Imagens em SVG são mídias que não salvam pixels, mas sim coordenadas para reconstruir os pontos da imagem, possibilitando redimensionar a imagem sem nenhuma perda de qualidade-->
+    <img title="Logotipo Javascript" src="./imagens/javascript-svgrepo-com.svg" alt="Logo SVG Javascript" width="400px" />
+    <!--Tag svg para recriar a imagem é melhor utilizada, pois com a tag img é feita a requisição ao caminho, delegando um tempo para buscar o arquivo e depois reconstruir-->
+    <svg xmlns="http://www.w3.org/2000/svg" aria-label="JavaScript" role="img" viewBox="0 0 512 512">
+        <rect width="512" height="512" rx="15%" fill="#f7df1e"/>
+        <path d="M324 370c10 17 24 29 47 29c20 0 33-10 33 -24c0-16 -13 -22 -35 -32l-12-5c-35-15 -58 -33 -58 -72c0-36 27 -64 70 -64c31 0 53 11 68 39l-37 24c-8-15 -17 -21 -31 -21c-14 0-23 9 -23 21c0 14 9 20 30 29l12 5c41 18 64 35 64 76c0 43-34 67 -80 67c-45 0-74 -21 -88 -49zm-170 4c8 13 14 25 31 25c16 0 26-6 26 -30V203h48v164c0 50-29 72 -72 72c-39 0-61 -20 -72 -44z"/>
+    </svg>
+    <h1>Áudios</h1>
+    <!--Mídias de áudio devem ser suportadas pelo navegador para reproduzir, as mais comuns são .mp3-->
+    <!--autoplay: tocar audio automaticamente, controls: controles para o áudio-->
+    <audio autoplay controls >
+        <source src="midia.mp3" />
+        <source src="midia.ogg" />
+        Seu navegador não tem suporte a este formato de áudio
+    </audio>
+    <h1>Vídeos</h1>
+    <!--Mídias de vídeo devem ser suportadas pelo navegador-->
+    <!--A tag track é utilizada para criar legendas para o vídeo, é utilizado arquivos de transcrição de falas por tempo como .vtt e entre outros-->
+    <!--kind: tipo de legenda, captions para falas, chapters para capítulos, subtitles para descrições e falas, metadata e descriptions. srclang: idioma utilizado-->
+   
+    <video controls>
+        <source src="video.mp4" />
+        <source src="video.webm" />
+        <track default src="legenda.vtt" kind="captions" srclang="pt-br">
+        Seu navegador não tem suporte a este formato de vídeo
+    </video>
+
+</body>
+</html>
