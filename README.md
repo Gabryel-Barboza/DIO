@@ -6,6 +6,7 @@ Veja também esse meu repositório contendo diversos desafios resolucionados e r
 <br>
 O foco deste módulo é apenas entender as principais tags HTML e a estruturação de um site, logo não terá muitas interações com CSS ou páginas responsivas.
 <br>
+Para visualizar modelos de sites, veja a branch Javascript com GitHub Pages 
 
 ## Primeiros passos com HTML 👶
 Primeiro site do curso, com um conjunto de tags HTML e suas especificações. <br>
