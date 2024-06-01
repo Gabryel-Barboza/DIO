@@ -12,11 +12,11 @@ Acesse os sites a partir daqui: [GitHub Pages](https://gabryel-barboza.github.io
 Primeiro site do curso, com um conjunto de tags HTML e suas especificações. <br>
 [HTML inicial](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/Desafios/html_inicial.html)
 
-## Exercícios
+## Exercícios 📝
 [Fórmularios](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/formularios.html) --
 [Estruturando HTML](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/estruturando_html.html) --
-[Trabalhando com Mídias](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/trabalhando_com_midias.html)
-[Tabelas](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/tabelas.html) -- 
+[Trabalhando com Mídias](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/trabalhando_com_midias.html) --
+[Tabelas](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/tabelas.html)  
 
-## Primeiro site completo em HTML
+## Primeiro site completo em HTML 🖼
 [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/Desafios/clinica_medica/index.html)
