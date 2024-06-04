@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+
+    <style>
+        /*Seletor universal*/
+        * {
+            font-weight: bold;
+        }
+
+        /*Seletores de Tipo*/
+        h1 {
+            background-color: darkblue;
+            color: lightgreen;
+        }
+
+        div {
+            background: lightblue;
+            color: darkblue;
+        }
+
+        li {
+            background: lightgreen;
+        }
+
+        /*Seletores de ID
+        Não é necessário o nome do elemento, pois são únicos*/
+        #texto-boas-vindas {
+            background: red;
+            color: white;
+        }
+        #explicacao-seletores {
+            color: red;
+        }
+
+        /*Seletores de Classe
+        Para classes pode-se colocar o nome do elemento e especificar o seletor ou não*/
+        li.seletores-mais-comuns {
+            color: red;
+        }
+
+        .texto-maiusculo {
+            text-transform: uppercase;
+        }
+
+        /*Os estilos são aplicados na ordem de leitura do campo style, logo os últimos seletores possuem prioridade*/
+        .sem-estilo {
+            background: white;
+            color: black;
+            font-weight: normal;
+        }
+
+        /*Seletores por Atributo
+        Possuem diferentes formas de selecionar um elemento
+        [atrib] : Se elemento possuir o atributo
+        [atrib=value] : Se elemento possuir o atributo e valor idêntico
+        [atrib~=value] : Se elemento possuir o atributo e valor for idêntico ou conter o valor selecionado
+        [atrib|=value] : Se elemento possuir o atributo e valor for idêntico ou valor seguido de hífen
+        [atrib^=value] : Se elemento possuir o prefixo selecionado
+        [atrib$=value] : Se elemento possuir o sufixo selecionado
+        [atrib*=value] : Se o elemento possuir a palavra selecionada em qualquer posição, não precisa estar isolada*/
+        [title] {
+            color: red;
+        }
+
+        [title="Prime"] {
+            color: darkblue;
+        }
+
+        [title~="Spotify"] {
+            color: green;
+        }
+
+        [title|="Streaming"] {
+            color: blue;
+        }
+
+        [href^="http://"] {
+            background-color: lightgreen;
+        }
+
+        [href$="/"] {
+            background-color: lightgray;
+        }
+
+        [href*="plus"] {
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seletores CSS</h1>
+    <p id="texto-boas-vindas">Bem-vindo!</p>
+    <p id="explicacao-seletores">No CSS nós possuimos os seletores por ID</p>
+    <div>
+        <ul>
+            <li class="seletores-mais-comuns"><b>Seletor por Tipo:</b> Busca elementos por uma tag HTML</li>
+            <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor por ID (#):</b> Busca elementos através do atributo ID</li> <!--Para aplicar mais de uma classe, separe por espaços os valores-->
+            <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor por Classe (.):</b> Busca elementos pelo atributo classe</li>
+            <li><b>Seletor Universal (*):</b> Seleciona todos os elementos do HTML</li>
+            <li><b>Seletor de Atributo ([atrib])</b> Seleciona elementos que possuem um atributo específico ou valor específico</li>
+        </ul>
+    </div>
+    <div class="sem-estilo">
+        <ul>
+            <li class="sem-estilo"><a title="Netflix" href="http://www.netflix.com">Netflix</a></li>
+            <li class="sem-estilo"><a title="Prime" href="http://www.primevideo.com">PrimeVideo</a></li>
+            <li class="sem-estilo"><a title="Streaming Spotify" href="https://www.spotify.com/">Spotify</a></li>
+            <li class="sem-estilo"><a title="Streaming-Apple" href="https://www.appletv.com/">Apple+</a></li>
+            <li class="sem-estilo"><a href="https://www.disneyplus.com/">Disney Plus</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

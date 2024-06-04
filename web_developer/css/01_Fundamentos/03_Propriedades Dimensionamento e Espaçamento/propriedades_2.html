@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Dimensionamento e Espaçamento</title>
+
+    <style>
+        /*mínimo e máximo do conteúdo*/
+        button {
+            min-width: 200px;
+        }
+
+        #botao-largura {
+            max-width: 200px;
+        }
+
+        #botao-altura {
+            background-color: antiquewhite;
+            max-width: 200px;
+            max-height: 100px;
+        }
+
+        /*margem dos elementos*/
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+        #elemento-1 {
+            background-color: orange;
+            margin-top: 150px;
+            margin-right: auto;
+            margin-bottom: -5px;
+            margin-left: auto;
+        }
+
+        /*shorthand ou facilitador*/
+        #elemento-2 {
+            background-color: purple;
+            margin: 5px auto;
+            /*Pode-se utilizar a shorthand das seguintes formas:
+            margin: todos os lados;
+            margin: cima-baixo direita-esquerda
+            margin: cima direita-esquerda baixo
+            margin: cima direita baixo esquerda*/
+        }
+
+        /*Padding ou preenchimento dos elementos*/
+        #elemento-1 {
+            /*shorthand*/
+            padding: 20px;
+        }
+
+        #elemento-2 {
+            padding: 20px 10px;
+        }
+
+        /*Box-sizing
+        Ao definir o padding, a largura total do elemento é aumentada, o cálculo é width = largura + borda + padding
+        Esse é o comportamento do content-box, para o border-box será redimensionado o elemento interno para que a lárgura seja a mesma, ainda que se adicione padding e borda*/
+        #elemento-1 {
+            box-sizing: border-box;
+        }
+        /*Content-box: 200px + 20px + 20px = 240px
+          Border-box: 160px + 20px + 20px = 200px*/
+    </style>
+</head>
+<body>
+    <button>Fechar</button> <br>
+
+    <button id="botao-largura">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic assumenda quidem optio, tempore qui ipsam. Facilis, totam expedita? Dolore sit beatae facere, nihil dignissimos alias officia odit illum maxime debitis?</button> <br>
+
+    <button id="botao-altura">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repellendus nostrum voluptate praesentium sint deleniti aliquid veritatis esse. Dolorem reiciendis alias totam necessitatibus culpa veniam facilis ducimus nostrum deserunt dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis saepe corporis distinctio natus non ex delectus hic autem provident aut dolorem similique quas nulla, corrupti, ut a blanditiis eius voluptatibus!</button>
+
+    <div id="elemento-1">Elemento 1</div>
+    <div id="elemento-2">Elemento 2</div>
+</body>
+</html>

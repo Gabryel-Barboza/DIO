@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+
+    <style>
+        /*Combinadores filhos
+        Elementos filhos são elementos dentro do bloco pai diretamente*/
+        div p {
+            background-color: lightgreen;
+        }
+
+        div > p {
+            color: red;
+        }
+        
+        /*Combinadores Irmãos
+        Irmãos são elementos de mesma indentação*/
+        div ~ p {
+            color:aquamarine;
+        }
+        
+        a ~ a {
+            background-color: red;
+        }
+
+        /*Combinadores Irmãos adjacentes
+        Irmãos são elementos de mesma indentação e adjacentes ou seja,  1º tag depois do elemento*/
+        div + p {
+            color: tomato;
+        }
+
+        .fundo-verde + p {
+            background-color: lightgreen;
+        }
+
+        a + a {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinadores</h1>
+    <h2>Filhos e Irmãos</h2>
+    <div>
+        <p>Parágrafo 1 dentro da div</p>
+        <p>Parágrafo 2 dentro da div</p>
+        <span>
+            <p>Parágrafo 3 dentro da div, dentro do span</p>
+        </span>
+    </div>
+
+    <p>Parágrafo 4 fora da div</p>
+    <p>Parágrafo 5 fora da div</p>
+
+    <div class="fundo-verde">
+        <p>Parágrafo 6 dentro da div</p>
+        <p>Parágrafo 7 dentro da div</p>
+        <span>
+            <p>Parágrafo 8 dentro da div, dentro do span</p>
+        </span>
+    </div>
+
+    <p>Parágrafo 9 fora da div</p>
+    <p>Parágrafo 10 fora da div</p>
+    <div class="fundo-azul">
+        <p>Parágrafo 11 dentro da div</p>
+        <p>Parágrafo 12 dentro da div</p>
+        <span>
+            <p>Parágrafo 13 dentro da div, dentro do span</p>
+        </span>
+    </div>
+
+    <a href="">Link 1</a> 
+    <a href="">Link 2</a> <br>
+    <span>
+        <a href="">Link 3</a> <br>
+        <a href="">Link 4</a> <br>
+    </span>
+    <a href="">Link 5</a> <br>
+</body>
+</html>

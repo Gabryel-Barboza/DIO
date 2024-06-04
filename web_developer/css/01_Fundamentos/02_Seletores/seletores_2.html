@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+
+    <style>
+        /*Separe os seletores por vírgula para selecionar mais de um elemento por bloco*/
+        h1, p, div {
+            color: red;
+            background-color: lightblue;
+        }
+
+        #link-referencia, #link-suporte{
+            background-color: antiquewhite;
+        }
+
+        h1, [id^="botao"] {
+            background-color: lightcoral;
+        }
+
+        /*Para especificar para um seletor vários atributos, coloque todos sem separação*/
+        p.texto {
+            color: blueviolet;
+        }
+
+        .texto.teste {
+            color: aqua;
+        }
+
+        .sem-estilo {
+            color: black;
+            background-color: inherit;
+        }
+
+        /*Combinadores
+        1. Combinador descendente (espaço)
+        2. Combinador filho (>)
+        3. Combinador irmão adjacente (+)
+        4. Combinador irmão em geral (~)
+        */
+
+        /*A prioridade dos seletores também é determinada pelo tipo do mesmo.
+        id > classe > tipo
+        Veja o valor de especificação do seletor passando o mouse por cima*/
+
+        /*Combinadores Descendentes
+        Descendentes são elementos dentro do bloco pai não diretamente, podendo ser filhos, netos e etc.*/
+        li {
+            color: red;
+        }
+
+        li li {
+            color: green;
+        }
+
+        #lista-01 li {
+            background-color: lightblue;
+        }
+
+        .fundo-verde li {
+            background-color: lightgreen;
+        }
+
+        .fundo-azul li {
+            background-color: lightblue;
+        }
+
+        .fundo-verde #sublista-1 li {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Agrupamento de Seletores</h2>
+
+    <p class="texto">Podemos aplicar as mesmas regras CSS para vários seletores diferentes. Para isso, podemos separar os elementos utilizados por uma vírgula (,).</p>
+    <div class="texto teste">Assim, não precisamos ficar copiando e colando os mesmos códigos para todos, nós podemos fazer um só bloco de CSS e reutilizar as mesmas regras</div>
+
+    <br><br>
+    <a id="link-referencia" href="#">Clique para ver a documentação</a>
+    <br>
+    <a id="link-suporte" href="#">Clique para entrar em contato</a>
+    <br>
+    <a id="botao-voltar" href="#">Voltar</a>
+    <br>
+    <button id="botao-fechar">Fechar Página</button>
+
+    <h1>Combinadores</h1>
+
+    <h2>Descendentes</h2>
+
+    <ul>
+        <li class="fundo-verde" id="lista-01">
+            <div class="sem-estilo">Item 1</div>
+            <ul id="sublista-0">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li class="fundo-verde" id="lista-02">
+            <div class="sem-estilo">Item 2</div>
+            <ul id="sublista-1">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li class="fundo-azul" id="lista-03">
+            <div class="sem-estilo">Item 3</div id="sublista-2">
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
