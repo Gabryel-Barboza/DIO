@@ -10,6 +10,13 @@ const eAzul = true;
 == Parecido, converte tipos
 === Idêntico
 */
+
+//Operadores Lógicos
+/*
+&& - E
+|| - Ou
+! - Negação
+*/ 
 const numeroPar = 11 % 2 == 0;
 console.log(numeroPar);
 console.log(10 % 2 == '0');
