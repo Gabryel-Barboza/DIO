@@ -22,7 +22,9 @@ Primeiro site do curso, com um conjunto de tags HTML e suas especificações. <b
 [Recursos Especiais](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/recursos_especiais.html)
 
 ## Primeiro site completo em HTML 🖼
+A criação do primeiro site com uma estrutura de páginas, utilizando um perfil de uma clínica médica fictícia. <br>
 [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/Desafios/clinica_medica/index.html)
 
 ## Clone Wikipedia 📖
+Um pequeno site simulando o Wikipedia, utilizando um pouco de CSS apenas para deixar similar ao original. <br>
 [Wikipédia](https://github.com/Gabryel-Barboza/DIO/tree/HTML/web_developer/html/Desafios/wikipedia)
