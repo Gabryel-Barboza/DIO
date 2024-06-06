@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades e Configurações</title>
+
+    <link rel="stylesheet" href="#">
+    <style>
+
+        /*Alterando a opacidade dos elementos, o elemento pai define a opacidade dos descendentes*/
+        #opacity {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            background: purple;
+            border: 2px solid red;
+            color: white;
+            box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.671);
+
+            opacity: 1;
+        }
+
+        img {
+            width: 100px;
+            height: 120px;
+            object-fit: scale-down;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.521));
+            opacity: .6;
+        }
+
+        /*Propriedade overflow define o comportamento para elementos que transbordam do bloco pai, visible: padrão, hidden: esconde o conteúdo, scroll: adiciona uma barra de rolagem ao bloco, auto: adiciona uma barra de rolagem apenas quando transbordar*/
+        /*Overflow-x e overflow-y definem o comportamento para esses eixos*/
+        #overflow {
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid gray;
+            background: antiquewhite;
+            overflow: auto;
+        }
+
+        #overflow-x {
+            width: 200px;
+            padding: 10px;
+            margin-top: 30px;
+            border: 1px solid gray;
+            background: antiquewhite;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade opacity</h1>
+    <div id="opacity">
+        <h2>Trilha de CSS</h2>
+        <p>Conhecendo as propriedades CSS</p>
+        <img src="../Fundo dos Elementos/Imagens/CSS3_logo_.png" alt="">
+    </div>
+
+    <h2>Overflow</h2>
+    <div id="overflow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quis neque perferendis, minus expedita atque enim commodi assumenda labore, impedit eos rem. Aliquid molestias impedit, magni illum et nostrum beatae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem illo unde natus animi, cumque voluptatibus quae eaque repudiandae officiis et eligendi iure quis sint numquam impedit! Sit, ducimus? Aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque quos qui temporibus fugit non nostrum unde ad, nihil quasi culpa officia perferendis! Nostrum sunt velit qui voluptate cum distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aperiam dicta maiores consequuntur quidem vitae repudiandae suscipit rerum nesciunt laboriosam, provident ducimus doloribus obcaecati tenetur repellat architecto vero dignissimos impedit.</p>
+    </div>
+
+    <div id="overflow-x">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quis neque perferendis, minus expedita atque enim commodi assumenda labore, impedit eos rem. Aliquid molestias impedit, magni illum et nostrum beatae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem illo unde natus animi, cumque voluptatibus quae eaque repudiandae officiis et eligendi iure quis sint numquam impedit! Sit, ducimus? Aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque quos qui temporibus fugit non nostrum unde ad, nihil quasi culpa officia perferendis! Nostrum sunt velit qui voluptate cum distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aperiam dicta maiores consequuntur quidem vitae repudiandae suscipit rerum nesciunt laboriosam, provident ducimus doloribus obcaecati tenetur repellat architecto vero dignissimos impedit.</p>
+    </div>
+</body>
+</html>

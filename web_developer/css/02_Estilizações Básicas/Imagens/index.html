@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens com CSS</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            border: 5px solid blue;
+        }
+
+        /*object-fit: fill;
+        Valor padrão, distorce a imagem para caber no bloco*/
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*Mantém a proporção original, apenas redimensionando a imagem*/
+        #contain {
+            object-fit: contain;
+        }
+
+        /*Corta o espaço da imagem que transbordar o bloco*/
+        #cover {
+            object-fit: cover;
+        }
+
+        /*Ignora os tamanhos do bloco, mantendo o aspecto original*/
+        #none {
+            object-fit: none;
+        }
+
+        /*Utiliza o que for de menor tamanho, contain ou none*/
+        #scale-down {
+            object-fit: scale-down;
+        }
+
+        /*Object-Position
+        (x), (y)
+        50% 50% (padrão)
+        palavras-chave: top-bottom, center, start-end, left-right*/
+        #position {
+            object-fit: cover;
+            object-position: 30px -40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade <code>object-fit</code></h1>
+
+    <code>object-fit: fill;</code>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="fill">
+    </div>
+
+    <code>object-fit: contain;</code>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="contain">
+    </div>
+
+    <code>object-fit: cover;</code>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="cover">
+    </div>
+
+    <code>object-fit: none;</code>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="none">
+    </div>
+
+    <code>object-fit: scale-down;</code>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="scale-down">
+    </div>
+    <h2>Propriedade Object-Position</h2>
+    <div>
+        <img src="Dio_logo.jpg" alt="" id="position">
+    </div>
+</body>
+</html>

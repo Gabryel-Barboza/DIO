@@ -1,0 +1,137 @@
+/*Define as alterações nos caracteres, para maiúsculo ou minúsculo; uppercase, lowercase, capitalize*/
+#transform {
+    text-transform: capitalize;
+}
+
+/*Define o alinhamento do texto, start-end, cente, left-right, justify: alinha o texto igualmente, na esquerda e direita (adiciona espaços)*/
+#align {
+    text-align: end;
+}
+
+/*text-decoration: Adiciona ou remove linhas do texto. É uma shorthand para line, style, color, thickness*/
+#decoration-under {
+    text-decoration: underline;
+}
+
+#decoration-line {
+    text-decoration: line-through;
+}
+
+#decoration-over {
+    text-decoration: overline;
+}
+
+/*line: underline, line-through, overline; style: solid, dashed, dotted, double, wavy; color: padrão do texto; thickness: expessura*/
+#text-decoration {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+
+    text-decoration: underline wavy red 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Colocando uma indentação no início do parágrafo*/
+#indent {
+    text-indent: 15px;
+}
+
+/*Adiciona um espaçamento entre letras*/
+#letter-s {
+    letter-spacing: 2px;
+}
+
+/*Adiciona um espaçamento entre palavras*/
+#word-s {
+    word-spacing: -7px;
+}
+
+.white {
+    background-color: antiquewhite;
+    width: 200px;
+}
+/*Define como são tratados espaços em branco e quebras de linha, 
+normal: Substitui sequência de espaços em um só e ignora quebras de linha do texto;
+nowrap: Não quebra linhas, mesmo que ultrapasse o tamanho do bloco, combina espaços;
+pre: Mantém os espaços e quebras de linha do texto, ignora o tamanho máximo do bloco;
+pre-line: Texto é quebrado quando necessário e combina espaços, contudo quebra as linhas onde o texto quebrar também;
+pre-wrap: Mantém os espaços em branco, mesmo funcionamento de pre-line;
+break-spaces: O mesmo que pre-wrap, no entanto no pre-wrap os espaços em branco podem transbordar do elemento, com break-spaces esse espaço é quebrado em linhas
+ */
+#white-space {
+    white-space: nowrap;
+}
+
+#white-space2 {
+    white-space: pre;
+}
+
+#white-space3 {
+    white-space: pre-line;
+}
+
+#white-space4 {
+    white-space: pre-wrap;
+}
+
+#white-space5 {
+    white-space: break-spaces;
+}
+
+/*Define a quebra de palavras quando transbordarem o bloco, normal: ultrapassa o bloco, break-word: quebra a palavra em linhas
+*/
+#word-wrap {
+    width: 100px;
+    word-wrap: break-word;
+}
+
+.break {
+    width: 100px;
+    background-color: antiquewhite;
+}
+
+/*Define quando quebrar linha dentro do texto, normal: com espaços em branco ou hífens; break-all: qualquer caractere; keep-all: não permite quebra de linha, utilizado para idiomas específicos como os orientais*/
+#word-break {
+    word-break: break-all;
+    }
+    
+#word-break2 {
+word-break: keep-all;
+}
+
+/*Qual a diferença de word-wrap e word-break? Para o word-wrap, as palavras podem ser quebradas de linha antes de começarem, no word-break as palavras são quebradas no caractere que ultrapassa a linha*/
+
+/*Define a orientação de escrita do texto
+horizontal-tb: padrão, vertical-rl: verticalmente da direita-esquerda, vertical-lr: verticalmente da esquerda-direita*/
+#writing {
+    writing-mode: vertical-rl;
+}
+
+/*Text overflow: define como é mostrado o texto que foi cortado do bloco, clip: padrão, corta o texto; ellipsis: adiciona reticências no local que foi cortado, string: adiciona um texto no local (pouco compatível, suportado pelo firefox)*/
+#overflow {
+    width: 100px;
+    background-color: antiquewhite;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+#overflow2 {
+    width: 100px;
+    background-color: antiquewhite;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#overflow3 {
+    width: 100px;
+    background-color: antiquewhite;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: 'etc.';
+}

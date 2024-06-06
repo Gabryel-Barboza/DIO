@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras com CSS</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+            margin: 20px auto;
+            background: rgba(255, 0, 0, 0.74);
+            
+            /*Cria uma sombra no elemento, inset eixo-x eixo-y desfoque espalhamento cor*/
+            box-shadow: 10px 10px 10px 5px rgba(255, 0, 0, 0.322), inset 5px 5px 5px black;
+        }
+
+        /*Aplicando sombras dentro de imagens PNG, perceba que o box-shadow é aplicado a caixa do elemento*/
+        img {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            object-fit: cover;
+
+            box-shadow: 10px 10px 5px rgba(255, 0, 0, 0.336);
+            filter: drop-shadow(10px 10px 5px gray);
+        }
+
+        /*Aplicando sombras em textos, horizontal vertical desfoque cor*/
+        p {
+            text-align: center;
+            font-size: xx-large;
+            color: red;
+            text-shadow: -15px 10px 5px rgba(0, 0, 0, 0.603);
+            /*Filter: drop-shadow*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade box-shadow</h1>
+    <div></div>
+
+    <img src="../Fundo dos Elementos/Imagens/CSS3_logo_.png" alt="">
+
+    <p>Texto com sombra aplicada</p>
+</body>
+</html>

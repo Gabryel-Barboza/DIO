@@ -1,0 +1,96 @@
+ /*Regras CSS*/
+ /*font-family: Nome para aplicar na fonte, src: source da fonte - local() para procurar pela fonte no computador, url() para o caminho da fonte se não for encontrada localmente*/
+ /*Para adicionar os outros estilos, utilize a propriedade font-weight, ela permite indicar qual o estilo da fonte para um arquivo*/
+ 
+ @font-face {
+     font-family: Roboto;
+     src: local(), url('assets/Roboto-Regular.ttf');
+     font-weight: normal;
+     }
+     
+@font-face {
+font-family: Roboto;
+src: local(), url('assets/Roboto-Black.ttf');
+font-weight: bold;
+}
+
+@font-face {
+font-family: Roboto;
+src: local(), url('assets/Roboto-Light.ttf');
+font-weight: 300;
+}
+
+/*Importando fontes*/
+@import url(./global.css);
+
+/*Famílias de Fontes
+tipos genéricos: serif, sans-serif, display, handwriting, monospace
+Google Fonts fornece fontes gratuitas.*/
+
+* {
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+* {
+    font-family: Roboto;
+}
+
+/*Se não estiver configurada a font-face, o navegador tenta simular o negrito na fonte utilizada, o que não fica parecido com a fonte original*/
+li {
+    font-weight: bold;
+}
+
+/*font-size: tamanho da fonte, unidades de medida ou palavras-chave: xx-small, x-small, ..., medium, ..., xx-large*/
+
+p {
+    font-size: small;
+}
+
+/*Valores relativos ao elemento pai, smaller ou larger*/
+li {
+    font-size: larger
+}
+
+/*font-style ou estilo das fontes*/
+#italic {
+    font-style: italic;
+    background-color:antiquewhite;
+}
+
+/*Quase o mesmo que italic, menos suportado*/
+#oblique {
+    font-style: oblique;
+    background-color:antiquewhite;
+}
+
+/*font-weight, expessura das fontes e definida pela fonte utilizada*/
+#weight {
+    font-weight: 400;
+    background-color:antiquewhite;
+}
+
+/*Aplica uma fonte mais fina que o elemento pai*/
+#weight p{
+    font-weight: lighter;
+    background-color:antiquewhite;
+}
+
+/*font-variant para definir formatos para a fonte. Versaletes (small caps)*/
+#variant {
+    font-variant: small-caps;
+    background-color:antiquewhite;
+}
+
+/*font-stretch determina o espaçamento entre as letras da fonte, se suportado pela fonte. ultra-condensed ... ultra-expanded*/
+#stretch {
+    font-stretch: condensed;
+    background-color:antiquewhite;
+}
+
+/*line-height define o espaçamento entre linhas, unidades de medida ou palavras-chave*/
+#line {
+    line-height: 32px;
+    background-color: beige;
+}
+
+/*shorthand font: style variant size / line-height family*/

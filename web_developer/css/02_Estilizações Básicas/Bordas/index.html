@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas com CSS</title>
+
+    <style>
+        /*border: 
+        border-width: tamanho da borda, unidades de medida, thin, medium, thick;
+        border-style: estilo de borda, solid - linha sólida, dashed - linha tracejada, dotted - linha pontilhada, double - linha dupla, groove - 3D, ridge - inverso de groove, inset, outset, none;
+        border-color: cor da borda, padrão do color*/
+        .exemplo {
+            width: 300px;
+            height: 300px;
+            background: purple;
+            border-style: solid groove dotted double;
+            border-width: 3px thick;
+            border-color: red green pink yellow;
+        }
+
+        
+        /*Bordas arredondadas
+        Shorthand no sentido horário, top left top right bottom right bottom left*/
+        .redonda {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            background: purple;
+            border: thick inset black;
+            border-radius: 20px 10px;
+        }
+        
+        /*Borda com arredondamento horizontal/vertical*/
+        .oval {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            background: purple;
+            border: thick inset black;
+            border-radius: 100px/150px;
+        }
+        
+        /*Shorthands border, border-direção*/
+        .teste {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            background: purple;
+            border-top: 50px solid yellow;
+            border-left: 50px ridge red;
+        }
+
+        /*Bordas com Imagens
+        Para a imagem ser aplicada, primeiro é criada a propriedade border*/
+        .imagem {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            background: purple;
+            border: 20px solid;
+            border-image-source: url('imagens/border.png');
+        }
+        
+        /*Bordas gradientes*/
+        .gradiente {
+            border-image-source: radial-gradient(aqua, blue);
+        }
+
+        /*Border image slice, pesquise para entender melhor. As imagens são divididas em pedaços e utilizadas nas bordas
+        Os pedaços 1-4(pontas) da imagem são utilizadas nas bordas de canto do elemento
+        Já de 5-8(laterais) é utilizado no meio da borda e o pedaço 9 não é utilizado*/
+        /*Para testar qual o melhor valor de proporção, utilize o inspecionar do navegador e altere essa propriedade*/
+        /*Funciona com gradiente*/
+        .slice {
+            border-image-slice: 20;
+        }
+
+        /*fill utiliza o pedaço 9 da imagem (meio), nesse caso o meio da imagem é transparente*/
+        .fill {
+            border-image-slice: 40 fill;
+        }
+
+        /*Define o tamanho dos pedaços divididos na imagem
+        Quanto maior, maior o pedaço da imagem dividido*/
+        .width {
+            border-image-width: 100px;
+        }
+
+        /*Repetição da imagem na borda, o mesmo que background
+        stretch (padrão): estica a imagem nas laterais da borda, round: redimensiona a imagem, repeat: repete a imagem e corta se necessário, space: adiciona um espaço onde não couber a imagem*/
+        .repeat {
+            border-image-repeat: round;
+        }
+
+        /*Outset define a distância entre a imagem e o elemento*/
+        .outset {
+            border-image-repeat: round;
+            border-image-outset: 23px;
+        }
+
+        /*Shorthand
+        border-image: source slice / width / outset repeat */
+        #shorthand {
+            border-image: url('imagens/border.png') 20 / 10px / 0 round;  
+        }
+    </style>
+</head>
+<body>
+    <h1>Bordas</h1>
+    <p>Podemos definir as configurações das nossas bordas através das propriedades:</p>
+    <ul>
+        <li>border-width</li>
+        <li>border-style</li>
+        <li>border-color</li>
+    </ul>
+    <h2>Exemplo:</h2>
+    <div class="exemplo"></div>
+    <div class="redonda"></div>
+    <div class="oval"></div>
+    <div class="teste"></div>
+    <h2>Bordas com Imagens</h2>
+    <div class="imagem"></div>
+    <div class="imagem gradiente"></div>
+    <div class="imagem slice"></div>
+    <div class="imagem slice fill"></div>
+    <div class="imagem slice gradiente"></div>
+    <div class="imagem slice width"></div>
+    <div class="imagem slice repeat"></div>
+    <div class="imagem" id="shorthand"></div>
+</body>
+</html>

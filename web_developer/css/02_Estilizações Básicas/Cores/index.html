@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores em CSS</title>
+
+    <style>
+        /*Cores com nomenclatures, 140 cores disponíveis pelo navegador*/
+        #pre-definidas {
+            color: orange;
+        }
+
+        li {
+            background: aqua;
+        }
+
+        /*transparent, currentColor: Utiliza a cor de color atual*/
+        #current-color {
+            background: transparent;
+            color: black;
+            border: 2px solid currentColor;
+        }
+
+        /*RGB(A) - Red Green Blue Alpha
+        0 - 255, tonalidade*/
+        #rgb {
+            color: rgb(255, 0, 255);
+            background: rgb(255, 255, 0);
+        }
+
+        /*Transparência 0.0 - 1*/
+        #rgba {
+            color: rgba(255, 0, 0, 0.7);
+            background: rgba(0, 0, 0, .3);
+        }
+
+        /*0 - F = 16, Red(FF) Green(FF) Blue(FF) Alpha(FF)*/
+        #hex {
+            color: #ffffff;
+            
+        }
+
+        #hex-transparencia {
+            background: #ff00009f;
+        }
+
+        /*Hue Saturation Lightness Alpha
+        0 - 360, pesquise por hue circle degrees*/
+        #hsl {
+            color: hsl(0, 0, 0);
+            background: hsl(120, 100%, 50%);
+        }
+
+        #hsla {
+            background: hsla(240, 100%, 30%, .6);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <p>Existem várias formas de definirmos cores utilizando o CSS. Elas são:</p>
+    <ul>
+        <li id="pre-definidas">Cores pré-definidas</li>
+        <li id="current-color">Palavra-chave "currentcolor"</li>
+        <li id="hex">Hexadecimal</li>
+        <li id="hex-transparencia">Hexadecimal com transparência</li>
+        <li id="rgb">RGB</li>
+        <li id="rgba">RGBA</li>
+        <li id="hsl">HSL</li>
+        <li id="hsla">HSLA</li>
+    </ul>
+</body>
+</html>

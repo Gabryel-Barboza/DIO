@@ -1,0 +1,168 @@
+/*Colocando imagens de fundo*/
+.exemplo {
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    background-image: url('Imagens/CSS3_logo_small.png');
+}
+
+/*Utilizando gradientes de fundo, direção: to top/bottom, to right/left, degrees; color1; color2*/
+.linear {
+    background-image: linear-gradient(aqua, lightblue);
+}
+
+.radial {
+    background-image: radial-gradient(aqua, lightblue);
+}
+
+/*direção, cor e posição
+CSS3 patterns gallery*/
+.repeating {
+    background-image: repeating-linear-gradient(to top, aqua 0 20px, lightblue 20px 40px);
+}
+
+/*Redimensionamento de Imagens
+auto (padrão), cover, contain ou unidades de medida
+O mesmo funcionamento que object-fit*/
+.redimensionamento {
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-size: 300px 300px;
+}
+
+/*Camadas de imagens
+Para aplicar para cada camada, separe os estilos por vírgula*/
+.camadas {
+    background-image: url('Imagens/CSS3_logo_small.png'), url('Imagens/CSS3_logo_.png');
+    background-size: 100px 100px, 300px 300px;
+}
+
+/*Controla o comportamento de repetição de imagens
+Por padrão, repete a imagem até concluir o container
+repeat(padrão), repeat-x: apenas no eixo x, repeat-y: apenas no eixo y, space: adiciona espaços para evitar corte de imagem, round: redimensiona a imagem para repetir e caber no container, no-repeat: desativa
+Separe por espaço para aplicar separadamente, ao eixo x e y*/
+.no-repeat {
+    background-repeat: no-repeat;
+}
+.repeat-x {
+    background-repeat: repeat-x;
+}
+.repeat-y {
+    background-repeat: repeat-y;
+}
+.space {
+    background-repeat: space;
+}
+.round {
+    background-repeat: round;
+}
+
+/*Posição de imagens ou gradientes
+O mesmo funcionamento que object-position
+Pode definir em unidades de medida, também em eixos x e y
+start, end, right-left, top-bottom, center*/
+.position {
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+}
+
+/*Movimentação de fundo
+overflow: auto - adiciona a barra de scroll quando transbordado o bloco
+fixed: rola a página, o fundo é fixo; scroll (padrão): rola o fundo juntamente a página, para o bloco é fixo, local: rola o fundo juntamente ao bloco*/
+.fixed {
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-attachment: fixed;
+}
+
+.scroll {
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-attachment: scroll;
+
+}
+
+.local {
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-attachment: local;
+}
+
+/*Origem do fundo
+padding-box: utiliza o espaço do padding para imagem, border-box: utiliza o espaço da borda para imagem, content-box: utiliza o espaço do conteúdo apenas*/
+.padding {
+    width: 400px;
+    height: 500px;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+.border {
+    width: 400px;
+    height: 500px;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+.content {
+    width: 400px;
+    height: 500px;
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+/*Propriedade clip
+O mesmo que origin, porém para o fundo do bloco
+Cada valor define até onde o fundo será utilizado*/
+.clip-padding {
+    background-image: none;
+    background-clip: padding-box;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+.clip-border {
+    background-image: none;
+    background-clip: border-box;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+.clip-content {
+    background-image: none;
+    background-clip: content-box;
+    padding: 20px;
+    border: 20px dashed black;
+}
+
+/*Adiciona o efeito ao texto*/
+.clip-text {
+    background-image: linear-gradient(to left, red, rgb(63, 1, 63));
+    background-clip: text;
+    padding: 20px;
+    border: 20px dashed black;
+    font-size: 40px;
+    color: transparent;
+    text-align: center;
+}
+
+/*Mesclagem de fundos
+normal, multiply, screen, overlay, blue...
+Pesquise sobre background-blend-mode*/
+.blend-multiply {
+    background-image: url('Imagens/CSS3_logo_.png');
+    background-color: red;
+    background-blend-mode: multiply;
+}
