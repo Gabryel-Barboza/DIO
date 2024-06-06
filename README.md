@@ -23,4 +23,5 @@ Primeiro site do curso, com um conjunto de tags HTML e suas especificações. <b
 ## Primeiro site completo em HTML 🖼
 [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/blob/HTML/web_developer/html/Desafios/clinica_medica/index.html)
 
-## Wikipedia com design moderno 📖
+## Clone Wikipedia 📖
+[Wikipédia](https://github.com/Gabryel-Barboza/DIO/tree/HTML/web_developer/html/Desafios/wikipedia)
