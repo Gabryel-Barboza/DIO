@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <style>
+    </style>
+</head>
+<body>
+    <!--Simulando um servidor com a lib http-server, utilize o npm para instalar com npm install no terminal-->
+    <!--Permite acessar de qualquer dispositivo na rede-->
+
+    <h1>Desenvolvimento Web</h1>
+    <p>Criando interações e comportamentos com JavaScript</p>
+    <button id="btn1">Clique aqui</button>
+
+    <script>
+        //Script ao final do documento, permite a página carregar antes do comportamento
+        // window é o objeto do navegador/janela, document se refere ao HTML
+        const btn1 = window.document.getElementById('btn1');
+        console.log(btn1);
+        // Adicionando eventos de clique ao elemento recuperado
+        btn1.addEventListener('click', function() {
+            console.log('Clicou no botão');
+        });
+    </script>
+</body>
+</html>

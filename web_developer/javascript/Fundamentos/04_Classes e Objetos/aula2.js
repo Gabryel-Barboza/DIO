@@ -9,8 +9,8 @@ class Pessoa {
     }
 }
 
-// Instâncias são Pessoas criadas, também chamadas de objetos
-
+// Instâncias são objetos criados a partir do molde
+// new define a instanciação de um objeto
 const gabryel = new Pessoa();
 console.log(gabryel);
 gabryel.nome = 'Gabryel';

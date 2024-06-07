@@ -1,5 +1,6 @@
 // Objetos, conjuntos de chave-valor
 const gabryel = {
+    // Atributos
     nome: 'Gabryel',
     idade: 19,
 

@@ -53,5 +53,5 @@ main();
 // Funções invocadas imediatamente
 // Main
 (function () {
-    console.log('Código executada automaticamente, depois da declaração');
+    console.log('Código executado automaticamente, depois da declaração');
 })();

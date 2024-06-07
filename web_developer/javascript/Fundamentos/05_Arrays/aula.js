@@ -1,4 +1,5 @@
 // Listas ou Arrays
+// Criadas com [] e valores separados por ,
 
 const aluno = 'João';
 const alunos = ['Gabryel', 'Kaio', 'Brayan'];
@@ -36,13 +37,19 @@ console.log(`A média é ${soma / 5}`);
 notas[5] = 7;
 
 soma = 0;
+
 // Estruturas de Repetição
+// Utilizando a estrutura for para percorrer a lista
+
+// Para i começando em 0; execute enquanto i menor que tamanho de notas; incremente 1 em i após execução do bloco
 for (let i = 0; i < notas.length; i++) {
     soma += notas[i];
+    // Bloco executado n vezes, n = tamanho de notas
 }
 
 console.log(`A média é ${soma / notas.length}`);
 
+// Strings são arrays de caracteres
 const nome = 'Gabryel';
 for (let i = 0; i < nome.length; i++) {
     console.log(nome[i]);

@@ -1,4 +1,4 @@
-//Booleanos - Verdadeiro ou Falso
+//Booleanos - Verdadeiro ou Falso - Tipo binário
 const eAzul = true;
 
 // Operadores Relacionais
@@ -7,7 +7,7 @@ const eAzul = true;
 > Maior
 <= Menor ou igual
 >= Maior ou igual
-== Parecido, converte tipos
+== Parecido, converte os tipos de dados
 === Idêntico
 */
 
@@ -16,25 +16,35 @@ const eAzul = true;
 && - E
 || - Ou
 ! - Negação
-*/ 
+*/
+
 const numeroPar = 11 % 2 == 0;
 console.log(numeroPar);
 console.log(10 % 2 == '0');
 console.log(10 % 2 === '0');
 console.log(10 % 2 === 0);
 
-// Estruturas Condicionais
 console.log('=============');
+
+// Estruturas Condicionais
 console.log(numeroPar);
 
+// Estrutura condicional simples
+// O mesmo que if (numeroPar === true) resumida em if (numeroPar)
+if (numeroPar) {
+    // Executa esse bloco se condição verdadeira
+}
+
 // Estrutura condicional composta
-if (numeroPar) { // Estrutura condicional simples
+// Se verdadeiro executa esse, senão executa esse
+if (numeroPar) { 
     console.log('É par!');
 } else {
     console.log('É ímpar!');
 }
 
 console.log('==============');
+
 const numero = 0;
 const numeroDivisivel = numero % 5 === 0;
 
