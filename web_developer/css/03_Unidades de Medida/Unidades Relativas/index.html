@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida com CSS</title>
+
+    <style>
+        body {
+            font-size: 17px;
+        }
+
+        #porcentagem-pixel {
+            font-size: 30px;
+            background: lightblue;
+            width: 300px;
+            border: 2px solid black;
+            }
+            
+        /*Se o elemento pai aumentar, a propriedade também aumenta, calcula o tamanho do bloco subtraído pelos valores de margem, padding e etc.*/
+        #porcentagem {
+            font-size: 30px;
+            background: lightcoral;
+            width: 50%;
+            border: 2px solid black;
+        }
+        
+        #em-pixel {
+            width: 300px;
+            font-size: 40px;
+            background: lightcoral;
+        }
+
+        /*Utiliza o font-size do elemento e multiplica pelo valor, Para a propriedade font-size é consultado o font-size do elemento pai*/
+        #em {
+            font-size: 2em;
+            width: 4em;
+            background: aquamarine;
+            white-space: nowrap;
+            overflow: auto;
+        }
+
+        #rem-pixel {
+            width: 300px;
+            font-size: 40px;
+            background: lightcoral;
+        }
+        
+        /*Mesmo funcionamento de em, mas utiliza o font-size do HTML ou root (16px) para aplicar o ajuste, todas as propriedades. O tamanho da fonte do root é configurável no navegador*/
+        #rem {
+            font-size: 2rem;
+            width: 18rem;
+            background: aquamarine;
+            white-space: nowrap;
+            overflow: auto;
+        }
+
+        /*Utiliza a largura da área de visualização (viewport), 50vw = 50% da viewport. Diferente da porcentagem, ignora margens e pega o valor inteiro da viewport*/
+        #vw {
+            width: 50vw;
+            background: aquamarine;
+
+        }
+
+        /*Utiliza a altura da viewport*/
+        #vh {
+            width: 50vw;
+            height: 10vh;
+            background-color: coral;
+        }
+        /*Pode-se utilizar vmin e vmax, que pega os valores de ambas as propriedades. 10vmin = 10% do valor menor entre 1080vw e 1200vh, por exemplo*/
+
+        /*Calculando medidas com calc()*/
+        #calc-pai {
+            width: 300px;
+            background: yellow;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /*100% = 300 - 40px -> 260px - 30px + 2em = 264px*/
+        #calc-filho {
+            background: lightcoral;
+            padding: 10px;
+            width: calc(100% - 30px + 2em);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medidas Relativas</h1>
+    <p>As unidades de relativas são calculadas com base em unidades já conhecidas de outros elementos, o que pode variar de acordo com a propriedade.</p>
+    <ul>
+        <li><span>%</span> - porcentagem. Baseia-se no elemento pai;</li>
+        <div id="porcentagem-pixel">
+            width: 300px;
+        </div>
+        <div id="porcentagem">
+            width: 50%;
+        </div>
+        
+        <li><span>em</span> - Baseia-se na font-size do elemento (para outras propriedades) ou no elemento pai (para a propriedade font-size);</li>
+        <div id="em-pixel">
+            Elemento Pai <br>
+            font-size: 40px;
+            <div id="em">
+                Elemento Filho <br>
+                font-size: 2em ou 80px; <br>
+                width: 4em ou 320px;
+            </div>
+        </div>
+
+        <li><span>rem</span> - Tem o funcionamento similar ao em, contudo, utiliza o font-size de root (html) para definir os tamanhos das propriedades, por padrão o font-size do HTML é 16px;</li>
+        <div id="rem-pixel">
+            Elemento Pai <br>
+            font-size: 40px;
+            <div id="rem">
+                Elemento Filho <br>
+                font-size: 2rem ou 32px (HTML 16px); <br>
+                width: 18rem ou 288px;
+            </div>
+        </div>
+        <li><span>vw</span> - viewport width. Baseia-se na largura visualizada da página pelo usuáro no navegador;</li> <br>
+        <div id="vw"><p>viewport width: 50vw;</p></div>
+
+        <li><span>vh</span> - viewport height. Baseia-se na altura visualizada da página pelo usuário no navegador;</li> <br>
+        <div id="vh"><p>viewport height: 10vh; viewport width: 50vw;</p></div>
+
+        <h2>Extras</h2>
+        <p>Unidades de medida pouco utilizadas.</p>
+        <li><span>ex</span> - Baseia-se na altura do x;</li>
+        <li><span>ch</span> - Baseia-se na largura do 0, em fontes monoespaçadas é definido a quantidade de caracteres por essa unidade;</li>
+
+        <h2>Calculando medidas</h2>
+        <p>Utilizando a função <code>calc()</code>, obtemos a largura com a seguinte fórmula <code>100% = 300 - 40px -> 260px - 30px + 2em = 260px - 30px + 34px = 264px</code></p>
+        <div id="calc-pai">Elemento pai
+            <div id="calc-filho">Elemento filho</div>
+        </div>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida com CSS</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .tipo {
+            font-family: monospace;
+            font-weight: bold;
+            background: lightblue;
+        }
+
+        .prop {
+            font-family: monospace;
+            font-weight: bold;
+            background: lightcoral;
+        }
+
+        .val {
+            font-family: monospace;
+            font-weight: bold;
+            background: lightcyan;
+        }
+
+        #cm {
+            font-size: 0.5cm;
+        }
+
+        #mm {
+            font-size: 5mm;
+        }
+
+        #q {
+            font-size: 20q;
+        }
+
+        #in {
+            font-size: 0.2in;
+        }
+
+        #pc {
+            font-size: 1.3pc;
+        }
+
+        #pt {
+            font-size: 15pt;
+        }
+
+        #px {
+            font-size: 20px;
+        }
+        /*Pixel físico e pixel lógico. No CSS utilizamos as medidas em pixel, contudo os diversos aparelhos no mercado possuem diferentes resoluções e PPIs (Pixel per Inch), logo entra o conceito acima. Pixels físicos correspondem ao do aparelho e pixels lógicos ao do CSS, onde um pixel lógico pode se representado por 1 ou mais pixels físicos, a depender do aparelho*/
+        /*Pesquise mais sobre pixels*/
+    </style>
+</head>
+<body>
+    <h1>Tipos Numéricos</h1>
+    <p>Tipos de números utilizados classificados por medidas.</p>
+    <ul>
+        <li><span class="tipo">integer</span> - 1024, -78;</li>
+        <li><span class="tipo">number</span> - 0.2, 128, -1.5;</li>
+        <li><span class="tipo">percentage</span> - 50%;</li>
+        <li><span class="tipo">dimension</span> - <ul>
+            <li><span class="prop">length</span>: distância (px, em, vw, in);</li>
+            <li><span class="prop">angle</span>: ângulos(deg, rad, grad, turn);</li>
+            <li><span class="prop">time</span>: tempo (s, ms);</li>
+            <li><span class="prop">resolutions</span>: resolução (dpi, dpcm, dppx)</li>
+        </ul></li>
+    </ul>
+
+    <h2>Medidas Absolutas</h2>
+    <p>Medidas com valores únicos independentes dos elementos em que estão envolvidas. Não se alteram com base em elementos pai.</p>
+    <ul>
+        <li><span class="val" id="cm">cm</span> = centímetros</li>
+        <li><span class="val" id="mm">mm</span> = milímetros</li>
+        <li><span class="val" id="q">Q</span> = quarto de milímetro</li>
+        <li><span class="val" id="in">in</span> = polegadas</li>
+        <li><span class="val" id="pc">pc</span> = paica</li>
+        <li><span class="val" id="pt">pt</span> = pontos</li>
+        <li><span class="val" id="px">px</span> = pixels</li>
+    </ul>
+</body>
+</html>
