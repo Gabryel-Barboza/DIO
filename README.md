@@ -6,8 +6,8 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 
 ## Desafios HTML 📄
 * [HTML Inicial](https://github.com/Gabryel-Barboza/DIO/blob/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/html_inicial.html)
-* [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/clinica_medica)
-* [Wikipédia](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/wikipedia)
+* [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/clinica_medica/index.html)
+* [Wikipédia](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/wikipedia/index.html)
 
 ## Desafios CSS 🆒
 * [Primeira Landing Page](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_CSS/Primeira%20Landing%20Page)
