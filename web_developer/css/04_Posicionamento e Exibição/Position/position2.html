@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Position</title>
+
+    <style>
+        .exemplo {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            position: absolute;
+            opacity: 0.5;
+        }
+        
+        #pai {
+            position: relative;
+        }
+
+        /*z-index: determina qual a posição no eixo z de um elemento absoluto (ou diferente de static), ou seja, qual está sendo visualizado em primeiro plano. O de maior valor no eixo z é o que está na frente*/
+        #i1 {
+            background: red;
+            z-index: 4;
+        }
+
+        #i2 {
+            background: blue;
+            left: 10px;
+            top: 10px;
+            z-index: 3;
+        }
+
+        #i3 {
+            background: green;
+            left: 20px; 
+            top: 20px;
+            z-index: 2;
+        }
+
+        #i4 {
+            background: yellow;
+            left: 30px;
+            top: 30px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade Z-index</h1>
+    <div id="pai">
+        <div id="i1" class="exemplo">Elemento 1</div>
+        <div id="i2" class="exemplo">Elemento 2</div>
+        <div id="i3" class="exemplo">Elemento 3</div>
+        <div id="i4" class="exemplo">Elemento 4</div>
+    </div>
+</body>
+</html>

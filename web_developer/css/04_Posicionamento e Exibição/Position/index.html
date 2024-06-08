@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Position</title>
+
+    <style>
+
+        /* Static: posicionamento padrão dos elementos seguindo o fluxo do documento HTML */
+
+        body {
+            height: 3000px;
+        }
+
+        .exemplo {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        .inline {
+            display: inline-block;
+            background-color: blueviolet;
+        }
+
+        /*Relative: permite modificar seu posicionamento em relação a sua posição original, dentro do elemento pai.*/
+        .relative {
+            position: relative;
+            background-color: peru;
+        }
+
+        /*top: distância topo, bottom: distância fundo, left: distância esquerda, right: distância direita */
+        #rel-1 {
+            top: 20px;
+            left: 140px;
+        }
+
+        #rel-2 {
+            top: 20px;
+            left: 280px;
+        }
+
+        #rel-3 {
+            bottom: 110px;
+        }
+
+        #rel-4 {
+            top: -10px;
+        }
+
+        #rel-5 {
+            bottom: 30px;
+            left: 80px;
+        }
+
+        #rel-6 {
+            bottom: 150px;
+            left: 170px;
+        }
+
+        /*Absolute: ignora o fluxo do documento, podendo ser posicionado em qualquer parte do site sem sobrepor os elementos. O espaço utilizado é ignorado pelos outros elementos*/
+        /* Utiliza o elemento relativo pai mais próximo para considerar em relação a distância, caso contrário, o próprio body é utilizado*/
+        #absolute-pai {
+            position: relative;
+            width: 500px;
+            height: 300px;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        #abs-1 {
+            top: 0;
+        }
+
+        #abs-2 {
+            bottom: 0;
+        }
+
+        #abs-3 {
+            right: 0;
+        }
+
+        /* Fixed: permite fixar o elemento a tela, ignorando completamenta a página e seguindo o scroll do usuário */
+        .fixed {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            position: fixed;
+            background: aqua;
+            bottom: 0;
+            right: 0;
+        }
+
+        .fixed p {
+            padding-top: 15px;
+        }
+
+        /* Sticky: permite grudar o elemento em algum campo da tela após passar por ele, permanecendo naquele campo a partir da sua posição original. Obrigatório alguma das propriedades de posicionamento para funcionar*/
+        .sticky {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            
+        }
+
+        .sticky p {
+            padding-top: 35px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posicionamento dos Elementos</h1>
+    <ul>
+        <li><code>position: static;</code></li>
+        <li><code>position: relative;</code></li>
+        <li><code>position: absolute;</code></li>
+        <li><code>position: fixed;</code></li>
+        <li><code>position: sticky;</code></li>
+    </ul>
+    <h2>Static</h2>
+
+    <div class="exemplo inline">Elemento 01</div>
+    <div class="exemplo inline">Elemento 02</div>
+    <div class="exemplo inline">Elemento 03</div>
+
+    <hr>
+
+    <div class="exemplo">Elemento A</div>
+    <div class="exemplo">Elemento B</div>
+    <div class="exemplo">Elemento C</div>
+
+    <h2>Relative</h2>
+    <div id="rel-1" class="exemplo relative">Elemento 01</div>
+    <div id="rel-2" class="exemplo relative">Elemento 02</div>
+    <div id="rel-3" class="exemplo relative">Elemento 03</div>
+    
+    <div id="rel-4" class="exemplo relative">
+        Elemento A
+        <div id="rel-5" class="exemplo relative">Elemento B</div>
+        <div id="rel-6" class="exemplo relative">Elemento C</div>
+    </div>
+
+    <h2>Absolute</h2>
+    <div id="absolute-pai">
+        <div id="abs-1" class="exemplo absolute">Elemento 01</div>
+        <div id="abs-2" class="exemplo absolute">Elemento 02</div>
+        <div id="abs-3" class="exemplo absolute">Elemento 03</div>
+    </div>
+    
+    <h2>Fixed</h2>
+    <br>
+    <div class="fixed"><p>Elemento Flutuante</p></div>
+    <br>
+    <h2>Sticky</h2>
+    <div class="sticky"><p>Elemento Grudento</p></div>
+    <p style="margin-top: 1000px;">Olá</p>
+</body>
+</html>

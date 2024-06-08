@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Display</title>
+    
+    <style>
+        /* Display: Modo de exibição do elemento, block, inline, inline-block, none, flex, grid */
+
+        /* Valores adicionais padrão de propriedades CSS, list-item, inline-table, table, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group, inline-flex, inline-grid, run-in, flow-root, contents */
+
+        /* Ocupam espaços de largura inteira no navegador, colocando elementos abaixo do outro. Valor padrao de algumas marcações como grouping tags, divs, títulos, parágrafos e etc.*/
+        .block {
+            display: block;
+            background-color: aqua;
+        }
+
+        /*Ocupam o espaço necessário de seu conteúdo apenas, ignorando propriedades como width e height. São exemplos de marcações, spans, tags de estilo negrito, itálico e etc.*/
+        /*Margin ou padding aplicam um espaçamento horizontal apenas, não interferindo em outras linhas do conteúdo*/
+        .inline {
+            display: inline;
+            background-color: blueviolet;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Possui as propriedades de ambos os displays, ocupando os espaços do conteúdo apenas, só que agora com a capacidade de definir as propriedades width e height, margin e padding verticais.*/
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            background-color: brown;
+        }
+
+        /* Esconde os elementos na página, removendo o espaço ocupado*/
+        .none {
+            display: none;
+            background: red;
+        }
+
+        /* Outra propriedade utilizada para esconder elementos, porém ainda mantendo o espaço que ocupa reservado */
+        .hidden {
+            background: red;
+            visibility: hidden;
+        }
+
+        /*Alinhamento de elementos inline*/
+        .container {
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        /* Alinhamento vertical de elementos, top-bottom, middle, baseline, text-bottom, text-top, super, sub */
+        #i1 {
+            width: 30px;
+            vertical-align: top;
+        }
+
+        #i2 {
+            vertical-align: bottom;
+        }
+
+        #i3 {
+            vertical-align: sub;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade Display</h1>
+    <p>Determinará como as caixas retangulares irão se comportar na hora de serem exibidas</p>
+
+    <h2>Exemplos</h2>
+
+    <code>display: block;</code> 
+    <br>
+    <div class="block">Div 01</div>
+    <p class="block">Parágrafo 01</p>
+    <span class="block">Span 01</span>
+
+    <code>display: inline;</code> 
+    <br>
+    <br>
+    <div class="inline">Div 02</div>
+    <p class="inline">Parágrafo 02</p>
+    <span class="inline">Span 02</span> 
+    <br>
+    <p>Lorem ipsum <span class="inline">dolor</span>, sit amet consectetur adipisicing elit. Perferendis, corporis provident! Enim, voluptatem magnam illum odit tempore exercitationem voluptas vero est iste blanditiis illo ratione? Tempore maxime assumenda quisquam nihil.</p>
+
+    <code>display: inline-block;</code>
+    <br>
+    <div class="inline-block">Div 03</div>
+    <p class="inline-block">Parágrafo 03</p>
+    <span class="inline-block">Span 03</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet <span class="inline-block">assumenda accusamus</span> beatae velit quisquam sint amet</p> 
+    <br>
+
+    <code>display: none;</code> 
+    <br>
+    <div class="none">
+        Div 04
+        <p>Elemento filho</p>
+    </div>
+    <p>Parágrafo 04</p>
+    <span class="none">Span 04</span>
+
+    <h2>Display: none vs visibility: hidden</h2>
+    <code>display: none;</code>
+    <br> <br>
+    <div style="background: red;">Item 01</div>
+    <div class="none">Item 02</div>
+    <div style="background: red;">Item 03</div>
+
+    <code>visibility: hidden;</code>
+    <br> <br>
+    <div style="background: red;">Item 01</div>
+    <div class="hidden">Item 02</div>
+    <div style="background: red;">Item 03</div>
+
+    <h2>Alinhamento de Blocos Inline</h2>
+    <div class="container">
+        <img id="i1" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*f9t1eeISadHhjK5QYejJBg.png" alt="Logo css3">
+        <span id="i2" class="exemplo">Item 02</span>
+        <span id="i3" class="exemplo">Item 03</span>
+    </div>
+</body>
+</html>
