@@ -6,7 +6,7 @@ Veja também esse meu repositório contendo diversos desafios resolucionados e r
 <br>
 O foco deste módulo é apenas entender as principais tags HTML e a estruturação de um site, logo não terá muitas interações com CSS ou páginas responsivas.
 <br>
-Para visualizar modelos de sites, veja a branch **Javascript** com [GitHub Pages](https://gabryel-barboza.github.io/DIO/).
+Para visualizar modelos de sites, veja a branch **JavaScript** com [GitHub Pages](https://gabryel-barboza.github.io/DIO/).
 <hr>
 
 ## Primeiros passos com HTML 👶
