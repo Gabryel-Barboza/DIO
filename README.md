@@ -2,7 +2,7 @@
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos. <br>
 Módulo com o foco na estilização dos documentos HTML, utilizando o **CSS**.
-Para ver as páginas construídas, entre na **branch JavaScript** e acesse o GitHub Pages descrito no README.
+Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [GitHub Pages](https://gabryel-barboza.github.io/DIO/) descrito no README.
 
 ## Desafios 💯
 * [Primeira Landing Page](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Primeira%20Landing%20Page)
