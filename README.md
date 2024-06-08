@@ -5,9 +5,9 @@ Módulo com o foco em desenvolver a interatividade de sites com JavaScript. Veja
 Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabryel-barboza.github.io/DIO/) deste repositório.
 
 ## Desafios HTML 📄
-* [HTML Inicial](https://github.com/Gabryel-Barboza/DIO/blob/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/html_inicial.html)
-* [Clínica Médica](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/clinica_medica/index.html)
-* [Wikipédia](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/wikipedia/index.html)
+* [HTML Inicial](https://gabryel-barboza.github.io/DIO/blob/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/html_inicial.html)
+* [Clínica Médica](https://gabryel-barboza.github.io/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/clinica_medica/index.html)
+* [Wikipédia](https:/gabryel-barboza.github.io/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_HTML/wikipedia/index.html)
 
 ## Desafios CSS 🆒
 * [Primeira Landing Page](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Desafios/Desafios_CSS/Primeira%20Landing%20Page)
