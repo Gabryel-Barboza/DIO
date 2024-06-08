@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica ➕Saúde</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" rel="prev">Página Principal</a></li>
+                <li><a href="horario_atendimento.html" rel="next">Horário de Atendimento</a></li>
+                <li><a href="sobre_a_clinica.html" rel="next">Sobre Nós</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header" style="background-image: url('https://www.shutterstock.com/image-photo/soft-blurred-image-decoration-work-600nw-1734381146.jpg'); background-repeat: no-repeat; background-position: center;">
+            </div>
+            <div class="content">
+                <h1>Contatos</h1>
+                <p>Celular: (15) 9422-8922</p>
+                <p>Whatsapp: (15) 9110-9999</p>
+                <p>Endereço: Rua Iguatemi Itaim Bibi São Paulo SP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7313.1292078160695!2d-46.68643960717278!3d-23.584075945005644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5742bc832a29%3A0xa9323f13433864db!2sItaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1717195591979!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <hr />
+                <form name="informacao_contato" action="#" method="POST" onsubmit="alert('Formulário enviado!')" target="_blank">
+                    <fieldset>
+                        <legend>Informações de Contato</legend>
+                        <label for="nome">Nome: </label> <input name="nome" type="text"> <br />
+                        <label for="email">Email: </label> <input name="email" type="email"> <br />
+                        <label for="assunto"></label>Assunto: <input name="assunto" type="text"> <br />
+                        <br />
+                        <label for="mensagem">Mensagem:</label> <br />
+                        <textarea name="mensagem"  cols="40" rows="10" placeholder="Escreva a sua mensagem de contato aqui. 'Olá, gostaria de entender como é o tratamento de calvice da clínica...'"></textarea>
+                        <br />
+                        <button type="reset"> Limpar Formulário</button> 
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="footer">
+                <p>Clínica <span>Mais Saúde</span> © 2024</p>
+                <p><address>Rua Iguatemi Itaim Bibi São Paulo SP</address></p>
+                <p>Site desenvolvido para a <a href="https://dio.me" target="_blank">DIO</a></p>
+                <p>Imagens retiradas do Google. Logotipo criada por Gabryel Barboza</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
