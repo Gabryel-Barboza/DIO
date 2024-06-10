@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+            background: palegreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .item {
+            background: orange;
+            margin: 10px;
+        }
+
+        /* Alinhamentos no eixo principal */
+        /* Alinha os items no começo do eixo principal, valor padrão*/
+        #container-1 {
+            justify-content: flex-start;
+        }
+
+        /* Alinha os items ao final do eixo principal */
+        #container-2 {
+            justify-content: flex-end;
+        }
+
+        /* Alinha os items ao centro do container flex */
+        #container-3 {
+            flex-flow: column nowrap;
+            height: 300px;
+            justify-content: center;
+        }
+
+        /* Alinha os items com espaçamento igual entre eles */
+        #container-4 {
+            justify-content: space-between;
+        }
+
+        /* Alinha os items com espaçamento entre eles e as bordas, metade para as bordas e igualmente entre os items */
+        #container-5 {
+            justify-content: space-around;
+        }
+
+        /* Alinha os items igualmente no espaçamento entre a borda e os items */
+        #container-6 {
+            justify-content: space-evenly;
+        }
+        /* Outros valores estão disponíveis, mas não muito compatíveis*/
+
+    </style>
+</head>
+<body>
+    <h1>Alinhamento de Items</h1>
+
+    <h2>Justify-Content - Eixo Principal</h2>
+    <code>justify-content: flex-start;</code>
+    <div id="container-1" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>justify-content: flex-end;</code>
+    <div id="container-2" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>justify-content: center;</code>
+    <div id="container-3" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>justify-content: space-between;</code>
+    <div id="container-4" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>justify-content: space-around;</code>
+    <div id="container-5" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>justify-content: space-evenly;</code>
+    <div id="container-6" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+</body>
+</html>

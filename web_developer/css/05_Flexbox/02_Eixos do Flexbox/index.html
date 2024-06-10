@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Flexbox</title>
+
+    <style>
+
+        /*O flexbox é dividido em dois eixos, o eixo principal e o eixo transversal ou cruzado. No eixo principal será definida a direção para organizar os items do container, em colunas ou linhas. O eixo transversal é perpendicular ao eixo principal*/
+
+        .container {
+            display: flex;
+            background: palegreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .item {
+            background: orange;
+            margin: 10px;
+        }
+
+        /*Organizando os items em linha, da esquerda para direta no padrão ocidental (ltr), valor padrão do flexbox*/
+        #container-1 {
+            flex-direction: row;
+        }   
+
+        /* Organizando os items em coluna, um abaixo do outro */
+        #container-2 {
+            flex-direction: column;
+        }
+
+        /* Organizando os items em linha, porém começando da direita para a esquerda no padrão Ocidental(ltr) */
+        #container-3 {
+            flex-direction: row-reverse;
+        }
+
+        /* Organizando os items em coluna, começando de baixo para cima */
+        #container-4 {
+            height: 300px;
+            flex-direction: column-reverse;
+        }
+
+        /* Propriedade de quebra de linha/coluna em casos de overflow do box 
+        nowrap: Não quebra, causando o overflow do conteúdo*/
+        #container-5 {
+            flex-wrap: nowrap;
+            width: 200px;
+        }
+
+        /* Quebra o conteúdo na direção ltr */
+        #container-6 {
+            flex-wrap: wrap;
+            width: 200px;
+        }
+
+        /* Quebra o conteúdo na direção rtl */
+        #container-7 {
+            flex-wrap: wrap-reverse;
+            width: 200px;
+        }
+
+        /* Shorthand flex-flow: direction wrap */
+        #container-8 {
+            flex-flow: column wrap-reverse;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eixos do Flexbox</h1>
+
+    <code>flex-direction: row;</code>
+    <div id="container-1" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <code>flex-direction: column;</code>
+    <div id="container-2" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <code>flex-direction: row-reverse;</code>
+    <div id="container-3" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <code>flex-direction: column-reverse;</code>
+    <div id="container-4" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <h2>Flex-wrap</h2>
+
+    <code>flex-wrap: nowrap;</code>
+    <div id="container-5" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <code>flex-wrap: wrap;</code>
+    <div id="container-6" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <code>flex-wrap: wrap-reverse;</code>
+    <div id="container-7" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+
+    <h2>Flex-flow</h2>
+    <p>Shorthand de flex-direction e flex-wrap</p>
+    <div id="container-8" class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+    </div>
+</body>
+</html>

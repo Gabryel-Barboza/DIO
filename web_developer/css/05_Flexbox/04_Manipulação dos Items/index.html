@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Flexbox</title>
+
+    <style>
+        /*Aplicando espaçamento entre items. O mesmo que margin em itens individuais.*/
+        .container {
+            display: flex;
+            background: palegreen;
+            padding: 20px;
+            margin: 10px;
+            row-gap: 10px;
+            column-gap: 10px;
+            }
+
+        /* Shorthand gap: row column */
+        .column {
+            flex-flow: column nowrap;
+            gap: 30px 10px;
+        }
+
+        .item {
+            background: orange;
+        }
+
+        /* Ordenando os flex-items. order: ordem de prioridade dos itens, valor padrão 0 */
+        #item-3 {
+            order: -1;
+        }
+
+        /* Aplicando a todos os itens */
+        .order {
+            order: 10;
+        }
+
+        #item-5 {
+            order: 1;
+        }
+
+        /* Aumentando o tamanho dos itens conforme o espaço do eixo principal, em proporção. É limitado pelo dimensionamento dos itens*/
+        .grow {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .column.grow {
+            height: 200px;
+            gap: 0;
+        }
+
+        .i-grow {
+            flex-grow: 1;
+        }
+
+        /* O espaço é o dobro dos outros itens */
+        #grow-2 {
+            flex-grow: 2;
+        }
+
+        /* Encolhendo elementos, mesmo funcionamento de flex-grow */
+        .shrink {
+            width: 300px;
+            max-height: 100px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        /* Valor padrão 1, 0 remove o shrink. É realizado o shrink respeitando a propriedade word-wrap e word-break*/
+        .i-shrink {
+            flex-shrink: 1;
+        }
+
+        /* Definindo o valor padrão para os itens, o tamanho inicial antes de aplicar o flex-grow, sobrescreve dimensões*/
+        /* Depende do flex-direction, para rows é largura e para columns é altura. Respeita o tamanho do conteúdo*/
+        /* 0: Desconsidera os espaços no item, auto: pega a dimensão padrão do conteúdo, min-content: pega o tamanho da maior palavra do conteúdo e aplica ao item, max-content: aplica o tamanho do conteúdo ao item, unidades de medida */
+        .basis {
+            flex-basis: 50px;
+        }
+
+        /* shorthand flex: grow shrink basis */
+        /* initial: 0 1 auto, auto: 1 1 auto, none: desativa */
+        .flex {
+            flex: 1 1 50px;
+        }
+
+        /* Aplicando um align-items de maneira individual*/
+
+        #self-2 {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Propriedade Gap</h2>
+    <div class="container">
+        <div class="item">Elemento 1</div>
+        <div class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+    </div>
+
+    <div class="container column">
+        <div class="item">Elemento 1</div>
+        <div class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+    </div>
+
+    <h2>Propriedade Order</h2>
+    <div class="container">
+        <div class="item order" id="item-1">Elemento 1</div>
+        <div class="item order" id="item-2">Elemento 2</div>
+        <div class="item order" id="item-3">Elemento 3</div>
+    </div>
+
+    <div class="container column">
+        <div class="item order" id="item-4">Elemento 1</div>
+        <div class="item order" id="item-5">Elemento 2</div>
+        <div class="item order" id="item-6">Elemento 3</div>
+    </div>
+
+    <h2>Propriedade Flex-grow</h2>
+    <div class="container grow">
+        <div class="item i-grow">Elemento 1</div>
+        <div class="item i-grow" id="grow-2">Elemento 2</div>
+        <div class="item i-grow">Elemento 3</div>
+    </div>
+
+    <div class="container column grow">
+        <div class="item i-grow">Dio</div>
+        <div class="item i-grow">Trilha CSS</div>
+        <div class="item i-grow">Bem Vindo</div>
+    </div>
+
+    <h2>Propriedade Flex-shrink</h2>
+    <div class="container shrink">
+        <div class="item i-shrin">Elemento 1</div>
+        <div class="item i-shrin" id="shrink-2">Elemento 2</div>
+        <div class="item i-shrink">Elemento 3</div>
+        <div class="item i-shrink">Elemento 4</div>
+        <div class="item i-shrink">Elemento 5</div>
+        <div class="item i-shrink">Elemento 6</div>
+    </div>
+
+    <div class="container column shrink">
+        <div class="item i-shrink">Dio</div>
+        <div class="item i-shrink">Trilha CSS</div>
+        <div class="item i-shrink">Bem Vindo</div>
+    </div>
+
+    <h2>Propriedade Flex-basis</h2>
+    <div class="container">
+        <div class="item basis">Elemento 1</div>
+        <div class="item basis">Elemento 2</div>
+        <div class="item basis">Elemento 3</div>
+    </div>
+
+    <div class="container column">
+        <div class="item basis">Elemento 1</div>
+        <div class="item basis">Elemento 2</div>
+        <div class="item basis">Elemento 3</div>
+    </div>
+
+    <h2>Shorthand Flex</h2>
+    <div class="container">
+        <div class="item flex">Elemento 1</div>
+        <div class="item flex">Elemento 2</div>
+        <div class="item flex">Elemento 3</div>
+    </div>
+
+    <div class="container column">
+        <div class="item flex">Elemento 1</div>
+        <div class="item flex">Elemento 2</div>
+        <div class="item flex">Elemento 3</div>
+    </div>
+
+    <h2>Propriedade Align-self</h2>
+    <div class="container">
+        <div class="item self">Elemento 1</div>
+        <div class="item self" id="self-1">Elemento 2</div>
+        <div class="item self">Elemento 3</div>
+    </div>
+
+    <div class="container column">
+        <div class="item self">Elemento 1</div>
+        <div class="item self" id="self-2">Elemento 2</div>
+        <div class="item self">Elemento 3</div>
+    </div>
+</body>
+</html>

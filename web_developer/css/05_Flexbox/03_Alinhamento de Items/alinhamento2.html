@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            background: palegreen;
+            height: 300px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .item {
+            background: orange;
+            margin: 10px;
+        }
+
+        /* Alinhamentos no eixo transversal */
+        /* Diferente de justify-content, pois o alinhamento é feito no eixo principal. Nesse caso os items estão alinhados ao centro da div pois o eixo principal é para baixo*/
+
+        /* Alinha os items esticando até o final do container, é ignorado quando aplicada dimensões width e heigth no item. Valor padrão*/
+        #container-1 {
+            align-items: stretch;
+        }
+
+        /* Alinha os items ao inicio do eixo transversal */
+        #container-2 {
+            align-items: flex-start;
+        }
+
+        /* Alinha ao fim do eixo transversal*/
+        #container-3 {
+            align-items: flex-end;
+        }
+
+        /* Alinha ao centro do eixo transversal */
+        #container-4 {
+            align-items: center;
+        }
+
+        /* Alinha com relação a base do texto */
+        #container-5 {
+            flex-direction: row;
+            align-items: baseline;
+        }
+        
+        #container-5 .item {
+            padding: 20px;
+        }
+
+        /* Outros valores estão disponíveis, mas com a mesma questão de  compatibilidade*/
+    </style>
+</head>
+<body>
+    <h1>Alinhamento de Items</h1>
+
+    <h2>Align-Items - Eixo Transversal</h2>
+    <code>align-items: stretch;</code>
+    <div id="container-1" class="container">
+        <div class="item">Item 1</div>
+        <div class="item" style="width: 40px;">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>align-items: flex-start;</code>
+    <div id="container-2" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>align-items: flex-end;</code>
+    <div id="container-3" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <code>align-items: center;</code>
+    <div id="container-4" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+
+    <code>align-items: baseline;</code>
+    <div id="container-5" class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

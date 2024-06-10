@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox no CSS</title>
+
+    <style>
+        /*Flexbox é uma propriedade display do CSS que possui uma ampla quantidade de outras propriedades para manipular seu comportamento*/
+        /* O seu funcionamento consiste na criação de um container dentro do HTML e da manipulação dos items dentro desse container (Flexible box module)*/
+        /* É definido em apenas uma dimensão, podendo ser colunas ou linhas a disposição dos items do container */
+
+        /*Os items são redimensionados para caber dentro do container*/
+        .container {
+            background: palegreen;
+            padding: 20px;
+
+            display: flex;
+        }
+
+        /* Ocupa apenas o espaço necessário para os items */
+        .container-inline {
+            background: palegreen;
+            padding: 20px;
+            display: inline-flex;
+        }
+
+        .item {
+            background: orange;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+
+    <code>display: Inline-flex;</code> <br>
+    <div class="container-inline">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+</body>
+</html>
