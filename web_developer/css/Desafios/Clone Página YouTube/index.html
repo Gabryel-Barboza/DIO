@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/ae4ecf92/img/favicon.ico" type="image/x-icon">
+    <!--Estilos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+    <header>
+        <!--Menu de navegação, logo, campo de busca, botões perfil-->
+        <nav>
+            <button id="menu-hamburguer" type="menu"></button>
+            <a href="#" rel="external">
+                <img src="assets/imagens/youtube 1.png" alt="Logo do YouTube">
+            </a>
+        </nav>
+
+        <div id="campo-buscar" class="botoes-head">
+            <input id="texto-busca" type="text">
+            <button id="buscar"></button>
+        </div>
+
+        <div id="botoes-perfil" class="botoes-head">
+            <button id="upload-video"></button>
+            <button id="notificacoes"></button>
+            <button id="perfil-usuario"></button>
+        </div>
+    </header>
+
+    <main>
+        <!--Video, título, canal, botão, avaliação, compartilhar, baixar, visualizações e data, descrição-->
+        <section id="campo-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0IY5TJwAbcQ?si=w7hEkBzYLAemC0Xn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <h1 id="titulo-video">Live Coding - Multiverso Spider-Man: Criando um site com HTML, CSS e JavaScript - Parte 2</h1>
+
+            <div id="sobre-canal">
+                <a href="#" rel="external">
+                    <img id="imagem-canal" src="#" alt="">
+                </a>
+                <a id="canal" href="#" rel="external">DIO</a>
+                <p id="inscritos">109 mil inscritos</p>
+            </div>
+
+            <button id="inscrever">Inscreva-se</button>
+
+            <div id="avaliar" class="botoes-video">
+                <button id="like">504</button>
+                <button id="deslike"></button>
+            </div>
+
+            <button id="compartilhar" class="botoes-video">Compartilhar</button>
+            <button id="download" class="botoes-video">Download</button>
+
+            <div id="sobre-video">
+                <div id="estatistica-video">
+                    <p id="visualizacao">7 mil visualizações</p>
+                    <p id="data">Transmitido há 2 anos</p>
+                    <p id="tags">#dio #spiderman #programação</p>
+                </div>
+                <p id="descricao">
+                    👨‍💻 Domine as tecnologias aplicadas nos projetos mais inovadores do Mundo! Venha para DIO: <a href="https://bit.ly/dioytlivecoding">https://bit.ly/dioytlivecoding</a>
+
+                    ✅ Inscreva-se no nosso canal e ative as notificações para não perder conteúdos como esse: <a href="https://bit.ly/ytsubdio">https://bit.ly/ytsubdio</a>
+                    ____________________________________________
+                </p>
+            </div>
+        </section>
+        
+        <!--Imagem, título, canal, visualizações, data-->
+        <aside id="recomendacoes-video">
+            <div class="rec-video">
+                <img class="sobre-rec" src="" alt="">
+                <h2 class="sobre-rec"></h2>
+                <p class="sobre-rec"></p>
+                <p class="sobre-rec"></p>
+                <p class="sobre-rec"></p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
