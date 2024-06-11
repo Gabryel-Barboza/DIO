@@ -6,6 +6,7 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 
 ## Desafios 💯
 * [Primeira Landing Page](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Primeira%20Landing%20Page)
+* [Clone Página YouTube](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Página%20YouTube)
   
 ## Fundamentos do CSS 👶
 * [Declarações CSS](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/01_Fundamentos/01_Declarações%20CSS)
@@ -25,3 +26,13 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 ## Unidades de Medida 🔢
 * [Medidas Absolutas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/03_Unidades%20de%20Medida/Unidades%20Absolutas)
 * [Medidas Relativas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/03_Unidades%20de%20Medida/Unidades%20Relativas)
+
+## Posicionamento e Exibição 🚩
+* [Display](https://github.com/Gabryel-Barboza/DIO/blob/CSS/web_developer/css/04_Posicionamento%20e%20Exibição/Display/)
+* [Position](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/04_Posicionamento%20e%20Exibição/Position)
+
+## Flexbox 🎴
+* [Introdução](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/01_Introdução)
+* [Eixos do Flexbox](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/02_Eixos%20do%20Flexbox)
+* [Alinhamento de Itens](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/03_Alinhamento%20de%20Items)
+* [Manipulação dos Itens](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/04_Manipulação%20dos%20Items)
