@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+    width: 98vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.5rem;
+    padding-bottom: 4px;
+    margin: 0.5rem 1rem 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.164);
+}
+
+header nav {
+    display: inline-block;
+    min-height: 30px;
+}
+
+.nav {
+    vertical-align: middle;
+    margin: 5px;
+}
+
+#menu-hamburguer {
+    cursor: pointer;
+    background: url('../imagens/menu.png') 100%/cover no-repeat scroll content-box content-box transparent;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    margin-right: 1.5em;
+    border: 0;
+}
+
+#campo-buscar {
+    cursor: context-menu;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+
+#texto-busca {
+    min-width: 25em;
+    padding: 6px;
+    border: 1px solid gray;
+    border-radius: 3px 0 0 3px;
+}
+
+#botao-buscar {
+    cursor: pointer;
+    background: url('../imagens/search.png') center/1.30rem no-repeat scroll transparent;
+    border: 1px solid gray;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    padding: 15px;
+}
+
+#botoes-perfil {
+    vertical-align: middle;
+}
+
+#upload-video {
+    cursor: pointer;
+    background: url('../imagens/video.png') center/100% no-repeat;
+    padding: 0.6em;
+    margin-right: 1.2em;
+    border: 0;
+}
+
+#notificacoes {
+    cursor: pointer;
+    background: url('../imagens/bell.png') center/100% no-repeat;
+    padding: 0.6em;
+    margin-right: 1.2em;
+    border: 0;
+}
+
+#perfil-usuario {
+    cursor: pointer;
+    background: url('https://yt3.ggpht.com/yti/ANjgQV9Ig5v7IBe0SVoHXC_Ibv126cWJGR7kmpOkK0YL_8hjZQA=s88-c-k-c0x00ffffff-no-rj') center/100% scroll no-repeat;
+    padding: 1.2em;
+    border: 1px solid rgba(128, 128, 128, 0.342);
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    max-width: 90%;
+    margin: 1.9em auto;
+}
+
+#campo-video {
+    max-width: 68%;
+}
+
+#video {
+    width: 100%;
+    height: 27em;
+}
+
+#video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#titulo-video {
+    font-size: 1.2rem;
+}
+
+#detalhes {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 auto;
+    align-items: center;
+}
+
+#perfil-canal {
+    display: inline-flex;
+    flex: 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+
+#sobre-canal {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#imagem-canal {
+    background: url('https://yt3.ggpht.com/yI1wflqa2uTsKtAOPj4f78hGjOSyp12uPt-OizVNK8sli7J4xJkx9DJxT1x6q_fTV_ckVYLtcb8=s48-c-k-c0x00ffffff-no-rj') center/100% scroll no-repeat;
+    padding: 1.3em;
+    border: 1px solid rgba(128, 128, 128, 0.342);
+    border-radius: 50%;
+}
+
+#canal {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#inscritos {
+    align-self: flex-end;
+    color: gray;
+    margin: 0;
+}
+
+#inscrever {
+    cursor: pointer;
+    background-color: red;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 1.5em;
+    border: 0;
+}
+
+#funcoes-video {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.3em;
+    font-weight: bold;
+    margin-left: 5em;
+}
+
+
+.botoes-video {
+    cursor: pointer;
+    vertical-align: middle;
+    background: center/100% no-repeat transparent;
+    padding: 10px;
+    border: 0;
+    margin-right: 1px;
+}
+
+#like {
+    background-image: url('../imagens/thumbs-up.png');
+}
+
+#deslike {
+    background-image: url('../imagens/Vector.png');
+}
+
+#compartilhar {
+    background-image: url('../imagens/share-2.png');
+}
+
+#download {
+    background-image: url('../imagens/download.png');
+}
+
+#estatistica-video {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    font-weight: bold;
+}
+
+#tags {
+    font-weight: normal;
+    color: gray;
+}
+
+#descricao {
+    margin-top: 0;
+    white-space: pre-line;
+}
+
+.rec-video {
+    cursor: pointer;
+    margin: 10px 0;
+}
