@@ -11,6 +11,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 
 ## Desafios CSS 🆒
 * [Primeira Landing Page](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Primeira%20Landing%20Page)
+* [Clone Página YouTube](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Página%20YouTube)
 
 ## Desafios JavaScript 💡
 
