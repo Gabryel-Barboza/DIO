@@ -13,15 +13,15 @@
     <header>
         <!--Menu de navegação, logo, campo de busca, botões perfil-->
         <nav>
-            <button id="menu-hamburguer" type="menu"></button>
-            <a href="#" rel="external">
-                <img src="assets/imagens/youtube 1.png" alt="Logo do YouTube">
+            <button id="menu-hamburguer" class="nav" type="menu"></button>
+            <a class="nav" href="https://www.youtube.com/" rel="external" target="_blank">
+                <img class="nav" src="assets/imagens/youtube 1.png" alt="Logo do YouTube">
             </a>
         </nav>
 
         <div id="campo-buscar" class="botoes-head">
-            <input id="texto-busca" type="text">
-            <button id="buscar"></button>
+            <input id="texto-busca" class="campo-buscar" type="text" placeholder="Pesquisar">
+            <button id="botao-buscar" class="campo-buscar"></button>
         </div>
 
         <div id="botoes-perfil" class="botoes-head">
@@ -34,27 +34,41 @@
     <main>
         <!--Video, título, canal, botão, avaliação, compartilhar, baixar, visualizações e data, descrição-->
         <section id="campo-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0IY5TJwAbcQ?si=w7hEkBzYLAemC0Xn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="video">
+                <iframe src="https://www.youtube.com/embed/0IY5TJwAbcQ?si=w7hEkBzYLAemC0Xn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             
             <h1 id="titulo-video">Live Coding - Multiverso Spider-Man: Criando um site com HTML, CSS e JavaScript - Parte 2</h1>
 
-            <div id="sobre-canal">
-                <a href="#" rel="external">
-                    <img id="imagem-canal" src="#" alt="">
-                </a>
-                <a id="canal" href="#" rel="external">DIO</a>
-                <p id="inscritos">109 mil inscritos</p>
+            <div id="detalhes">
+                <div id="perfil-canal">
+                    <a href="https://www.youtube.com/@diomakethechange" rel="external" target="_blank">
+                        <img id="imagem-canal" class="sobre-canal" src="#" alt="">
+                    </a>
+                    <div id="sobre-canal">
+                        <a id="canal" class="sobre-canal" href="https://www.youtube.com/@diomakethechange" rel="external" target="_blank">DIO</a>
+                        <p id="inscritos" class="sobre-canal">109 mil inscritos</p>
+                    </div>
+                    <button id="inscrever">Inscreva-se</button>
+                </div>
+                <div id="funcoes-video">
+                    <div id="campo-like" class="funcoes-video">
+                        <button id="like" class="botoes-video"></button>
+                        504
+                    </div>
+                    <div id="campo-deslike" class="funcoes-video">
+                        <button id="deslike" class="botoes-video"></button>
+                    </div>
+                    <div id="campo-compartilhar" class="funcoes-video">
+                        <button id="compartilhar" class="botoes-video"></button>
+                        Compartilhar
+                    </div>
+                    <div id="campo-download"  class="funcoes-video">
+                        <button id="download" class="botoes-video"></button>
+                        Download
+                    </div>
+                </div>
             </div>
-
-            <button id="inscrever">Inscreva-se</button>
-
-            <div id="avaliar" class="botoes-video">
-                <button id="like">504</button>
-                <button id="deslike"></button>
-            </div>
-
-            <button id="compartilhar" class="botoes-video">Compartilhar</button>
-            <button id="download" class="botoes-video">Download</button>
 
             <div id="sobre-video">
                 <div id="estatistica-video">
@@ -63,9 +77,9 @@
                     <p id="tags">#dio #spiderman #programação</p>
                 </div>
                 <p id="descricao">
-                    👨‍💻 Domine as tecnologias aplicadas nos projetos mais inovadores do Mundo! Venha para DIO: <a href="https://bit.ly/dioytlivecoding">https://bit.ly/dioytlivecoding</a>
+                    👨‍💻 Domine as tecnologias aplicadas nos projetos mais inovadores do Mundo! Venha para DIO: <a href="https://bit.ly/dioytlivecoding" rel="external" target="_blank">https://bit.ly/dioytlivecoding</a>
 
-                    ✅ Inscreva-se no nosso canal e ative as notificações para não perder conteúdos como esse: <a href="https://bit.ly/ytsubdio">https://bit.ly/ytsubdio</a>
+                    ✅ Inscreva-se no nosso canal e ative as notificações para não perder conteúdos como esse: <a href="https://bit.ly/ytsubdio" rel="external" target="_blank">https://bit.ly/ytsubdio</a>
                     ____________________________________________
                 </p>
             </div>
@@ -74,11 +88,31 @@
         <!--Imagem, título, canal, visualizações, data-->
         <aside id="recomendacoes-video">
             <div class="rec-video">
-                <img class="sobre-rec" src="" alt="">
-                <h2 class="sobre-rec"></h2>
-                <p class="sobre-rec"></p>
-                <p class="sobre-rec"></p>
-                <p class="sobre-rec"></p>
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video.png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (1).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (2).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (3).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (4).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video.png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (1).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (2).png" alt="">
+            </div>
+            <div class="rec-video">
+                <img class="sobre-rec" src="assets/imagens/thumbs/Video (3).png" alt="">
             </div>
         </aside>
     </main>
