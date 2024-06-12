@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout com CSS</title>
+
+    <style>
+        /*Terminologias:
+        grid container: bloco ou elemento pai; 
+        grid item: elementos filhos direto do grid container;
+        grid columns: colunas de grid items;
+        grid rows: linhas de grid items;
+        grid gaps: espaçamento entre os grid items
+        grid lines: linhas divisórias entre grid items, dentro do gap. São divididas em column lines e row lines
+        grid cell: células com o conteúdo do grid item*/
+
+        /* CSS Grid
+        Por padrão é apenas uma coluna e os elementos em linha. Veja o bloco no dev-tools para enxergar as grid lines*/
+        .container {
+            display: grid;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background-color: palegreen;
+        }
+
+        /* Trabalha com blocos inline */
+        .inline {
+            display: inline-grid;
+        }
+
+        #item-1 {
+            background-color: lightgreen;
+        }
+
+        #item-2 {
+            background-color: lightcoral;
+        }
+
+        #item-3 {
+            background-color: lightblue;
+        }
+
+        #item-4 {
+            background-color: orange;
+        }
+
+        #item-5 {
+            background-color: lightcyan;
+        }
+
+        #item-6 {
+            background-color: aquamarine;
+        }
+
+        #item-7 {
+            background-color: lightsalmon;
+        }
+
+        /* Grid template, definindo as colunas e linhas
+        grid-template-columns: define o tamanho com unidades de medida e a quantidade de colunas pela contagem das unidades de medida utilizadas.
+        grid-template-rows: define o tamanho e quantidade de linhas padrão. Novas linhas são adicionadas automaticamente ao encher as demais.
+        min-content: define o tamanho pela maior palavra no conteúdo disponível; max-content: define o tamanho pelo maior conteúdo*/
+        .template{
+            background: yellow;
+            grid-template-columns: max-content 300px min-content;
+            grid-template-rows: 200px 200px;
+        }
+
+        .template .item {
+            border: 1px solid black;
+        }
+
+        /*Utilizando a unidade de medida "fr". Está disponível com o CSS Grid e representa uma fração do espaço disponível, dividindo igualmente entre todas as colunas ou linhas
+        Para as linhas a fração será determinada pela altura do conteúdo, enquanto as colunas pela largura da página ou do elemento*/
+        .fr {
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 500px;
+        }
+
+        /* Utilizando o repeat para automatizar a criação de novos blocos, é repetido o comando inserido.
+        Pode-se mesclar os valores, criando manualmente alguns blocos e automatizando outros*/
+        /* Repete a criação de 2 colunas 5 vezes; 
+        Cria uma linha manualmente, repete a criação de duas e cria outra linha manualmente*/
+        .repeat {
+            grid-template-columns: repeat(5, 1fr 1fr);
+            grid-template-rows: 50px repeat(2, 1fr) 50px;
+            height: 300px;
+        }
+
+        /* Utilizando palavras chave com o repeat
+        auto-fill, preenche o máximo de blocos dentro do espaço disponível com o tamanho especificado;*/
+        .repeat2 {
+            grid-template-columns: repeat(auto-fill, 100px);
+        }
+
+        /*auto-fit: não aloca o espaço quando não se tem elementos para preencher, veja no dev-tools a comparação*/
+        .repeat3 {
+            grid-template-columns: repeat(auto-fit, 100px);
+            grid-template-rows: repeat(auto-fit, 100px);
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid layout</h1>
+    <div class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+    </div>
+
+    <h2>Inline-grid</h2>
+    <div class="container inline">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+    </div>
+
+    <h2>Linhas e colunas</h2>
+    <div class="container template">
+        <div id="item-1" class="item">Item 01</div>
+        <div id="item-2" class="item">Item 02</div>
+        <div id="item-3" class="item">Item 03</div>
+        <div id="item-4" class="item">Item 04</div>
+        <div id="item-5" class="item">Item 05</div>
+        <div id="item-6" class="item">Item 06</div>
+        <div id="item-7" class="item">Item 07</div>
+    </div>
+
+    <h2>Unidade de Medida "fr"</h2>
+    <div class="container template fr">
+        <div id="fr-1" class="item">Item 01</div>
+        <div id="fr-2" class="item">Item 02</div>
+        <div id="fr-3" class="item">Item 03</div>
+        <div id="fr-4" class="item">Item 04</div>
+        <div id="fr-5" class="item">Item 05</div>
+        <div id="fr-6" class="item">Item 06</div>
+        <div id="fr-7" class="item">Item 07</div>
+    </div>
+
+    <h2>Repeat</h2>
+    <div class="container template repeat">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+        <div class="item">Item 06</div>
+        <div class="item">Item 07</div>
+        <div class="item">Item 08</div>
+        <div class="item">Item 09</div>
+        <div class="item">Item 10</div>
+    </div>
+
+    <code><strong>auto-fill</strong></code>
+    <div class="container template repeat2">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+        <div class="item">Item 06</div>
+        <div class="item">Item 07</div>
+        <div class="item">Item 08</div>
+        <div class="item">Item 09</div>
+        <div class="item">Item 10</div>
+    </div>
+
+    <code><strong>auto-fit</strong></code>
+    <div class="container template repeat3">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+        <div class="item">Item 04</div>
+        <div class="item">Item 05</div>
+        <div class="item">Item 06</div>
+        <div class="item">Item 07</div>
+    </div>
+
+    
+</body>
+</html>
