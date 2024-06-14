@@ -36,3 +36,9 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Eixos do Flexbox](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/02_Eixos%20do%20Flexbox)
 * [Alinhamento de Itens](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/03_Alinhamento%20de%20Items)
 * [Manipulação dos Itens](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/05_Flexbox/04_Manipulação%20dos%20Items)
+
+## Grid Layout ♊
+* [Grid Template](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Template)
+* [Grid Lines e Grid Position](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Lines%20e%20Position)
+* [Grid Areas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Area)
+* [Grid Align](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Align)
