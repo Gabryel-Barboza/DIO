@@ -7,6 +7,7 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 ## Desafios 💯
 * [Primeira Landing Page](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Primeira%20Landing%20Page)
 * [Clone Página YouTube](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Página%20YouTube)
+* [Clone Listagem YouTube](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Listagem%20do%20Youtube)
   
 ## Fundamentos do CSS 👶
 * [Declarações CSS](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/01_Fundamentos/01_Declarações%20CSS)
