@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout com CSS</title>
+
+    <style>
+        /* Criando o layout do site com grid e nomeando areas
+        grid-template-areas: row"" row"" row"", onde cada row vai possuir as colunas separadas por espaço.
+        No site, a primeira linha inteira é o header, na segunda linha temos 2 colunas para o main, uma coluna vazia com . e uma coluna sidebar, na terceira linha inteira é o footer*/
+        body {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background-color: orange;
+        }
+
+        main {
+            grid-area: main;
+            background-color: deepskyblue;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: lightcoral;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: yellowgreen;
+        }
+
+        /* Shorthand grid-template:
+        grid-template-rows / grid-template-columns grid-template-areas*/
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        main
+    </main>
+    <aside>
+        sidebar
+
+    </aside>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

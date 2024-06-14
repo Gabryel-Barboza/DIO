@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout com CSS</title>
+
+    <style>
+        /* Aplicando espaçamento nas grid lines, shorthand gap: row column, mantém o espaçamento nas primeiras e ultimas grid lines, permanecendo grudado ao container*/
+        .container {
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+            gap: 10px 10px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        #gap-1 {
+            background-color: blue;
+        }
+        #gap-2 {
+            background-color: red;
+        }
+        #gap-3 {
+            background-color: orange;
+        }
+        #gap-4 {
+            background-color: green;
+        }
+        #gap-5 {
+            background-color: pink;
+        }
+        #gap-6 {
+            background-color: yellow;
+        }
+        #gap-7 {
+            background-color: cyan;
+        }
+        #gap-8 {
+            background-color: purple;
+        }
+        #gap-9 {
+            background-color: brown;
+        }
+
+        /* Shorthand grid: grid-areas | grid-rows - rows auto-flow auto-rows / grid-columns */
+        .grid {
+            display: grid;
+            grid: "header header header" 100px "main main ." 100px "footer footer footer" 100px;
+            gap: 1px;
+        }
+
+        .item {
+            background-color: aquamarine;
+        }
+
+        /* Alinhamentos do grid
+        justify-items: alinhamento horizontal - stretch start center end, align-items: alinhamento vertical - mesmos valores*/
+
+        /* Shorthand place-items: align justify*/
+
+        /* justify-content e align-content alinham nos eixos respectivamente, os items dentro do container; para o valor relativo fr não é possivel visualizar o alinhamento pois é ocupado todo espaço. Valores: stretch start left right end center space-around space-between space-evenly
+        Shorthand place-content: align justify*/
+
+        /* Veja no dev tools o grid dentro do container*/
+        .align {
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+
+            justify-items: center;
+            align-items: center;
+
+            place-items: center end;
+
+            justify-content: space-around;
+            align-content: center;
+
+            place-content: center space-around;
+        }
+
+        .align .item {
+            border: 1px solid black;
+        }
+
+        /* Alinhamento individual com justify/align-self ou shorthand place-self: align justify*/
+        #self-3 {
+            justify-self: right;
+            align-self: center;
+        }
+
+        #self-5 {
+            place-self: end center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades do Grid</h1>
+    <p>Veja no dev tools o grid.</p>
+    <h2>Gap</h2>
+    <div class="container">
+        <div id="gap-1" class="item"></div>
+        <div id="gap-2" class="item"></div>
+        <div id="gap-3" class="item"></div>
+        <div id="gap-4" class="item"></div>
+        <div id="gap-5" class="item"></div>
+        <div id="gap-6" class="item"></div>
+        <div id="gap-7" class="item"></div>
+        <div id="gap-8" class="item"></div>
+        <div id="gap-9" class="item"></div>
+    </div>
+
+    <h2>Grid</h2>
+    <div class="grid">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>Alinhamentos</h2>
+    <div class="container align">
+        <div class="item">Elemento</div>
+        <div class="item">Elemento</div>
+        <div class="item">Elemento</div>
+        <div class="item">Elemento</div>
+        <div class="item">Elemento</div>
+        <div class="item">Elemento</div>
+    </div>
+    <br>
+    <div class="container self">
+        <div id="self-1" class="item">Elemento</div>
+        <div id="self-2" class="item">Elemento</div>
+        <div id="self-3" class="item">Elemento</div>
+        <div id="self-4" class="item">Elemento</div>
+        <div id="self-5" class="item">Elemento</div>
+        <div id="self-6" class="item">Elemento</div>
+    </div>
+</body>
+</html>

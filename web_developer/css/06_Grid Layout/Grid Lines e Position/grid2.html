@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout com CSS</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            background-color: yellow;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .item {
+            background-color: aquamarine;
+            padding: 5px;
+        }
+
+        /* Diferença entre grid explícito e implícito
+        As linhas definidas pela propriedade grid-template-rows são explicitas, enquanto as linhas criadas automaticamente por falta de espaço são implícitas. Linhas implícitas recebem, por padrão, o tamanho do conteúdo*/
+
+        /* Definindo esse comportamento de linhas implícitas grid-auto-rows: tamanho de linhas implícitas;
+        grid-auto-columns: tamanho de colunas implícitas;
+        grid-auto-flow: muda o comportamento de criação implícita, row (padrão), column, dense: aplica os elementos no espaço disponível, pode ignorar a ordem dos elementos*/
+        /* Impondo limites com o valor minmax, mínimo e máximo, aumenta o tamanho do item se o conteúdo for maior, auto: respeita o tamanho do conteúdo, expandindo o grid*/
+        .container {
+            grid-auto-rows: 100px;
+            grid-auto-columns: minmax(1fr, auto);
+            grid-auto-flow: column;
+        }
+
+        /* As grid lines são dividas em grid rows e grid columns, elas são selecionadas pela posição, se row a posição é contada de cima para baixo começando do 1, se column é contada da esquerda para direita começando do 1. Veja no dev tools as grid row lines e grid column lines*/
+
+        .position {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-auto-flow: row;
+            grid-auto-rows: 100px;
+        }
+
+        /*Posicionando um elemento no grid, defina a linha selecionada pelo número da linha*/
+        #pos-1 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            text-align: center;
+        }
+
+        /* valor span indica expansão, span 3 = expanda 3 colunas/linhas. Utilizado no lugar da posição da linha*/
+        #pos-2 {
+            grid-column-start: 1;
+            grid-column-end: span 3;
+            grid-row-start: 2;
+            grid-row-end: span 3;
+            text-align: center;
+        }
+
+        /* shorthand grid-column e grid-row 
+        start / end */
+        #pos-3 {
+            grid-column: 1 / span 3;
+            grid-row: 2 / span 2;
+        }
+
+        .selected {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 50px);
+        }
+
+        .i-selected {
+            background-color: blueviolet;
+        }
+
+        #pos-4 {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: red;
+            border: 1px solid gray;
+        }
+
+        /* Nomeando linhas do grid, nomeação através de colchetes antes do tamanho, não começando com numeros!*/
+        .nomeada {
+            grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr;
+            grid-template-rows: [row-1] 100px [row-2] 100px [row-3] 100px;
+        }
+
+        #pos-5 {
+            grid-column: col-2;
+            grid-row: row-1 / span 2;
+        }
+
+        /* shorthand, grid-row-start / grid-column-start / row-end / column-end */
+        #pos-6 {
+            grid-area: row-3 / col-2 / auto / span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Propriedades do Grid</h1>
+    <div class="container">
+        <div class="item">Elemento 1</div>
+        <div class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+        <div class="item">Elemento 4</div>
+        <div class="item">Elemento 5</div>
+        <div class="item">Elemento 6</div>
+        <div class="item">Elemento 7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, hic ipsum! Sunt reprehenderit dolores officiis adipisci consequatur repellat facere expedita odio laborum, doloremque incidunt molestias animi optio repudiandae doloribus assumenda.</div>
+    </div>
+
+    <h2>Posições do Grid</h2>
+    <code>grid-column-start/end | grid-row-start/end;</code>
+    <div class="container position">
+        <div id="pos-1" class="item">Elemento 1</div>
+    </div>
+
+    <code>span 3;</code>
+    <div class="container position">
+        <div id="pos-2" class="item">Elemento 2</div>
+    </div>
+
+    <code>grid-column | grid-row;</code>
+    <div class="container position">
+        <div id="pos-3" class="item">Elemento 3</div>
+    </div>
+
+    <div class="container position selected">
+        <div class="item i-selected">Elemento 1</div>
+        <div id="pos-4" class="item i-selected">Elemento 2</div>
+        <div class="item i-selected">Elemento 3</div>
+        <div class="item i-selected">Elemento 4</div>
+        <div class="item i-selected">Elemento 5</div>
+        <div class="item i-selected">Elemento 6</div>
+    </div>
+
+    <code>[nomes linhas];</code>
+    <div class="container position nomeada">
+        <div class="item">Elemento 1</div>
+        <div id="pos-5" class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+        <div class="item">Elemento 4</div>
+    </div>
+
+    <code>grid-area;</code>
+    <div class="container position nomeada">
+        <div class="item">Elemento 1</div>
+        <div id="pos-6" class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+        <div class="item">Elemento 4</div>
+    </div>
+
+</body>
+</html>
