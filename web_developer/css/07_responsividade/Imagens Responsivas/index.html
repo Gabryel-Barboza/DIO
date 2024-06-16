@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        code {
+            font-size: large;
+            font-weight: bold;
+        }
+        /* max-width > width, max-width para não distorcer uma imagem menor do que o tamanho do site */
+        img {
+            display: block;
+            max-width: 50%;
+        }
+
+        .image-container {
+            height: 800px;
+            background: url('imagens/css3.png') top/50% no-repeat;
+        }
+
+        @media screen and (max-width: 600px) {
+            .image-container {
+                background-image: url('imagens/css3_small.png');
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens Flexíveis</h1>
+    <code>img: 100%;</code>
+    <img src="imagens/css3.png" alt="" class="flexivel">
+    <!--Reduz o tamanho do arquivo carregado para o usuário, carregando arquivos menores para tamanhos de tela diferentes-->
+    <!--Funcionamento similar ao picture, porém menos consistente-->
+    <code>img srcset</code>
+    <img srcset="imagens/css3_small.png 480w, imagens/css3.png  1200w" sizes="(max-width: 600px) 480px, 1200px" src="imagens/css3.png" alt="">
+    <code>picture</code>
+    <picture>
+        <source srcset="imagens/css3_small.png" media="(max-width: 600px)" type="image/png">
+        <img src="imagens/css3.png" alt="Css3">
+    </picture>
+    <code>media query</code>
+    <div class="image-container"></div>
+</body>
+</html>

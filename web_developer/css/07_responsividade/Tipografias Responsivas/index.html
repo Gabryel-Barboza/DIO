@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        h1 {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 680px) {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Não utilizar apenas a medida vw, pois retira a possibilidade de personalizar a fonte pelo navegador */
+        p {
+            font-size: calc(1rem + 1vw);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipografia Responsiva</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore delectus eveniet obcaecati magni id. Sed molestiae incidunt magni magnam voluptate esse maiores in doloremque quod doloribus, explicabo ea illum amet.</p>
+    <p>Ipsum fugit eligendi adipisci accusantium sunt debitis magni assumenda, minus hic consequuntur illum quidem enim explicabo sed, non dolorem vitae ducimus quaerat fugiat totam et sequi iusto at. Quisquam, sit!</p>
+    <p>Aperiam dolores laborum aliquid minus unde perspiciatis eius asperiores, tenetur magni consequatur quibusdam non minima. Laudantium rerum aperiam tempore minima veritatis consequuntur exercitationem ad ducimus cupiditate, voluptas fugit vitae est!</p>
+</body>
+</html>

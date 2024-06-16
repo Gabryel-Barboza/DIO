@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        /* Layouts flexíveis com Grid */
+        body {
+            display: grid;
+            grid-template: 100px repeat(3, 300px) / repeat(4, 1fr);
+            grid-template-areas: "header header header header" "navbar main-content main-content main-content" "navbar content-1 content-2 content-3" "navbar footer footer footer";
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            grid-area: header;
+            background-color: lightblue;
+        }
+
+        header, nav, section, footer {
+            padding: 20px;
+        }
+
+        nav {
+            grid-area: navbar;
+            background-color: lightgreen;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        li a {
+            color: black;
+        }
+
+        .main-section-content {
+            grid-area: main-content;
+            background-color: lightsalmon;
+        }
+
+        .content-1 {
+            grid-area: content-1;
+            background-color: paleturquoise;
+        }
+
+        .content-2 {
+            grid-area: content-2;
+            background-color: papayawhip;
+        }
+
+        .content-3 {
+            grid-area: content-3;
+            background-color: plum;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Cabeçalho
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </nav>
+    <section class="main-section-content">
+        conteúdo
+    </section>
+    <section class="content-1">
+        Conteúdo 1
+    </section>
+    <section class="content-2">
+        Conteúdo 2
+    </section>
+    <section class="content-3">
+        Conteúdo 3
+    </section>
+    <footer>
+        Rodapé
+    </footer>
+</body>
+</html>

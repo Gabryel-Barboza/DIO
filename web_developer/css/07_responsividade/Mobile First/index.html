@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        /* Desenvolvendo sites com metodologia mobile first ou criação de layout mobile primeiro*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: lightseagreen;
+        }
+
+        nav {
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-flow: column;
+            gap: 15px;
+        }
+
+        nav li {
+            background-color: rgb(33, 168, 162);
+            padding: 2px;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-flow: column;
+            gap: 15px;
+        }
+
+        section ul {
+            list-style-position: inside;
+        }
+
+        #skills {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        #education {
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 600px) {
+            nav ul {
+                flex-flow: row;
+                justify-content: space-around;
+            }
+
+            nav li {
+                background-color: transparent;
+            }
+
+            main {
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            section {
+                flex-flow: row wrap;
+                align-content: flex-start;
+                gap: 10px;
+            }
+
+            section p {
+                max-width: 500px;
+                margin-top: 10px;
+            }
+
+            #skills, #education {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Meus trabalhos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gabryel Barboza</h1>
+        <section>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ad laborum eligendi nisi totam assumenda, ducimus dicta officiis. Vel numquam adipisci itaque ex dolorem fugiat doloribus ipsam dolorum soluta placeat.</p>
+                <p>Aut atque, harum explicabo unde ducimus quo delectus commodi corporis praesentium deserunt accusantium fugit minima, perferendis laborum sint distinctio vel ex modi magni laboriosam aperiam ipsam. Adipisci quod esse quae!</p>
+                <p>Quidem, porro debitis? Nobis expedita cumque iste. Rerum doloribus vel earum debitis accusantium, necessitatibus deserunt et dolorem voluptas aliquam temporibus excepturi iure tempore, qui expedita magnam sint omnis praesentium recusandae.</p>
+            </div>
+            <div id="skills">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+            <div id="education">
+                <ul>
+                    <li>Tecnólogo em Análise e Desenvolvimento de Sistemas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--meta tag de viewport aplica o redimensionamento da página para o tamanho do dispositivo, width= largura da página, initial-scale= zoom inicial, height= altura da página, minimum-scale= zoom mínimo, maximum-scale= zoom máximo, user-scalable=no desabilita o zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Técnica de Múltiplas colunas*/
+        .container {
+            column-count: 3;
+        }
+
+        /* Criando as colunas pelo tamanho da viewport, o tamanho mínimo é definido por column-width
+        column-rule cria uma borda divisória entre colunas
+        column-gap adiciona um espaçamento entre colunas*/
+        .width {
+            column-width: 200px;
+            column-rule: 1px solid black;
+            column-gap: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Layouts Flexíveis</h1>
+
+    <h2>Multiplas Colunas</h2>
+    <code>column-count;</code>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptate aut at fugit non hic aliquid consectetur? Quidem neque nostrum impedit rem natus est numquam unde iusto? Quasi, dicta! Reiciendis.
+        Ipsam ipsum repellat quis libero similique voluptatibus ullam numquam eligendi possimus, quasi adipisci ratione facilis ducimus omnis! Doloribus esse porro sequi quibusdam, et veniam quasi officiis illo alias quaerat voluptas!
+        Atque vitae est esse quas eaque dolores magni laudantium dolore, dolorum explicabo incidunt ea magnam veniam, excepturi exercitationem officia veritatis facilis hic repudiandae mollitia recusandae? Neque perferendis obcaecati vero architecto.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vero fugiat ipsam illo, modi quisquam dolorem, molestias velit labore soluta doloremque eveniet, consequatur facilis ea ullam. Eum eaque quia in.
+        Quidem mollitia, incidunt cumque sed nostrum saepe temporibus earum nulla reiciendis architecto dolorem eius laborum non. At sapiente, voluptas consequuntur ipsam voluptatem enim maiores autem repellendus voluptatum molestias pariatur! Dicta.
+        Eaque recusandae ipsam, laudantium, blanditiis sequi fuga dolorem quam ea quibusdam excepturi quidem deleniti! Cupiditate nisi quos, accusamus magnam tempore, expedita non aut eos aspernatur deleniti dolorum iste quae eaque?
+    </div>
+    <br>
+    <code>column-width;</code>
+    <div class="container width">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptate aut at fugit non hic aliquid consectetur? Quidem neque nostrum impedit rem natus est numquam unde iusto? Quasi, dicta! Reiciendis.
+        Ipsam ipsum repellat quis libero similique voluptatibus ullam numquam eligendi possimus, quasi adipisci ratione facilis ducimus omnis! Doloribus esse porro sequi quibusdam, et veniam quasi officiis illo alias quaerat voluptas!
+        Atque vitae est esse quas eaque dolores magni laudantium dolore, dolorum explicabo incidunt ea magnam veniam, excepturi exercitationem officia veritatis facilis hic repudiandae mollitia recusandae? Neque perferendis obcaecati vero architecto.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vero fugiat ipsam illo, modi quisquam dolorem, molestias velit labore soluta doloremque eveniet, consequatur facilis ea ullam. Eum eaque quia in.
+        Quidem mollitia, incidunt cumque sed nostrum saepe temporibus earum nulla reiciendis architecto dolorem eius laborum non. At sapiente, voluptas consequuntur ipsam voluptatem enim maiores autem repellendus voluptatum molestias pariatur! Dicta.
+        Eaque recusandae ipsam, laudantium, blanditiis sequi fuga dolorem quam ea quibusdam excepturi quidem deleniti! Cupiditate nisi quos, accusamus magnam tempore, expedita non aut eos aspernatur deleniti dolorum iste quae eaque?
+    </div>
+
+</body>
+</html>

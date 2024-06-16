@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background: lightblue;
+            padding: 60px;
+            text-align: center;
+        }
+
+        header h2 {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        .details {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cards {
+            background-color: lightblue;
+            padding: 16px;
+            border-radius: 4px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .image-card {
+            flex-basis: 200px;
+            background-color: lightblue;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .image-card img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Layouts Flexíveis</h1>
+        <h2>Exemplo de layouts flexíveis utilizando Flexbox</h2>
+    </header>
+    <main>
+        <section>
+            <h3>Saiba mais</h3>
+            <div class="details">
+                <div class="cards">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi laborum mollitia minus suscipit dicta earum, aliquid numquam dolorem ut aperiam exercitationem, excepturi aliquam facere tempora explicabo deleniti tenetur enim.
+                </div>
+                <div class="cards">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi laborum mollitia minus suscipit dicta earum, aliquid numquam dolorem ut aperiam exercitationem, excepturi aliquam facere tempora explicabo deleniti tenetur enim.
+                </div>
+                <div class="cards">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi laborum mollitia minus suscipit dicta earum, aliquid numquam dolorem ut aperiam exercitationem, excepturi aliquam facere tempora explicabo deleniti tenetur enim.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Galeria de Imagens</h3>
+            <div class="gallery">
+                <div class="image-card">
+                    <img src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-1024x683.jpg" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://img.freepik.com/fotos-gratis/respingo-colorido-abstrato-3d-background-generativo-ai-background_60438-2509.jpg" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://s2-techtudo.glbimg.com/SSAPhiaAy_zLTOu3Tr3ZKu2H5vg=/0x0:1024x609/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/c/u/15eppqSmeTdHkoAKM0Uw/dall-e-2.jpg" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://s2-g1.glbimg.com/c1tS_axTjV_qDkmMeMs3wYZCgGY=/0x0:5472x3648/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/H/v/pTatikTlSIWRuTzd0JwA/j9a6180.jpg" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://services.meteored.com/img/article/inteligencia-artificial-aprende-a-reconstruir-imagens-vistas-por-pessoas-ciencia-fotos-1679175318563_1280.jpg" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://media.istockphoto.com/id/517188688/pt/foto/paisagem-de-montanha.jpg?s=612x612&w=0&k=20&c=uFGUrUT6gA8FrTWhE10YYzngWPlDLssKxJiDs1Qw2Qs=" alt="">
+                </div>
+                <div class="image-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAO3UTZKb24tsTSkhjfpwmrVJFIGQbuA5uLg&s" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

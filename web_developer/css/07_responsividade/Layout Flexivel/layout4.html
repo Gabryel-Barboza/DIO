@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade com CSS</title>
+
+    <style media="">
+        /* Media queries permitem aplicar configurações para tamanhos de tela diferentes, assim pode-se aplicar CSS independentes para determinadas telas*/
+        
+        /* at-rule media-type media-feature operator media-feature */
+        /* @media: regra CSS que identifica o tipo de mídia da página a ser visualizada.
+        screen: media-type para definir os estilos CSS em dispositivos de tela; all: todos os dispositivos (padrão); print: media-type para impressões; speech: media-type para leitores de tela.*/
+
+        /* Para visualizar, dev tools > esc > três pontinhos > renderização > emular tipo de media CSS */
+        @media print {
+            body {
+                background-color: black;
+                color: white;
+            }
+        }
+        /* media features: recursos de media necessários para aplicar determinados estilos. min-width/height, max-width/height, width/height; orientation: orientação do dispositivo em paisagem ou retrato; hover: mecanismo de ponteiro; pointer: precisão de ponteiro (fino, grosso...), touchscreen/mouse/etc.*/
+
+        @media screen and (max-width: 500px) {
+            body {
+                font-size: smaller;
+            }
+            img {
+                width: 50%;
+            }
+
+            p {
+                column-count: 2;
+            }
+        }
+
+        /* paisagem (landscape), retrato (portrait)*/
+        @media screen and (orientation: landscape) {
+            h1 {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        /* mouse (fine), touchscreen (coarse), sem ponteiro (none) */
+        @media screen and (pointer: coarse) {
+            button {
+                padding: 10px;
+                background-color: red;
+            }
+        }
+        /* Entre outras media queries */
+
+        /* Operadores lógicos 
+        and or not*/
+        @media screen and not (pointer: coarse) {
+            button {
+                padding: 5px;
+                background-color: yellow;
+            }
+        }
+        /* Media queries no HTML, CSS e Javascript*/
+
+        /* Breakpoints ou tamanhos de tela padronizados para design, pesquise por breakpoints*/
+    </style>
+    <link rel="stylesheet" href="#" media="all">
+    <link rel="stylesheet" href="#" media="(min-width: 300px)">
+</head>
+<body>
+    <h1>Media Queries no CSS</h1>
+    <img src="https://miro.medium.com/v2/resize:fit:900/1*yyB4EpJcUQ5W8h9X8wCm7g.png" alt="Imagem com Media queries">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam recusandae sed ad exercitationem hic laboriosam deserunt tempora, consectetur excepturi earum tenetur sunt magni modi impedit blanditiis veniam soluta. Libero, voluptatum.
+    Dolorem consequuntur at omnis, repellendus, dignissimos corrupti nam delectus saepe ipsa sit et odit harum odio minus! Tempora, debitis magnam cumque aspernatur expedita unde, reiciendis, exercitationem dolorem adipisci aliquid sequi!
+    Autem debitis tempora nihil possimus similique consequatur dolor beatae sit iusto corrupti vel dolorem quisquam error ipsam atque magni neque inventore laborum ipsa, dignissimos alias! Asperiores atque nihil et dolore!
+    Ad quis perspiciatis repellat dolores voluptate pariatur adipisci nostrum mollitia, iure maiores sunt tenetur, officiis facilis! Saepe rerum asperiores nostrum, quod at quibusdam quis sint, illo, nam in porro qui?
+    Ducimus minus vero commodi voluptatibus facere dicta nulla distinctio accusantium dolorem minima doloribus molestias libero tempora mollitia reiciendis quos explicabo, soluta quae, sequi necessitatibus maxime blanditiis error. Impedit, delectus et.</p>
+    <button>Clique aqui!</button>
+</body>
+</html>
