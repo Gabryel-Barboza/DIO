@@ -116,5 +116,6 @@ footer {
 }
 
 footer img {
+    max-width: 40%;
     margin: 0;
 }
