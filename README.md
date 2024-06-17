@@ -43,3 +43,9 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Grid Lines e Grid Position](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Lines%20e%20Position)
 * [Grid Areas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Area)
 * [Grid Align](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/06_Grid%20Layout/Grid%20Align)
+
+## Responsividade ✅
+* [Layout Flexível](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Layout%20Flexivel)
+* [Imagens Responsivas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Imagens%20Responsivas)
+* [Tipografia Responsiva](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Tipografias%20Responsivas)
+* [Mobile First](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Mobile%20First)
