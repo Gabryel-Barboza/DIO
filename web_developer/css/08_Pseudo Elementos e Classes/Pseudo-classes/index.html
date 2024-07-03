@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes com CSS</title>
+
+    <style>
+        code {
+            background-color: lightgray;
+        }
+
+        button {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        
+        /* hover: ao passar o mouse sobre o elemento */
+        .hover:hover {
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+        }
+
+        /* active: ao interagir com o elemento com clicks*/
+        .active:active {
+            color: red;
+            text-decoration: none;
+        }
+
+        label, button {
+            display: block;
+            margin: 12px;
+            font-size: 1.2rem;
+        }
+
+        input, select {
+            font-size: 1.2rem;
+        }
+
+        /* focus: ao se colocar em foco o elemento*/
+        .focus:focus {
+            background-color: blue;
+            color: white;
+        }
+
+        /* focus-within: ao se colocar em foco um elemento filho */
+        .within {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .within:focus-within {
+            background-color: red;
+        }
+
+        /* focus-visible: ao se selecionar um elemento em foco (possuir um outline em volta dele).*/
+        .visible:focus-visible {
+            background-color: blue;
+        }
+
+        /* target: ao ser redirecionado para alguma seção da página, através das âncoras, é aplicado ao elemento de id selecionado*/
+        #target {
+            margin-top: 300px;
+        }
+
+        .target {
+            margin-top: 100px;
+            margin-bottom: 300px;
+        }
+
+        p:target {
+            background-color: gold;
+        }
+
+        p:target::before {
+            content: ">>";
+            color: red;
+            margin-right: 5px;
+        }
+
+        /* enabled: Quando um elemento de formulário está ativado */
+        .enable-disable:enabled {
+            background-color: gold;
+        }
+
+        /* disabled: Quando um elemento de formulário está desativado*/
+        .enable-disable:disabled {
+            background-color: lightblue;
+            opacity: .4;
+        }
+
+        /* link: Quando um link ainda não foi visitado */
+        .link-not:link {
+            background-color: aquamarine;
+        }
+        
+        /* visited: Quando um link foi encontrado no histórico de navegação, ou seja, já foi visitado*/
+        .link-visited:visited {
+            color: lightcoral;
+        }
+
+        /* placeholder-shown: Quando um elemento de formulário possui um placeholder sendo exibido */
+        .placeholder:placeholder-shown {
+            border: 2px solid blue;
+        }
+
+        .placeholder:placeholder-shown::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes</h1>
+    <p>São utilizadas para selecionar ações com os elementos do HTML</p>
+
+    <h2>Pseudo-classe <code>:hover</code></h2>
+    <p>Quando o mouse passa sobre o elemento.</p>
+    <button class="hover">Entrar em contato</button>
+
+    <h2>Pseudo-classe <code>:active</code></h2>
+    <p>Quando o elemento é ativado, por clicks ou interações</p>
+    <h3 class="active">Clique aqui</h3>
+    <a class="active" href="#">Veja mais aqui</a>
+
+    <h2>Pseudo-classe <code>:focus</code></h2>
+    <p>Quando o elemento está em foco na página, ao usuário clicar para entrar no campo, navegar até o elemento com TAB e etc.</p>
+    <form>
+        <p>Preencha os dados:</p>
+        <label>
+            Nome Completo:
+            <input class="focus" name="nome" type="text">
+        </label>
+        <select class="focus" name="sabor">
+            <option value="chocolate">Chocolate</option>
+            <option value="morango">Morango</option>
+            <option value="doce-leite">Doce de leite</option>
+            <option value="abacaxi">Abacaxi</option>
+        </select>
+        <button class="focus">Finalizar</button>
+    </form>
+
+    <h2>Pseudo-classe <code>:focus-within</code></h2>
+    <p>Quando um elemento descendente está em foco na página, o elemento pai é afetado.</p>
+
+    <div class="within">
+        <button>Clique aqui e veja</button>    
+    </div>
+
+    <h2>Pseudo-classe <code>:focus-visible</code></h2>
+    <p>Quando o elemento está selecionado na página, não apenas em foco. Elementos como textos, botões e entre outros podem ser selecionados com TAB. Veja a diferença entre um botão e um input:</p>
+
+    <button class="visible">Clique aqui</button>
+    <input type="text" class="visible">
+
+    <h2>Pseudo-classe <code>:target</code></h2>
+    <p> Quando se é redirecionado para alguma seção da página, através das âncoras, é aplicado ao elemento do id selecionado</p>
+
+    <ol>
+        <li>
+            <a href="#p1">Pular para o primeiro parágrafo</a></li>
+        <li>
+            <a href="#p2">Pular para o segundo parágrafo</a></li>
+    </ol>
+    <h3 id="target">Meu artigo</h3>
+    <p id="p1" class="target">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet ipsam enim cumque culpa, dolores consequuntur aliquid voluptas non repellat architecto tenetur et, iure nemo quia voluptatem, tempora vel iste?</p>
+    <p id="p2" class="target">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid iste quo totam perferendis exercitationem quibusdam optio quam deleniti nulla facilis natus magnam, molestias aperiam earum pariatur molestiae illum enim quasi?</p>
+
+    <h2>Pseudo-classes <code>:enabled/disabled</code></h2>
+    <p>Quando determinado elemento de um formulário possui o estado enabled/disabled</p>
+
+    Disabled:
+    <input class="enable-disable" type="text" disabled> <br>
+    Enabled:
+    <input class="enable-disable" type="text">
+
+    <h2>Pseudo-classe <code>:link</code></h2>
+    <p>Quando um link ainda não foi acessado</p>
+    <a class="link-not" href="https://www.google.com/">Não clique aqui!</a>
+
+    <h2>Pseudo-classe <code>:visited</code></h2>
+    <p>Quando um link já foi visitado, conferindo o histórico de navegação</p>
+    <a class="link-visited" href="https://www.youtube.com">Clique aqui!</a>
+
+    <h2>Pseudo-classe <code>:placeholder-shown</code></h2>
+    <p>Quando um elemento de formulário possui um placeholder sendo exibido. Exclua o valor abaixo</p>
+
+    <input class="placeholder" type="text"> <br>
+    <input class="placeholder" type="text" placeholder="Texto aparece se excluir o valor" value="0"> <br>
+    <input class="placeholder" type="text" placeholder="Escreva seu nome aqui...">
+</body>
+</html>

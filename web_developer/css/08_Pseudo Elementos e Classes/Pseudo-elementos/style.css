@@ -1,0 +1,85 @@
+code {
+    background-color: lightgray;
+}
+
+/* first-letter: seleciona a primeira letra do texto*/
+p.letter::first-letter {
+    color: red;
+    background-color: lightcoral;
+    padding: 1px;
+}
+
+/* first-line: seleciona a primeira linha do texto */
+p.line::first-line {
+    color: purple;
+    font-weight: bold;
+}
+
+#video {
+    max-width: 500px;
+}
+
+video {
+    width: 100%;
+}
+
+/* backdrop: estiliza o fundo de elementos em tela cheia, para melhor visualização veja no dev tools com um modelo de smartphone*/
+video::backdrop {
+    background-color: plum;
+}
+
+/* marker: estiliza marcadores de listas ou outros elementos */
+.marker::marker {
+    color: red;
+    content: "> ";
+}
+
+/* placeholder: estiliza os placeholders de formulários */
+::placeholder {
+    color: lightcoral;
+    font-weight: bold;
+}
+
+/* selection: estiliza a seleção de textos */
+.selection::selection {
+    color:blueviolet;
+    background-color: aqua;
+    text-decoration: line-through;
+}
+
+/* file-selector-button: estiliza o input do tipo file */
+input::file-selector-button {
+    border: 2px solid darkblue;
+    background-color: #6c5ce7;
+    color: white;
+}
+
+/* before: permite adicionar elementos antes do conteúdo; after: permite adicionar elementos após o conteúdo
+propriedade content obrigatória*/
+/* São criados elementos no HTML, sendo possível visualizar pelo dev tools*/
+.before::before {
+    content: '💯';
+}
+
+.after::after {
+    content: '(semi)';
+    font-weight: bold;
+}
+
+.gradiente {
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    background: url('https://miro.medium.com/v2/resize:fit:365/1*f9t1eeISadHhjK5QYejJBg.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.gradiente::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent, rgb(0, 100, 255));
+}

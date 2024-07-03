@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos com CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo-elementos</h1>
+    <p>Pseudo-elementos são utilizados para adicionar elementos na página sem a declaração no HTML, como também para selecionar algum componente do elemento</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+    
+    <h2>Pseudo-elemento - <code>::first-letter</code></h2>
+    <p class="letter">Seleciona a primeira letra da linha.</p>
+    <p class="letter">Propriedades disponíveis:</p>
+    <ul>
+        <li>Color</li>
+        <li>Background</li>
+        <li>Margin</li>
+        <li>Padding</li>
+        <li>Border</li>
+        <li>Font</li>
+        <li>Propriedades de texto</li>
+    </ul>
+
+    <h2>Pseudo-elemento - <code>::first-line</code></h2>
+    <p>Seleciona a primeira linha do texto.</p>
+    <p class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deserunt dicta cum, consequatur, distinctio dolore ducimus nam est perspiciatis quae iure. Minus, nesciunt error. Eligendi et impedit fuga saepe repellendus?</p>
+    <p>Propriedades disponíveis:</p>
+    <ul>
+        <li>Color</li>
+        <li>Background</li>
+        <li>Font</li>
+        <li>Propriedades de texto</li>
+    </ul>
+
+    <h2>Pseudo-elemento - <code>::backdrop</code></h2>
+    <p>Estiliza o plano de fundo de elementos em tela cheia, como <code>dialog</code> ou <code>video</code>.</p>
+    <p>Veja em um celular</p>
+    <div id="video">
+        <video controls>
+            <source src="Pure CSS3 Water Wave Text Animation Effects Using CSS Clip-path.mp4">
+        </video>
+    </div>
+    <a href="https://www.youtube.com/watch?v=Tf6qm5JMUXQ" target="_blank">Video Original no YouTube</a>
+    
+    <h2>Pseudo-elemento - <code>::marker</code></h2>
+    <p>Permite estilizar os tópicos de uma lista ou outros elementos</p>
+
+    <details open>
+        <summary class="marker">Propriedades aceitas</summary>
+        <ul>
+            <li class="marker">Color</li>
+            <li class="marker">Content</li>
+            <li class="marker">White-space</li>
+            <li>Font</li>
+            <li>Animation</li>
+            <li>Transition</li>
+        </ul>
+    </details>
+
+    <h2>Pseudo-elemento - <code>::placeholder</code></h2>
+    <p>Selecione o placeholder de elementos de formulários</p>
+    <ul>
+        <li>Color</li>
+        <li>Font</li>
+        <li>Background</li>
+        <li>Text</li>
+    </ul>
+    <form>
+        <label for="texto">Preencha os dados: </label>
+        <input id="texto" type="text" placeholder="Escreva aqui">
+    </form>
+
+    <h2>Pseudo-elemento - <code>::selection</code></h2>
+    <p>Permite estilizar a seleção de texto</p>
+    <ul>
+        <li>Color</li>
+        <li>Background-color</li>
+        <li>Text</li>
+    </ul>
+    <p><strong>Selecione</strong> o texto a seguir:</p>
+    <p class="selection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ex ab, nostrum accusantium quibusdam harum quaerat nesciunt, eaque voluptates, repellat magni perferendis aut doloremque veniam eius magnam quae repellendus quo?</p>
+
+    <h2>Pseudo-elemento - <code>::file-selector-button</code></h2>
+    <p>Permite estilizar o <code>input type="file"</code></p>
+    <p>Upload do arquivo: <input type="file"></p>
+
+    <h2>Pseudo-elementos - <code>::before | ::after</code></h2>
+    <p>Permite adicionar um elemento ao seletor como primeiro/ultimo filho do seletor</p>
+    <p class="before">Olá, este parágrafo será estilizado com os <span class="after">pseudo</span>-elementos</p>
+    
+    <div class="gradiente"></div>
+</body>
+</html>

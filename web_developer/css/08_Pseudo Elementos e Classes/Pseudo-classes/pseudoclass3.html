@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes com CSS</title>
+    <style>
+        code {
+            background-color: lightgray;
+        }
+
+        /* first-child: seleciona o primeiro filho do elemento */
+        #art1 :first-child {
+            background-color: aquamarine;
+        }
+
+        /* first-of-type: seleciona o primeiro elemento de cada tipo */
+        #art1 :first-of-type {
+            color: orange;
+        }
+
+        /* last-child: seleciona o último filho do elemento */
+        #art1 :last-child {
+            background-color: bisque;
+        }
+
+        /* last-of-type: seleciona o último elemento de cada tipo */
+        #art1 :last-of-type {
+            text-transform: uppercase;
+        }
+
+        /* nth-last-child/of-type: o mesmo funcionamento de nth-child e of type, porém a contagem de índices é de baixo para cima, ou reversa às pseudo-classes */
+        #art2 :nth-last-child(2) {
+            color: red;
+        }
+
+        #art2 :nth-last-of-type(2n-1) {
+            background-color: blue;
+            font-weight: bold;
+        }
+
+        /* only-child: seleciona o filho dos elementos que tenham apenas um único filho */
+        .art3 :only-child {
+            color: red;
+        }
+
+        /* only-of-type: seleciona os filhos únicos de cada tipo dos elementos*/
+        .art4 :only-of-type {
+            background-color: lightblue;
+        }
+
+        /* empty: seleciona elementos sem nenhum filho, são elementos fechados e sem nenhum caractere dentro*/
+        .art5 :empty {
+            border: 2px solid green;
+            padding: 10px;
+        }
+
+        /* is: seleciona as tags especificadas na pseudo-classe, substituindo a seguinte linha por uma mais compacta. Outra vantagem está na tolerância de erros, ao colocar algum seletor que não existe toda a linha é ignorada, no entanto com a pseudo-classe apenas o seletor que causar erro é ignorado*/
+        .post h3, .post li, .post .red {
+            color: red;
+        }
+
+        .post :is(h3, li, .red, .post qualquer@coisa) {
+            color: blue;
+        }
+
+        /* Procurando a tag p dentro de todos os elementos a seguir */
+        :is(section, aside, nav) p {
+            background-color: bisque;
+        }
+        /* No entanto, não é possivel utilizar o :is com pseudo-elementos */
+
+        /* where: funciona da mesma forma do :is, porém possui uma especificidade menor, permitindo ser sobreescrito */
+        .especif {
+            background-color: aquamarine;
+        }
+
+        /* As propriedades são sobreescritas por outro seletor, diferente do :is que possui maior prioridade */
+        :where(.especif) {
+            background-color: red;
+            color: purple;
+        }
+
+        /* not: é uma pseudo-classe de negação, permitindo excluir alguns elementos do seletor */
+        .negacao :not(.ignorar) {
+            color: red;
+        }
+
+        /* Utilizando outras pseudo-classes com o :not */
+        .negacao :not(:first-child) {
+            background-color: bisque;
+        }
+
+        /* Selecionando imagens sem o atributo alt */
+        img:not([alt]) {
+            max-width: 200px;
+        }
+
+        .gallery {
+            max-width: 300px;
+        }
+
+        .gallery figure {
+            height: 100%;
+            box-shadow: 0 0 5px 2px lightgray;
+        }
+
+        .gallery img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        /* has:  seleciona elementos que contenham alguma propriedade selecionada*/
+        .gallery figure:has(figcaption) {
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        /* Selecionando os elementos figures que não tenham a tag p, diferente de figure:not(p), pois é verificado se o figure é um p e não se ele possue um p dentro dele*/
+        .gallery figure:not(:has(p)) {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes</h1>
+    <h2>Pseudo-classe <code>:first-of-type|last-of-type|first-child|last-child</code></h2>
+    <article id="art1">
+        <div>Eu sou uma div</div>
+        <p>Eu sou 1º parágrafo</p>
+        <p>Eu sou 2º parágrafo</p>
+        <p>Eu sou 3º parágrafo</p>
+        <p>Eu sou 4º parágrafo</p>
+        <p>Eu sou 5º parágrafo</p>
+    </article>
+
+    <h2>Pseudo-classe <code>:nth-last-of-type|nth-last-child</code></h2>
+    <article id="art2">
+        <div>Eu sou uma div</div>
+        <p>Eu sou 1º parágrafo</p>
+        <p>Eu sou 2º parágrafo</p>
+        <p>Eu sou 3º parágrafo</p>
+        <p>Eu sou 4º parágrafo</p>
+        <p>Eu sou 5º parágrafo</p>
+    </article>
+
+    <h2>Pseudo-classe <code>:only-child</code></h2>
+    <article class="art3">
+        <div>Eu sou uma div</div>
+        <p>Eu sou 1º parágrafo</p>
+        <p>Eu sou 2º parágrafo</p>
+        <p>Eu sou 3º parágrafo</p>
+        <p>Eu sou 4º parágrafo</p>
+        <p>Eu sou 5º parágrafo</p>
+    </article>
+
+    <article class="art3">
+        <div>Eu sou uma div</div>
+    </article>
+
+    <h2>Pseudo-classe <code>:only-of-type</code></h2>
+    <article class="art4">
+        <div>Eu sou uma div</div>
+        <p>Eu sou 1º parágrafo</p>
+        <p>Eu sou 2º parágrafo</p>
+        <p>Eu sou 3º parágrafo</p>
+        <p>Eu sou 4º parágrafo</p>
+        <p>Eu sou 5º parágrafo</p>
+    </article>
+
+    <article class="art4">
+        <div>Eu sou uma div</div>
+        <p>Eu sou o 1º páragrafo</p>
+    </article>
+
+    <h2>Pseudo-classe <code>:empty</code></h2>
+    <article class="art5">
+        <div>
+            <p>Eu sou 1º parágrafo</p>
+            <p>Eu sou 2º parágrafo</p>
+        </div>
+    </article>
+
+    <article class="art5">
+        <div></div>
+    </article>
+
+    <h2>Pseudo-classe <code>:is</code></h2>
+    <article class="post">
+        <h3>Meu post</h3>
+        <nav>Meu nav:
+            <p>Parágrafo</p>
+        </nav>
+        <p>Sumário</p>
+        <ul>
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+        </ul>
+        <p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, animi, dolorem repudiandae quod eius quibusdam voluptatem libero nulla alias non est placeat dolores voluptatibus explicabo vel provident quam! Id, porro?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, animi, dolorem repudiandae quod eius quibusdam voluptatem libero nulla alias non est placeat dolores voluptatibus explicabo vel provident quam! Id, porro?</p>
+    </article>
+    <section>
+        <p>Está é uma section</p>
+    </section>
+    <aside>
+        <p>Olá, este é um aside</p>
+    </aside>
+
+    <h2>Pseudo-classe <code>:where</code></h2>
+    <h3 class="especif">Testando</h3>
+    <p class="especif">Olá</p>
+
+    <h2>Pseudo-classe <code>:not</code></h2>
+    <div class="negacao">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum assumenda sunt impedit magnam, itaque nihil tempore minima laboriosam, quos qui a iste nam. Ea pariatur, rerum molestias quia nam possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum assumenda sunt impedit magnam, itaque nihil tempore minima laboriosam, quos qui a iste nam. Ea pariatur, rerum molestias quia nam possimus.</p>
+        <p class="ignorar">Parágrafo a ser ignorado</p>
+        <h4>Olá, mundo!</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt="Imagem do HTML">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg">
+    </div>
+
+    <h2>Pseudo-classe <code>:has</code></h2>
+    <div class="gallery">
+        <figure class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Imagem do css">
+            <figcaption>Legenda</figcaption>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Imagem do css">
+            <figcaption>Legenda</figcaption>
+            <p>Olá</p>
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Imagem do css">
+        </figure>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Imagem do css">
+            <figcaption>Legenda</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
