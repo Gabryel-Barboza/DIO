@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições e Animações</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 247, 247);
+
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        div {
+            background: linear-gradient(90deg, #fc4668 0%, #0050fd 100%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        /* Movimentando o elemento com translate na propriedade transform, translate(x, y) onde o elemento é empurrado para direita e para baixo, se valores positivos. A propriedade transform deve ser única, separando as diferentes transformações por espaço*/
+        .box:hover {
+            transform: translate(50px, 50px);
+        }
+
+        /* Transformações em eixos independentes, se separado por espaço, outras funções podem ser aplicadas*/
+        .box:hover {
+            transform: translateX(100px) translateY(-100px);
+        }
+
+        .box2 {
+            border-radius: 10px;
+        }
+        /* Rotação do elemento com rotate, clique no elemento para ativar. Pode-se rotacionar os eixos independentemente com rotateX e rotateY, no entanto para transformações 2D o elemento se comporta como uma folha de papel sendo rotacionada*/
+        .box2:active {
+            transform: rotate(45deg);
+            /* transform: rotateX(); */
+        }
+
+        /* Expandindo ou diminuindo os elementos com scale, scale(x, y) onde o elemento é multiplicado pelos valores respectivos das dimensões */
+        .box3:hover {
+            transform: scale(.5, 1.2);
+        }
+
+        /* Distorcendo elementos com skew(x, y) */
+        .box4:hover {
+            /* transform: skewX(20deg); */
+            /* transform: skewY(20deg); */
+            transform: skew(20deg, 20deg);
+        }
+
+        .box5 {
+            border-radius: 10px;
+        }
+        /* shorthand para as funções com matrix(scaleX, skewY, skewX, scaleY, translateX, translateY), não se utiliza a unidade de medida */
+        .box5:active {
+            transform: matrix(1.1, 0, 2, 1, 50, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>

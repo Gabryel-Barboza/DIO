@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições e Animações com CSS</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        
+        main {
+            position: relative;
+            font-weight: bold;
+            font-size: 1.4rem;
+            perspective: 200px;
+        }
+
+        /* shorthand transition: transition-delay transition-duration transition-property transition-timing-function */
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            color: white;
+        }
+        /* transição de 1s de duração para começar e terminar com a timing-function ease, sendo aplicada ao background e na transformação com um delay de 1s para realizar a animação*/
+        /* ease: inicio lento - meio rápido - fim lento, linear: velocidade constante, ease-in: início lento, ease-out: fim lento, ease-in-out: lento, cubic-buzier(n, n, n): velocidade determinada por uma curva */
+
+        #animacao:hover {
+            background-color: yellow;
+            transform: rotateX(20deg);
+            transition: background 1s ease, transform 1s ease-in 1s;
+        }
+
+        /* Criando uma lista com transições */
+        .list {
+            list-style: none;
+            width: max-content;
+            padding: 20px;
+            background-color: brown;
+            color: white;
+        }
+
+        .list li {
+            padding: 10px 30px;
+            margin-bottom: 5px;
+            transition: background 0.5s;
+        }
+
+        .list li:hover {
+            background-color: rgb(148, 38, 38);
+        }
+
+        .list input:checked + span{
+            text-decoration: line-through;
+        }
+
+        .list li:has(input:checked) {
+            background-color: blueviolet;
+        }
+
+        .animacao {
+            margin: 10px;
+        }
+        /* Animações com CSS
+        as animações utilizam keyframes para reproduzirem, determinando o estilo CSS para cada keyframe da animação, utilizando from e to determina-se o estilo inicial e final após a animação*/
+        @keyframes exemplo {
+            from {
+                background-color: palegreen;
+            }
+
+            to {
+                background-color: purple;
+            }
+        }
+
+        /* Para aplicar a animação, selecione o nome e duração da animação */
+        #animacao2:hover {
+            animation-name: exemplo;
+            animation-duration: 4s;
+        }
+
+        /* Utilizando porcentagens para os keyframes */
+        @keyframes exemplo2 {
+            0% {
+                background-color: aliceblue;
+            }
+            50% {
+                background-color: aquamarine;
+                width: 300px;
+            }
+            100% {
+                background-color: blue;
+                width: 200px;
+            }
+        }
+
+        #animacao3:hover {
+            animation-name: exemplo2;
+            animation-duration: 4s;
+        }
+
+        /* Aplicando atrasos para executar a animação, ao aplicar valores negativos a animação pula os segundos de sua duração. Com iteration-count a animação é executada determinadas vezes, infinite para ser executada indefinidamente*/
+        #animacao4:hover {
+            animation-name: exemplo2;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+        }
+
+        /* Alterando a direção de execução da animação, normal: execução padrão, reverse: executa do final ao ínicio da animação, alternate: executa como padrão e depois é alternado para reverse, alternate-reverse: mesmo processo, porém começando do final da animação */
+        /* Da mesma forma que transition, timing-function determina a velocidade da animação */
+        #animacao5:hover {
+            animation-name: exemplo2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+        }
+
+        /* Determinando o estilo inicial ou final do elemento na animação com fill-mode, forwards: mantém o estilo final aplicado ao elemento, backwards: mantém o estilo inicial da animação antes de reproduzir, both: aplica os dois valores*/
+        #animacao6:hover {
+            animation-name: exemplo2;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: 3;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Pausando animações com play-state */
+        #animacao7:hover {
+            animation-name: exemplo2;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: 3;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
+
+        #animacao7:active {
+            animation-play-state: paused;
+        }
+
+        /* Shorthand animation: name duration timing-function delay iteration-count direction */
+        #animacao8:hover {
+            animation: exemplo2 4s ease-in 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transições em CSS</h1>
+    <main>
+        <div id="animacao">Olá!</div>
+        <ul class="list">
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span>Item 1</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span>Item 2</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span>Item 3</span>
+                </label>
+            </li>
+        </ul>
+
+        <h2>Animações em CSS</h2>
+        <div id="animacao2" class="animacao">Palavras-chave</div>
+        <div id="animacao3" class="animacao">Porcentagens</div>
+        <div id="animacao4" class="animacao">Delay</div>
+        <div id="animacao5" class="animacao">Direction</div>
+        <div id="animacao6" class="animacao">Fill-mode</div>
+        <div id="animacao7" class="animacao">Play-state</div>
+        <div id="animacao8" class="animacao">Animation</div>
+    </main>
+</body>
+</html>

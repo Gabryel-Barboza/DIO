@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições e Animações em CSS</title>
+    <style>
+        /* A perspectiva vai definir o efeito 3D em elementos, alterando a distância do elemento para criar essa visualização. A perspectiva deve ser aplicada ao elemento pai. Com perspective-origin é definido o local de visualização do elemento, alterando sua perspectiva nos eixos x, y*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 247, 247);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            perspective: 100px;
+            perspective-origin: right bottom;
+        }
+        
+            div {
+                background: linear-gradient(90deg, #fc4668 0%, #0050fd 100%);
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+            }
+
+        /* Rotacionando elementos no eixo z com rotateZ, movimentando elementos com translateZ*/
+        .box {
+            transform: rotateY(20deg) rotateZ(20deg) translateZ(20px);
+        }
+
+        /* Escalando o elemento com scale */
+        .box:hover {
+            transform: scale(2) rotateY(20deg) rotateZ(20deg) translateZ(20px);
+        }
+
+        
+        /* Definindo a origem da transformação com transform-origin */
+        .box2:active {
+            transform-origin: bottom right;
+            transform: rotateY(20deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>
