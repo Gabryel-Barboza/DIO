@@ -33,7 +33,7 @@ O básico da linguagem de programação é apresentado, contudo no seu âmbito d
 
 ## JavaScript na Web
 Aprendendo a desenvolver com o JavaScript na web, construindo websites e aplicando interatividade a eles.
-* [Introdução à web](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Introdução)
+* [Introdução a web](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Introdução)
 * [Construindo uma Pokedex](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Criando%20uma%20Pokedex)
 
 ## Aprofundando os Conhecimentos em JavaScript
