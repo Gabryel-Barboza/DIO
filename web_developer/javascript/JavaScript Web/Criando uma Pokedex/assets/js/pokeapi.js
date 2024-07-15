@@ -1,3 +1,34 @@
+// Exemplo didático
+// Requisitando a PokeAPI com FetchAPI
+// Retorna uma promise da URL, onde é feito um processamento assincrono do resultado. Uma promessa de resposta é feita, porém não se sabe quando será recebida
+function exemplo() {
+    const url = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10';
+    fetch(url) 
+        .then(function (response) {
+            // Realizando operações com a requisição
+            console.log(response);
+            // A API retorna um JSON, portanto vamos tratar o mesmo
+            /*response.json().then(function (responseBody) {
+                console.log(responseBody);
+            })
+            .catch();*/
+            // Não recomendado aninhar o then, encadeie o bloco retornando outra promise
+
+            return response.json(); 
+        })
+        .then(function (jsonBody) {
+            // Tratando o json de retorno do anterior
+            console.log(jsonBody);
+        }) 
+        .catch(function (error) {
+            // Capturando erros se requisição rejeitada
+            console.log(error);
+        })
+        .finally(function () {
+            // Executado independente do resultado da requisição
+            console.log('Requisição concluída!');
+        });
+    }
 
 const pokeApi = {}
 

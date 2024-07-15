@@ -1,12 +1,26 @@
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 180px);
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+h1 {
+    background-color: rgb(224, 224, 224);
+    text-align: center;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+h1:hover {
+    color: white;
+}
+
 .pokemon {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     background: url('../Pokeball.png') bottom right/30% no-repeat;
@@ -15,6 +29,10 @@
     margin: .5rem;
     border-radius: 1rem;
     box-shadow: 3px 3px 3px rgba(0,0,0, 0.300);
+}
+
+.pokemon:hover {
+    filter: brightness(1.1);
 }
 
 /* Backgrounds diferentes para os tipos */
