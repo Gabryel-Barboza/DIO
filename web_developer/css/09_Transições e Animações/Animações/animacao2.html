@@ -13,7 +13,7 @@
             align-items: flex-start;
             gap: 5px;
             height: 100vh;
-            perspective: 200px;
+            perspective: 300px;
         }
 
         /* Animação de rotação de botão */
@@ -108,7 +108,66 @@
             animation: decolar 4s ease-in-out infinite alternate;
         }
 
-        /*  */
+        /* Animação de background */
+        #fundo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, pink, orange);
+            background-size: 400% 400%;
+            width: 400px;
+            height: 400px;
+            animation: trocar-fundo 5s ease infinite alternate;
+        }
+
+        @keyframes trocar-fundo {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #fundo p {
+            background: linear-gradient(0deg, #ff0576, blue);
+            background-clip: text;
+            color: transparent;
+            font-size: 2rem;
+        }
+
+        /* Animação de um circulo */
+        #circulo {
+            align-self: center;
+            justify-self: center;
+            background: linear-gradient(90deg, pink , blue 100%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            animation: giro 2s ease infinite alternate;
+            filter: blur(50px);
+        }
+
+        @keyframes giro {
+            0% {
+                transform: rotateY(30deg) rotate(-25deg) translateZ(100px);
+            }
+            25% {
+                transform: rotateY(-30deg) translateZ(100px);
+            }
+            50% {
+                transform: rotateX(-50deg) translateZ(-100px);
+            }
+            75% {
+                transform: rotateX(-50deg) translateZ(-100px);
+            }
+            100% {
+                transform: rotateX(20deg) translateZ(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -122,5 +181,9 @@
     <div id="div-foguete">
         <img id="foguete" src="https://images.vexels.com/content/145819/preview/rocket-cartoon-8ab3f6.png" alt="Foguete">
     </div>
+    <div id="fundo">
+        <p>Olá!</p>
+    </div>
+    <div id="circulo"></div>
 </body>
 </html>
