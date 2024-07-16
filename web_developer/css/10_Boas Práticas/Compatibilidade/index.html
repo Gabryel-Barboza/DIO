@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boas Práticas com CSS</title>
+    <style>
+        /* Defina uma sem prefixo para compatibilidade */
+        #clip {
+            font-size: 1.5rem;
+            background: linear-gradient(blue, yellow 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Compatibilidade entre Navegadores</h1>
+    <p>É importante se atentar a esse ponto no desenvolvimento de sites. Existem alguns problemas de compatibilidade entre diferentes navegadores.</p>
+    <h2>Motores de Renderização</h2>
+    <p>Responsável pelo suporte a renderização de elementos nos navegadores. Determina a compatibilidade de renderização para estilos CSS. Exemplos:</p>
+    <ul>
+        <li>Blink - Google Chrome, Opera</li>
+        <li>Gecko - Firefox</li>
+        <li>WebKit - iOS, Safari</li>
+        <li>Trident - Internet Explore</li>
+    </ul>
+    <p>Veja se propriedades funcionam em determinado navegador no site <a href="https://caniuse.com">caniuse</a></p>
+
+    <h2>Prefixos no CSS</h2>
+    <p>Permitem aplicar um estilo CSS experimental de navegadores, se diferenciando da propriedade padrão. Exemplos:</p>
+    <ul>
+        <li>-moz-: Firefox</li>
+        <li>-webkit-: Chrome/Edge/Opera/Safari</li>
+        <li>-ms-: IE (Versão antiga)</li>
+        <li>-o-: Opera (Versão antiga)</li>
+    </ul>
+    <p>São chamados de vendor prefixes, podem ser verificados em sites como caniuse para saber se determinadas propriedades ainda são experimentais e necessitam do prefixo.</p>
+    <ul>
+        <li><code>-webkit-background-clip:</code> <span id="clip">text</span></li>
+    </ul>
 </body>
 </html>

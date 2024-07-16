@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boas Práticas com CSS</title>
+    <!--Estilos externos possuem prioridade em relação ao estilo do navegador-->
+    <link rel="stylesheet" href="style.css">
+    <style> 
+        /* Estilos internos possuem prioridade em relação aos externos*/
+        h2 {
+            background-color: red;
+        }
+
+        /* Para elementos de maior especificidade a localização é ignorada, aplicando os estilos de maior grau mesmo que externos*/
+        /* Para elementos de mesmo grau, a prioridade de localização entra em efeito */
+        p {
+            background-color: paleturquoise;
+        }
+
+        /* Veja o estilo externo */
+    </style>
 </head>
 <body>
-    
+    <main>
+        <h1>Hierarquia do Efeito Cascata</h1>
+        <p>Estabelece uma prioridade para a aplicação de uma regra de CSS</p>
+        <p>Se houver um conflito, o navegador irá:</p>
+        <ol>
+            <li>Analisar todas as regras;</li>
+            <li>Ver o nível de importância do elemento;</li>
+            <li>Comparar a especificidade das declarações de mesmo;nível (cálculo de especificidade);</li>
+            <li>Em caso de empate de grau de especificidade, irá selecionar o último seletor declarado.</li>
+        </ol>
+        <hr>
+        <!--Estilos inline possuem prioridade em relação aos internos, veja no devtools os estilos riscados por estarem sobreescritos-->
+        <h2 style="background-color: palegoldenrod;">Exemplo de Hierarquia</h2>
+
+        <h2>Exemplo de especificidade</h2>
+        <p>Texto 00</p>
+        <div id="especif">
+            <p>Texto 01 - ID</p>
+            <p class="conteudo">Texto 02 - ID e classe</p>
+            <p class="conteudo" style="background-color: palegreen;">Texto 03 - inline</p>
+        </div>
+        <hr>
+        <h3>Cálculo de Especificidade</h3>
+        <ol>
+            <li>inline - 1000 pontos</li>
+            <li>ID - 100 pontos</li>
+            <li>classes, pseudo-classes e atributos - 10 pontos</li>
+            <li>Tag HTML - 1 ponto</li>
+        </ol>
+        <hr>
+        <ul>
+            <li><strong>#exemplo h1.titulo</strong> - 111 pontos</li>
+            <li><strong>a:hover</strong> - 11 pontos</li>
+            <li><strong>div p</strong> - 2 pontos</li>
+        </ul>
+        <p>Para a pseudo-classe <code>:not</code> não se aplica o cálculo de especificidade</p>
+
+        <h2 style="background-color: white;">!Important</h2>
+        <div class="important">
+            <p class="important">Nivel de prioridade do efeito em cascata:</p>
+        </div>
+        <ol>
+            <li>Declarações com !important do usuário (devtools)</li>
+            <li>Declarações com !important do desenvolvedor</li>
+            <li>Folha de estilo do desenvolvedor</li>
+            <ol>
+                <li>CSS inline</li>
+                <li>CSS interno</li>
+                <li>CSS externo</li>
+                <li>Folhas de estilo padrão navegador</li>
+            </ol>
+        </ol>
+
+        <h3>Herança</h3>
+        <div id="heranca">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque veniam ipsam molestiae voluptate eius repellendus animi. Corporis alias deserunt aspernatur, fugit minima maiores deleniti velit magnam dignissimos neque officia et?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque veniam ipsam molestiae voluptate eius repellendus animi. Corporis alias deserunt aspernatur, fugit minima maiores deleniti velit magnam dignissimos neque officia et?</p>
+        </div>
+    </main>
 </body>
 </html>

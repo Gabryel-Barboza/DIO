@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boas Práticas com CSS</title>
+    <style>
+        /* Variáveis
+        Declaração: --nome-variavel
+        Referência: var(--nome-variavel)
+        */
+        /* Guarde variáveis no root para possuirem escopo global */
+        :root {
+            --bg-gradient: linear-gradient(270deg, purple 0%, red 100%);
+        }
+
+        body {
+            background-color: var(--bg-body);
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--txt-color);
+        }
+
+        #gradiente1 {
+            width: 100px;
+            height: 100px;
+            background: var(--bg-gradient);
+        }
+
+        #gradiente2 {
+            width: 200px;
+            height: 200px;
+            background: var(--bg-gradient);
+        }
+
+        /* Aplicando escopo para as variáveis, altere entre as classe para visualizar. Altera o valor da variável pela classe*/
+        .light-theme {
+            --bg-body: rgb(240, 240, 240);
+            --txt-color: black;
+        }
+
+        .dark-theme {
+            --bg-body: rgb(30, 20, 30);
+            --txt-color: white;
+        }
+
+        /* Adicionando fallbacks para se uma variável não existir */
+        p {
+            color: var(--cor-texto, blue);
+        }
+
+        /* Padrões de nomenclatura CSS */
+        .bemcss__btn {
+            background-color: yellow;
+            padding: 2px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+
+        .bemcss__spn--purple {
+            font-weight: bold;
+            color: purple;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="light-theme">
+    <h1>Organizando folhas de estilo</h1>
+    <h2>Variáveis em CSS</h2>
+    <p>Permite utilizar variáveis para guardar valores de propriedades</p>
+    <div id="gradiente1">Olá!</div>
+    <div id="gradiente2">Olá!</div>
+
+    <h2>Padrões de Nomenclaturas</h2>
+    <dl>
+        <dt><strong>BEMCSS</strong> - Block, Element, Modifier</dt>
+        <dd>BEM faz alusão à POO, uma maneira de descrever a realidade no código, com uma variedade de padrões e uma maneira de pensar nas entidades do programa. -- Varga Stepanova</dd>
+        <ul>
+            <li>Bloco: Entidade independente (bloco de construção), Elemento pai, [Bloco] (.btn)</li>
+            <li>Elemento: Elemento filho, não independente, vinculado a um bloco, [Bloco__elemento] (.btn__price)</li>
+            <li>Modificador: modifica um bloco ou elemento, variante para alterar a aparência, propriedade, estado, [Bloco__elemento--modificador] (.menu__link--disabled)</li>
+        </ul>
+        <dt><strong>SMACSS</strong> - Scalable and Modular Architect for CSS</dt>
+        <dd>Traz uma documentação de estruturação do CSS para auxiliar na organização em grandes projetos. --<a href="https://smacss.com">SMACSS</a></dd>
+        <dt><strong>OOCSS</strong> - Object Oriented CSS</dt>
+        <dd>Obter os elementos usados e repetidos dentro da página como um objeto e usá-los quando necessário. Separa os estilos CSS em dois:</dd>
+        <ul>
+            <li>Estrutura: "width, height, padding, margin, position"</li>
+            <li>Design: "border, color, font, background"</li>
+        </ul>
+        <p>Além de modularizar o código, deixando cada classe independente</p>
+    </dl>
+
+    <h3>Exemplos de nomenclatura</h3>
+    <ul>
+        <!--Não replicar hierarquia html na classe-->
+        <li>BEMCSS
+            <div class="bemcss">
+                <button class="bemcss__btn"><span class=".bemcss__spn bemcss__spn--purple">Clique</span> aqui!</button>
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
