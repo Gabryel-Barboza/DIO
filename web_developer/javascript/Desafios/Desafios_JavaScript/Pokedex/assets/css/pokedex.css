@@ -20,6 +20,7 @@ h1:hover {
 }
 
 .pokemon {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     background: url('../Pokeball.png') bottom right/30% no-repeat;
@@ -28,6 +29,10 @@ h1:hover {
     margin: .5rem;
     border-radius: 1rem;
     box-shadow: 3px 3px 3px rgba(0,0,0, 0.300);
+}
+
+.pokemon:hover {
+    filter: brightness(1.1);
 }
 
 /* Backgrounds diferentes para os tipos */

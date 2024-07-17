@@ -3,7 +3,7 @@
 const pokemonUl = document.getElementById('pokemonList');
 const pokemonLi = document.getElementsByClassName('pokemon');
 const loadButton = document.getElementById('loadMore');
-const limit = 10;
+const limit = 1;
 const maxPokemons = 151;
 let offset = 0;
 
@@ -23,16 +23,31 @@ function convertListToHTML(pokemon) {
 
 // Criando os elementos HTML dinamicamente após receber a lista de pokemons com o método
 function loadPokemons(offset, limit) {
-    // Breakpoint para o debug no dev tools/Node.js
-    debugger
-
     // Criando uma lista HTML com os dados de pokemons
     // O mesmo que um for percorrendo a lista e pegando valores individuais, depois chamando a função para transformar em HTML
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertListToHTML).join('');
         pokemonUl.innerHTML += newHtml;
     })
-    .catch((error) => console.log(error));
+    .catch((error) => console.log(error))
+    .finally(() => {
+        // Executado após carregar os pokemons
+        for (i = 0; i < pokemonLi.length; i++) {
+            // Para cada item da lista é adicionado o evento de click, permitindo abrir os detalhes do pokemon
+            pokemonLi[i].addEventListener('click', (lista) => openDetails(lista));
+        }
+    });
+}
+
+// Abre o pokemon selecionado e visualiza seus detalhes
+function openDetails(lista) {
+    // Seleciona o elemento que ativou o evento do documento recebido
+    let item = lista.target;
+    // Enquanto o elemento não ser uma LI e não conter a classe pokemon selecione o elemento pai
+    while (!(item.tagName == 'LI' && item.className.includes('pokemon'))) {
+        item = item.parentElement;
+    }
+    
 }
 
 // Executado antes de promises, sincrono
