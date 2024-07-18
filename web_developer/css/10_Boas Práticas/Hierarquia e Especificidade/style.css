@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+}
+
+h2 {
+    background-color: aqua;
+}
+
+/* Entendendo a especificidade de seletores, passe o mouse sobre o elemento e veja o valor */
+p {
+    background-color: green;
+}
+
+#especif p {
+    background-color: aquamarine;
+}
+
+#especif p.conteudo {
+    background-color: blueviolet;
+}
+
+/* !important: permite que alguma propriedade ignore o cálculo de especificidade, sobrescrevendo apenas aquela propriedade do elemento*/
+.important {
+    color: red !important;
+    font-size: 1.2 rem;
+}
+
+/* É utilizado apenas o font-size desse seletor, devido a maior especificidade*/
+.important p {
+    color: purple;
+    font-size: 1.5rem;
+}
+
+/* Herda as propriedades possiveis de elementos pai, respeita a especificidade de seletores*/
+#heranca {
+    background-color: white;
+    color: red;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Para os elementos herdarem algumas propriedades, é necessário forçar com o valor inherit na propriedade */
+
+#herança p {
+    border: inherit;
+}
