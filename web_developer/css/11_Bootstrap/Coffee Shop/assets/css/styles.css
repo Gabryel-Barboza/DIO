@@ -1,4 +1,9 @@
-/* Alterando as variáveis do bootstrap na classe btn */
+/* Alterando as variáveis do bootstrap*/
+:root {
+    --bs-link-color: #198764;
+    --bs-link-hover-color: #146c4c;
+}
+
 .btn{
     --bs-btn-bg: #198754;
     --bs-btn-border-color: #146c43;
@@ -9,6 +14,11 @@
 
 main {
     margin-top: 5rem;
+}
+
+/* Aplicando uma margem a função de scroll por links, dando um espaçamento do local vinculado */
+section {
+    scroll-margin-top: 6rem;
 }
 
 .navbar-brand img {
@@ -36,4 +46,13 @@ main {
 .card-menu img {
     height: 300px;
     object-fit: cover;
+}
+
+footer a {
+    font-weight: bold;
+    color: lightgray;
+}
+
+footer a:hover {
+    color: white;
 }
