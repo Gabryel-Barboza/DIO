@@ -14,6 +14,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Clone Página YouTube](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Página%20YouTube)
 * [Clone Listagem YouTube](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Listagem%20do%20Youtube)
 * [Página Discord Responsiva](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Discord)
+* [Coffee Shop](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Coffee%20Shop)
 
 ## Desafios JavaScript 💡
 
@@ -37,3 +38,9 @@ Aprendendo a desenvolver com o JavaScript na web, construindo websites e aplican
 * [Construindo uma Pokedex](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Criando%20uma%20Pokedex)
 
 ## Aprofundando os Conhecimentos em JavaScript
+* [Variáveis e Escopo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Variáveis%20e%20Escopo)
+* [Tipos de Dados](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Tipos%20de%20Dados)
+* [Manipulação de Listas](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Manipulação%20de%20Listas)
+* [Funções](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Funções)
+* [Prototype](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Prototype)
+* [Assincronismo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Assincronismo)
