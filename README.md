@@ -59,7 +59,7 @@ Para este módulo, será desenvolvido programas em Python juntamente com bibliot
 Nesse tópico foi desenvolvidos programas para aprender sobre o **Python DBAPI**, como também a utilização de frameworks para integração com bancos de dados relacionais (**SQLite**) e não relacionais (**MongoDB**). Os frameworks utilizados, respectivamente, foram SQLAlchemy e Pymongo. <br>
 Para acessar os programas realizados, navegue até a pasta [04_Banco de Dados](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/04_Bancos%20de%20Dados). <br>
 <hr>
-Como desafio desse tópico, foi criado aplicações para integrar com o SQLite e MongoDB e também realizar as respectivas operações. A seguir está a modelagem do banco de dados desenvolvido nesse desafio:
+Como desafio desse tópico foi criada aplicações para integrar com o SQLite e MongoDB, e também realizar as respectivas operações. A seguir está a modelagem do banco de dados desenvolvido nesse desafio:
 <br>
 
 ![modelo_database_desafio](https://github.com/Gabryel-Barboza/DIO/assets/73187678/53044ffd-cc8a-41ef-ac1e-b38706af81ed)
