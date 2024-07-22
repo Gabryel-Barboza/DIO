@@ -24,18 +24,18 @@ Todos os exercícios realizados nas aulas estão dispostos a seguir.
 
 ## Fundamentos 👶
 O básico da linguagem de programação é apresentado, contudo no seu âmbito de back-end com Node.js.
-* [Variáveis e Operadores](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/01_Variáveis%20e%20Operadores)
-* [Estruturas Condicionais](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/02_Estruturas%20Condicionais)
-* [Funções](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/03_Funções)
-* [Classes e Objetos](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/04_Classes%20e%20Objetos)
-* [Arrays](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/05_Arrays)
-* [Importação](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/06_Importação)
-* [Desafios](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/Fundamentos/07_Desafios)
+* [Variáveis e Operadores](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/01_Variáveis%20e%20Operadores)
+* [Estruturas Condicionais](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/02_Estruturas%20Condicionais)
+* [Funções](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/03_Funções)
+* [Classes e Objetos](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/04_Classes%20e%20Objetos)
+* [Arrays](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/05_Arrays)
+* [Importação](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/06_Importação)
+* [Desafios](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/01_Fundamentos/07_Desafios)
 
 ## JavaScript na Web
 Aprendendo a desenvolver com o JavaScript na web, construindo websites e aplicando interatividade a eles.
-* [Introdução a web](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Introdução)
-* [Construindo uma Pokedex](https://gabryel-barboza.github.io/DIO/web_developer/javascript/JavaScript%20Web/Criando%20uma%20Pokedex)
+* [Introdução a web](https://gabryel-barboza.github.io/DIO/web_developer/javascript/02_JavaScript%20Web/Introdução)
+* [Construindo uma Pokedex](https://gabryel-barboza.github.io/DIO/web_developer/javascript/02_JavaScript%20Web/Criando%20uma%20Pokedex)
 
 ## Aprofundando os Conhecimentos em JavaScript
 * [Variáveis e Escopo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Variáveis%20e%20Escopo)
