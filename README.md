@@ -10,10 +10,12 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 [BancoV3.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov3.py) - 
 [BancoV4.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov4.py) - 
 [BancoV5.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov5.py) -
-[BancoV6.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov6.py) <br> 
+[BancoV6.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov6.py)
+<br> <br> 
 [Integração SQLite e MongoDB](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/04_Bancos%20de%20Dados/Desafios/Integracao_SQLite_MongoDB) -
-[ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb)
-<br>
+[ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb) -
+[Distribuições no PyPi](https://test.pypi.org/project/sqlite2mongo/)
+<br> <br>
 Abaixo está a documentação de cada projeto:
 
 ## Criação de um sistema bancário 💸
