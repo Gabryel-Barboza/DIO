@@ -3,6 +3,18 @@ Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos.
 
 # Trabalhando com Python 🐍
+## Desafios 📈
+
+[BancoV1.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/02_Intermediario/Desafios/bancov1.py) - 
+[BancoV2.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/02_Intermediario/Desafios/bancov2.py) -
+[BancoV3.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov3.py) - 
+[BancoV4.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov4.py) - 
+[BancoV5.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov5.py) -
+[BancoV6.py](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/03_POO/Desafios/bancov6.py) <br> 
+[Integração SQLite e MongoDB](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/04_Bancos%20de%20Dados/Desafios/Integracao_SQLite_MongoDB) -
+[ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb)
+<br>
+Abaixo está a documentação de cada projeto:
 
 ## Criação de um sistema bancário 💸
 Primeiro desafio do módulo, implementando um sistema bancário com as funções de depositar, sacar e extrato.
@@ -71,3 +83,16 @@ Como desafio desse tópico foi criada aplicações para integrar com o SQLite e 
 * Uma aplicação de integração com MongoDB Cloud, para inserir dados do banco SQL em um cluster na nuvem do MongoDB.
 * Os dados inseridos dentro do SQLite são automaticamente convertidos para documentos e inseridos em coleções do MongoDB.
 
+## Tratamento de Dados 🎲
+Para este módulo, as bibliotecas Pandas e Matplotlib foram utilizadas para tratar dados de planilhas csv e Excel, como também criar gráficos. Acesse os exercícios na pasta [05_Tratameto de dados](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/05_Tratamento%20de%20Dados). <br>
+Como desafio do módulo, foi utilizada a planilha em Excel SuperMarket para analisar e tratar os dados.
+* Renomeadas as colunas para o Português
+* Substituidos os campos nulos
+* Realizado uma análise exploratória da planilha
+* Criado gráficos com base na análise
+
+[ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb)
+
+## Segurança da Informação 🛡
+
+## Desenvolvimento Web 📲
