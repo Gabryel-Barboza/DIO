@@ -96,5 +96,13 @@ Como desafio do módulo, foi utilizada a planilha em Excel SuperMarket para anal
 [ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb)
 
 ## Segurança da Informação 🛡
+O objetivo deste módulo foi desenvolver algumas ferramentas para compreender conceitos de Segurança da Informação. Entre as ferramentas desenvolvidas possuem: 
+* Programas para realizar requisições com o protocolo ICMP (Ping), único host ou múltiplos hosts.
+* Programas para criação de um cliente TCP, UDP e servidor UDP simples. Como também a comunicação entre eles.
+* Ferramentas de comparação e criação de Hash. Programas geradores de senhas fortes e de Wordlists.
+* Programa para entender o funcionamento de Multithreading em Python, através de uma corrida de carros.
+* Outras ferramentas como web scraping e web crawlers simples, verificadores de IP externo e de geolocalização de telefone.
+
+[06_Segurança da Informação](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/06_Segurança%20da%20Informação)
 
 ## Desenvolvimento Web 📲
