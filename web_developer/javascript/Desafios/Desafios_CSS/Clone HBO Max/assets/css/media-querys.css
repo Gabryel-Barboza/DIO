@@ -1,0 +1,109 @@
+@media screen and (min-width: 600px) {
+    header {
+        padding-bottom: 200px;
+    }
+
+    header::before {
+        background-image: linear-gradient(transparent 60%, var(--primary-color) 100%);
+    }
+
+    .company-logos {
+        height: min-content;
+        margin-bottom: 50px;
+    }
+
+    .btn-plan {
+        margin-top: 40px;
+    }
+
+    .title-2 {
+        font-size: 2rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
+        max-height: unset;
+        overflow: visible;
+    }
+
+    :where(#streaming-hbo, #streaming-max, #streaming-dc, #streaming-wb, #streaming-cn, #streaming-ucl):hover::before
+    {
+        width: 100%;
+        height: 100%;
+        grid-area: 1 / 2 / 1 / 2;
+    }
+
+    .footer-nav {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    nav {
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .logo {
+        width: 150px;
+        margin: 0;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .prices {
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        perspective: 1000px;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        transition: 1s ease;
+    }
+
+    .card:first-of-type button {
+        padding: 20px 40px;
+    }
+
+    #card-1:hover + .card {
+        transform: rotateY(-30deg);
+    }
+
+    .cards:has(#card-2:hover) #card-1 {
+        transform: rotateY(30deg);
+    } 
+
+    form {
+        max-width: 90%;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        max-width: 1000px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
