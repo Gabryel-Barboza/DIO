@@ -11,7 +11,6 @@
     <style>
         main {
             text-align: center;
-            max-width: 90%;
             min-height: 70vh;
             margin: auto;
         }
@@ -41,23 +40,22 @@
                 <img id="nav-logo" src="assets/images/hbo-max-logo.png" alt="Logotipo HBO Max">
             </a>
         </div>
+        <div class="nav-items">
             <a class="nav-item" href="./login.html" rel="next">Entrar</a>
-            <button class="btn nav-item" type="button">Assine Agora</button>
+            <a class="btn nav-item" href="#plans">Assine Agora</a>
+        </div>
     </nav>
-
     <main>
         <form action="#">
             <h1>Entrar</h1>
             <label>Você tem um conta da HBO Max?</label>
             <input type="email" placeholder="Endereço de email">
-            <input type="password" placeholder="Senha">
+            <input type="password" minlength="8" placeholder="Senha">
             <button class="btn btn-buy" type="submit">Entrar</button>
             <a class="link link-menor" href="#">Esqueceu a senha?</a>
         </form>
     </main>
-
     <footer>
-        
         <div class="footer-nav">
             <a class="link" href="https://www.hbomax.com/br/pt/sitemap" rel="external" target="_blank">Agora na HBO Max</a>
             <a class="link" href="https://www.hbomax.com/br/pt/coming-soon" rel="external" target="_blank">Em breve</a>

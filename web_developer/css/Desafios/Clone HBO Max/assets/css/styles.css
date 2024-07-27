@@ -18,16 +18,30 @@
     --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
     --form-field-placeholder: rgba(255, 255, 255, 0.7);
     --form-field-error: rgb(255, 76, 76);
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--tertiary-color);
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: var(--secondary-color);
 }
 
 body {
     box-sizing: border-box;
     position: relative;
-    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
-    background-size: 400% 400%;
+    background-color: var(--primary-color);
     font-family: Raleway, sans-serif;
     color: var(--text-color);
-    animation: background-transition 5s ease infinite alternate;
 }
 
 p {
@@ -38,6 +52,7 @@ p {
 nav {
     position: sticky;
     top: 0;
+    z-index: 1;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -45,6 +60,7 @@ nav {
     gap: 20px;
     background: var(--nav-bg-color);
     min-height: 80px;
+    max-height: 100px;
     padding: 25px;  
 }
 
@@ -61,6 +77,14 @@ nav img {
     margin: 10px auto 0;
 }
 
+.nav-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .nav-item {
     font-size: .825rem;
     font-weight: bold;
@@ -74,14 +98,15 @@ nav img {
 nav .btn {
     background-color: var(--tertiary-color);
     background-image: none;
+    width: max-content;
     padding: 8px 25px;
     margin: 0;
 }
 
-nav .btn:focus {
+nav .btn:hover {
     background-color: var(--btn-link-bg-color);
     color: var(--btn-link-color);
-    transition: .5s ease-in;
+    transition: 1s ease;
 }
 
 .btn {
@@ -97,6 +122,16 @@ nav .btn:focus {
     border-radius: 80px;
 }
 
+.btn:hover:not(nav .btn) {
+    font-weight: 900;
+    border: 2px solid var(--tertiary-color);
+    transition: background 1s ease-in;
+}
+
+.btn-anim:hover {
+    animation: button-transition 5s forwards;
+}
+
 :where(header, .prices, .streaming) {
     display: flex;
     flex-flow: column;
@@ -108,7 +143,28 @@ nav .btn:focus {
 }
 
 header {
+    position: relative;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
     padding-bottom: 300px;
+    animation: background-transition 5s ease infinite alternate;
+}
+
+header::before {
+    content: "";
+    background-image: linear-gradient(transparent 80%, var(--primary-color) 100%);
+    width: 100%;
+    height: 93%;
+    position: absolute;
+}
+
+.container-header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 750px;
+    margin: auto;
 }
 
 .company-logos {
@@ -129,6 +185,7 @@ header {
     font-weight: 400;
     text-transform: uppercase;
     line-height: 2.3rem;
+    max-width: 630px;
     padding: 10px;
     margin: 0;
 }
@@ -165,20 +222,21 @@ header {
 .btn-plan {
     font-weight: 700;
     text-transform: uppercase;
-    max-width: 90%;
     padding: 20px 50px;
     animation: shaking 2s ease infinite;
 }
 
-.btn-plan:focus {
-    background-image: none;
-    background-color: transparent;
-    border: 2px solid var(--tertiary-color);
-    transition: 1s ease-in-out;
-}
-
 .p-menor {
     font-weight: 200;
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 50px;
 }
 
 .prices {
@@ -187,6 +245,7 @@ header {
 
 .card {
     background: var(--card-bg-color);
+    max-width: 350px;
     padding: 20px 0px;
     border-radius: 10px;
 }
@@ -225,10 +284,13 @@ header {
 }
 
 .grid {
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     gap: 30px;
-    overflow-x: scroll;
+    overflow: scroll hidden;
+    max-width: 350px;
+    max-height: 500px;
 }
 
 .grid-item {
@@ -240,20 +302,29 @@ header {
     object-fit: contain;
     background: center/cover no-repeat;
     width: 100%;
-}
-
-.grid-item img:hover {
-    border: 3px groove var(--tertiary-color);
-    border-radius: 10px;
+    height: 100%;
 }
 
 /* Imagens de fundo da seção streaming */
-#streaming-hbo:hover {background-image: url("../images/streaming/hbo-hover_0.webp");}
-#streaming-max:hover {background-image: url("../images/streaming/MAX-Hover.webp");}
-#streaming-dc:hover {background-image: url("../images/streaming/DC-Hover.webp");}
-#streaming-wb:hover {background-image: url("../images/streaming/WB-Hover.webp");}
-#streaming-cn:hover {background-image: url("../images/streaming/CN-Hover.png");}
-#streaming-ucl:hover {background-image: url("../images/streaming/UCL-Hover.webp");}
+:where(#streaming-hbo, #streaming-max, #streaming-dc, #streaming-wb, #streaming-cn, #streaming-ucl):hover::before
+{
+    content: "";
+    position: absolute;
+    background: center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    border: 3px groove var(--tertiary-color);
+    border-radius: 3%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: background 2s ease-in;
+}
+
+#streaming-hbo::before {background-image: url("../images/streaming/hbo-hover_0.webp");}
+#streaming-max::before {background-image: url("../images/streaming/MAX-Hover.webp");}
+#streaming-dc::before {background-image: url("../images/streaming/DC-Hover.webp");}
+#streaming-wb::before {background-image: url("../images/streaming/WB-Hover.webp");}
+#streaming-cn::before {background-image: url("../images/streaming/CN-Hover.png");}
+#streaming-ucl::before {background-image: url("../images/streaming/UCL-Hover.webp");}
 
 a {
     text-decoration: none;
@@ -266,6 +337,12 @@ a {
     letter-spacing: 2px;
     line-height: 2rem;
     color: var(--link-color);
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--tertiary-color);
+    transition: .5s;
 }
 
 :where(footer, .footer-nav) {
@@ -301,14 +378,15 @@ form {
     justify-content: center;
     align-items: center;
     background-color: rgba(211, 211, 211, 0.06);
+    max-width: 500px;
     padding: 20px;
+    margin: auto;
     margin-top: 20px;
     border: 1px solid var(--form-field-border);
     border-radius: 5px;
 }
 
 label {
-    text-align: left;
     width: 80%;
 }
 
@@ -316,6 +394,7 @@ input {
     display: block;
     background-color: rgba(0, 0, 0, 0.2);
     color: var(--text-color);
+    max-width: 80%;
     padding: 15px 30px;
     margin: 15px 0;
     border: 1px solid;
@@ -329,6 +408,10 @@ input:focus {
 
 input:invalid {
     border: 1px solid var(--form-field-error);
+}
+
+input::placeholder {
+    color: var(--form-field-placeholder);
 }
 
 .link-menor {
@@ -368,5 +451,19 @@ input:invalid {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes button-transition {
+    0% {
+        background-position: 0% 50%;
+        padding: 1em;  
+    }
+    5% {
+        padding: 1.2em;
+    }
+    50%, 100% {
+        background-position: 100% 50%;    
+        padding: 1.2em;
     }
 }
