@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient( 45deg, #9b34ef 0%, #490cb0 20%, transparent 50% );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient( 90deg, #5516ba, rgba(255, 0, 229, 0.5) 80% );
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    font-family: Raleway, sans-serif;
+    color: var(--text-color);
+    animation: background-transition 5s ease infinite alternate;
+}
+
+p {
+    font-family: Quicksand, sans-serif;
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--nav-bg-color);
+    min-height: 80px;
+    padding: 25px;  
+}
+
+nav img {
+    object-fit: cover;
+    width: 35%;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: min-content;
+    margin: 10px auto 0;
+}
+
+.nav-item {
+    font-size: .825rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .btn {
+    background-color: var(--tertiary-color);
+    background-image: none;
+    padding: 8px 25px;
+    margin: 0;
+}
+
+nav .btn:focus {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+    transition: .5s ease-in;
+}
+
+.btn {
+    cursor: pointer;
+    background: var(--btn-bg-color-gradient);
+    background-size: 400% 400%;
+    color: var(--text-color);
+    max-width: 70%;
+    padding: 10px 40px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 80px;
+}
+
+:where(header, .prices, .streaming) {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+    padding: 15vh 35px;
+    padding-bottom: 20vh;
+    text-align: center;
+}
+
+header {
+    padding-bottom: 300px;
+}
+
+.company-logos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    height: 130px;
+}
+
+.company-logos img {
+    object-fit: contain;
+}
+
+.title {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 2.3rem;
+    padding: 10px;
+    margin: 0;
+}
+
+.title-2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.title-3 {
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.spn {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+}
+
+.header-divider {
+    background: linear-gradient( 90deg, #5516ba, rgba(255, 0, 229, 0.5) 80% );
+    width: 70%;
+    height: 5px;
+    border: 0;
+}
+
+.spn-menor {
+    font-size: 2.5rem;
+}
+
+.btn-plan {
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 90%;
+    padding: 20px 50px;
+    animation: shaking 2s ease infinite;
+}
+
+.btn-plan:focus {
+    background-image: none;
+    background-color: transparent;
+    border: 2px solid var(--tertiary-color);
+    transition: 1s ease-in-out;
+}
+
+.p-menor {
+    font-weight: 200;
+}
+
+.prices {
+    padding: 15vh 20px;
+}
+
+.card {
+    background: var(--card-bg-color);
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.card li {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    margin: 30px 0;
+}
+
+.card li::marker {
+    content: "+";
+    font-size: 2rem;
+}
+
+.btn-buy {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+    overflow-x: scroll;
+}
+
+.grid-item {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.grid-item img {
+    object-fit: contain;
+    background: center/cover no-repeat;
+    width: 100%;
+}
+
+.grid-item img:hover {
+    border: 3px groove var(--tertiary-color);
+    border-radius: 10px;
+}
+
+/* Imagens de fundo da seção streaming */
+#streaming-hbo:hover {background-image: url("../images/streaming/hbo-hover_0.webp");}
+#streaming-max:hover {background-image: url("../images/streaming/MAX-Hover.webp");}
+#streaming-dc:hover {background-image: url("../images/streaming/DC-Hover.webp");}
+#streaming-wb:hover {background-image: url("../images/streaming/WB-Hover.webp");}
+#streaming-cn:hover {background-image: url("../images/streaming/CN-Hover.png");}
+#streaming-ucl:hover {background-image: url("../images/streaming/UCL-Hover.webp");}
+
+a {
+    text-decoration: none;
+}
+
+.link {
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    color: var(--link-color);
+}
+
+:where(footer, .footer-nav) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+footer {
+    gap: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+small {
+    font-weight: 200;
+    color: var(--link-color);
+}
+
+.socials {
+    padding: 20px 0;
+}
+
+.socials a {
+    margin: 0 10px;
+}
+
+/* Página Login */
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.06);
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid var(--form-field-border);
+    border-radius: 5px;
+}
+
+label {
+    text-align: left;
+    width: 80%;
+}
+
+input {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    padding: 15px 30px;
+    margin: 15px 0;
+    border: 1px solid;
+    border-color: var(--form-field-border);
+    border-radius: 5px;
+}
+
+input:focus {
+    border: 2px groove;
+}
+
+input:invalid {
+    border: 1px solid var(--form-field-error);
+}
+
+.link-menor {
+    font-size: .7rem;
+}
+
+@keyframes shaking {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    35% {
+        transform: rotate(-10deg);
+    }
+    40%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes background-transition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
