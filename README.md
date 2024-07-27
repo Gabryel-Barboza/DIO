@@ -50,3 +50,20 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Imagens Responsivas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Imagens%20Responsivas)
 * [Tipografia Responsiva](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Tipografias%20Responsivas)
 * [Mobile First](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/07_responsividade/Mobile%20First)
+
+## Pseudo-elementos e Pseudo-classes ⁉
+* [Pseudo-elementos](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/08_Pseudo%20Elementos%20e%20Classes/Pseudo-classes)
+* [Pseudo-classes](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/08_Pseudo%20Elementos%20e%20Classes/Pseudo-elementos)
+
+## Transições e Animações 💨
+* [Transformações 2D](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/09_Transições%20e%20Animações/Transformações%202D)
+* [Transformações 3D](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/09_Transições%20e%20Animações/Transformações%203D)
+* [Animações](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/09_Transições%20e%20Animações/Animações)
+
+## Boas Práticas com CSS 💖
+* [Hierarquia e Especificidade](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/10_Boas%20Práticas/Hierarquia%20e%20Especificidade)
+* [Compatibilidade entre Navegadores](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/10_Boas%20Práticas/Compatibilidade)
+* [Variáveis e Boas práticas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/10_Boas%20Práticas/Boas%20práticas)
+
+## Bootstrap e Frameworks
+* [Coffee Shop](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/11_Bootstrap/Coffee%20Shop)
