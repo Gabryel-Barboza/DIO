@@ -15,6 +15,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Clone Listagem YouTube](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Listagem%20do%20Youtube)
 * [Página Discord Responsiva](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20Discord)
 * [Coffee Shop](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Coffee%20Shop)
+* [Projeto HBO Max](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Clone%20HBO%20Max)
 
 ## Desafios JavaScript 💡
 
