@@ -9,6 +9,7 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Clone Página YouTube](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Página%20YouTube)
 * [Clone Listagem YouTube](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Listagem%20do%20Youtube)
 * [Página Discord Responsiva](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20Discord)
+* [Projeto HBO Max](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/Desafios/Clone%20HBO%20Max)
   
 ## Fundamentos do CSS 👶
 * [Declarações CSS](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/01_Fundamentos/01_Declarações%20CSS)
