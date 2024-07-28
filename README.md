@@ -66,5 +66,14 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Compatibilidade entre Navegadores](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/10_Boas%20Práticas/Compatibilidade)
 * [Variáveis e Boas práticas](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/10_Boas%20Práticas/Boas%20práticas)
 
-## Bootstrap e Frameworks
+## Bootstrap 🅱
 * [Coffee Shop](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/11_Bootstrap/Coffee%20Shop)
+
+## TailwindCSS #️⃣
+* [Introdução ao Tailwind](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/01_Introdução/src)
+* [Fundamentos](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/02_Fundamentos/src)
+* [Layouts](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/03_Layout/src)
+* [Backgrounds](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/04_Background/src)
+* [Tamanhos e Espaçamento](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/05_Tamanho%20e%20Espaçamento/src)
+* [Tipografia](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/06_Tipografia/src)
+* [Portifolio](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/07_Projeto%20Final/src)
