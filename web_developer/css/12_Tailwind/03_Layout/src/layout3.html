@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout no Tailwind</title>
+    <link rel="stylesheet" href="../../tailwind_config/dist/output.css">
+</head>
+<body>
+    <!-- Box: box decoration break controla a renderização de fragmentos do elemento em linhas, colunas ou páginas -->
+    <!-- box sizing controla a propriedade em questão -->
+
+     <!--background gradient começando da direita, da cor indigo para pink e texto branco-->
+     <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white">Hello <br>World</span>
+     <br>
+     <span class="box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white">Hello <br>World</span>
+     <!-- "slice" para aplicar a estilização em pedaços para cada fragmento do elemento. "Clone" para aplicar a estilização completa em ambos os fragmentos do elementos -->
+
+      <!-- box-border para aplicar box-sizing: border-box; box-content para box-sizing: content-box-->
+       <!-- padding/border: 4*4px, w/h: largura/altura = 32*4px-->
+       <div class="box-border h-32 w-32 p-4 border-4 bg-red-600"></div>
+</body>
+</html>

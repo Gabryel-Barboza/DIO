@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos do Tailwind</title>
+    <!--Caminho para um arquivo único, apenas para facilitar na criação de novos diretórios sem necessidade de configurar o tailwind novamente-->
+    <!--Inicialize o tailwind com: npx tailwindcss -i ./assets/input.css -o ./dist/output.css --watch, entre na pasta antes de executar tailwind_config-->
+    <link rel="stylesheet" href="../../tailwind_config/dist/output.css">
+</head>
+<body>
+    <!--Tailwind-Utility-first para escrita de CSS diretamente no HTML, priorizando a reutilização do mesmo CSS em diversos outros elementos, como também possibilitando a criação de um estilo único por elemento (inline)-->
+    <!--Classes utilitárias são classes para definir o estilo do elemento, geradas pelo Tailwind-->
+    <div class="h-screen bg-gray-100">
+        <div class="flex justify-center">
+            <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+                <div class="flex justify-center md:justify-end -mt-16">
+                    <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8e2JRUnU7yU_ifw5q5CNtq2Xj_NWK8rP1A&s" alt="Logo da DIO">
+                </div>
+                <div>
+                    <h2 class="text-gray-800 text-3xl font-semibold">Curso de Tailwind CSS</h2>
+                    <p class="mt-2 text-gray-600">Neste curso iremos apresentar uma introdução dos recursos do Tailwind CSS de forma que após concluir você possa utilizar o Tailwind CSS em seus projetos profissionais ou pessoais.</p>
+                </div>
+                <div class="flex justify-end mt-4">
+                    <a class="text-xl font-medium text-indigo-500" href="#">João Paulo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

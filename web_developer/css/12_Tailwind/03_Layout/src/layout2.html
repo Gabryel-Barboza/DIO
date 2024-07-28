@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts no Tailwind</title>
+    <link rel="stylesheet" href="../../tailwind_config/dist/output.css">
+</head>
+<body>
+    <!--Columns: utilitários para controlar o número de colunas-->
+    <div class="columns-3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quis sunt dolorem quidem velit natus porro sed, harum placeat accusantium aliquam suscipit enim in dolores corrupti veniam nisi praesentium laborum!</p>
+        <p>Temporibus tempora architecto numquam ipsa libero consequatur eos, voluptate aut porro tenetur obcaecati reprehenderit, nihil molestias voluptatem qui, cupiditate atque voluptatibus soluta natus doloremque vitae expedita suscipit? Modi, aliquam libero.</p>
+        <p>Necessitatibus, error, quas ipsam libero quod ut quis est quaerat accusantium non minus? Dolorum minima libero, perferendis nisi dolore est, maxime saepe laborum sunt aspernatur quae rerum iste sint similique.</p>
+    </div>
+    <!--Utilizando breakpoints-->
+    <div class="columns-1 md:columns-2 lg:columns-4">
+        <!--width: 100% margin-bottom: 4*3px, video ratio-->
+        <img class="w-full mb-3 aspect-video" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8e2JRUnU7yU_ifw5q5CNtq2Xj_NWK8rP1A&s" alt="">
+        <img class="w-full mb-3 aspect-video" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8e2JRUnU7yU_ifw5q5CNtq2Xj_NWK8rP1A&s" alt="">
+        <img class="w-full mb-3 aspect-video" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8e2JRUnU7yU_ifw5q5CNtq2Xj_NWK8rP1A&s" alt="">
+        <img class="w-full mb-3 aspect-video" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8e2JRUnU7yU_ifw5q5CNtq2Xj_NWK8rP1A&s" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout no Tailwind</title>
+    <link rel="stylesheet" href="../../tailwind_config/dist/output.css">
+</head>
+<body>
+    <!-- Propriedades de position -->
+     <!-- relative: position: relative; left, right, top, bottom -->
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- left-0 top-0 para superior esquerda do elemento -->
+        <div class="absolute left-0 top-0 w-16 h-16 bg-indigo-600"></div>
+    </div>
+    <br>
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- left-36 top-0 para superior meio do elemento. left=36*4px = 144px, meio do elemento = 192-64px (tamanho filho) = 148px -->
+        <div class="absolute left-36 top-0 w-16 h-16 bg-indigo-600"></div>
+    </div>
+    <br>
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- right-0 top-0 para superior direita do elemento -->
+        <div class="absolute right-0 top-0 w-16 h-16 bg-indigo-600"></div>
+    </div>
+    <br>
+    <br>
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- inset-x-0 para todo eixo x -->
+        <div class="absolute inset-x-0 h-16 top-0 bg-indigo-600"></div>
+    </div>
+    <br>
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- inset-y-0 para todo eixo y -->
+        <div class="absolute inset-y-0 w-16 left-0 bg-indigo-600"></div>
+    </div>
+    <br>
+    <div class="relative w-96 h-48 bg-red-600">
+        <!-- inset--0 para todo o container -->
+        <div class="absolute inset-0 bg-indigo-600"></div>
+    </div>
+</body>
+</html>

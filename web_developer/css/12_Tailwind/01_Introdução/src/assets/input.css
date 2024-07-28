@@ -1,0 +1,4 @@
+/* Instale as extensões Postcss e Tailwind intellisense, definindo a criação dos módulos de css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

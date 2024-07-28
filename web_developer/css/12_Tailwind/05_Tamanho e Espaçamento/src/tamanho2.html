@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanhos e Espaçamento no Tailwind</title>
+    <link rel="stylesheet" href="../../tailwind_config/dist/output.css">
+</head>
+<body>
+    <!-- Space between: Aplica uma margem apenas entre elementos -->
+     <div class="flex justify-center">
+        <!-- space-eixo-espaçamento*4 -->
+        <div class="flex space-x-6 justify-center items-center h-96 w-full bg-blue-500 border-4 border-orange-400">
+            <div class="flex justify-center items-center h-20 w-20 bg-cyan-400 border-4 border-orange-400">1</div>
+            <div class="flex justify-center items-center h-20 w-20 bg-yellow-400 border-4 border-orange-400">2</div>
+            <div class="flex justify-center items-center h-20 w-20 bg-slate-400 border-4 border-orange-400">3</div>
+        </div>
+        <!-- flex-col: eixo de colunas -->
+        <div class="flex flex-col space-y-6 justify-center items-center h-96 w-full bg-blue-500 border-4 border-orange-400">
+            <div class="flex justify-center items-center h-20 w-20 bg-cyan-400 border-4 border-orange-400">1</div>
+            <div class="flex justify-center items-center h-20 w-20 bg-yellow-400 border-4 border-orange-400">2</div>
+            <div class="flex justify-center items-center h-20 w-20 bg-slate-400 border-4 border-orange-400">3</div>
+        </div>
+     </div>
+</body>
+</html>
