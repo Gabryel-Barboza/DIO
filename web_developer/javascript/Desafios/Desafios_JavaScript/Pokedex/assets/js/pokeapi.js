@@ -1,36 +1,38 @@
 
 const pokeApi = {}
 
-// Retorna o pokemon definido
-pokeApi.getPokemon = function (id) {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        .then((response) => response.json())
-        .then((pokeDetail) => {
-            debugger
-            const pokemon = convertDetailToPokemon(pokeDetail)
-            pokeApi.getPokemonText(pokeDetail.species.url)
-                .then((text) => text)
-                .then((text) => pokemon.text = text)
-                .then((pokemon) => pokemon)
-                .catch((error) => console.log(error));
-        })
-        .catch((error) => console.log(error));
+// Retorna o pokemon pelo id, requisita um pokemon e seu texto
+pokeApi.getPokemon = async function (id) {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const pokeDetail = await response.json();
+        const pokemon = convertDetailToPokemon(pokeDetail);
+        const text = await pokeApi.getPokemonText(pokeDetail.species.url);
+        pokemon.text = text.flavor_text_entries[0].flavor_text;
+        return pokemon;
+    } catch (error) {
+        return console.log(error);
+    }
 }
+
 // Retorna uma lista com todos os pokemons, dentro do limite definido
-pokeApi.getPokemons = function (offset = 1, limit = 10) {
+pokeApi.getPokemons = async function (offset = 1, limit = 10) {
     const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
 
     // Formatando a requisição para o produto final: response > json > nome e url pokemons > url de pokemons > todas as requests feitas > json com as informações dos pokemons
-    return fetch(url)
-        .then((response) => { return response.json() })
-        .then((jsonBody) => jsonBody.results)
-        .then((pokemons) => pokemons.map((pokeApi.getPokemonDetail)))
-        .then((detailRequests) => Promise.all(detailRequests))
-        .then((pokemonsDetails) => pokemonsDetails)
-        .catch((error) => console.log(error));
+    try {
+        const response = await fetch(url);
+        const jsonBody = await response.json();
+        const pokemons = jsonBody.results;
+        const detailRequests = pokemons.map((pokeApi.getPokemonDetail));
+        const pokemonsDetails = await Promise.all(detailRequests);
+        return pokemonsDetails;
+    } catch (error) {
+        return console.log(error);
+    }
 }
 
-// Realiza a requisição e retorna uma instância de pokemon, utilizando async para fins didáticos
+// Realiza a requisição e retorna uma instância de pokemon
 pokeApi.getPokemonDetail = async (pokemon) => {
     try {
         const response = await fetch(pokemon.url);
@@ -45,9 +47,9 @@ pokeApi.getPokemonDetail = async (pokemon) => {
 pokeApi.getPokemonText = async (url) => {
     try {
         const response = await fetch(url);
-        const text = await response.json().flavor_text_entries[0].flavor_text;
+        const text = await response.json()
         return text;
-    }  catch (error) {
+    } catch (error) {
         return console.log(error);
     }
 }

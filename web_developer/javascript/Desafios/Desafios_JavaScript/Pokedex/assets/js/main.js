@@ -3,7 +3,7 @@
 const pokemonUl = document.getElementById('pokemonList');
 const pokemonLi = document.getElementsByClassName('pokemon');
 const loadButton = document.getElementById('loadMore');
-const limit = 5;
+const limit = 10;
 const maxPokemons = 151;
 let offset = 0;
 
@@ -21,32 +21,35 @@ function convertListToHTML(pokemon) {
             </li>`
 }
 
-// Cria uma tela com os detalhes de pokemon recebidos
+// Cria um Node com os detalhes de pokemon recebidos e adiciona ao body
 function createModal(pokemon) {
-    return `<div class="modal ${pokemon.type}">
-                <div class="modal-btn modal-item">
-                    <button class="btn-close" onclick="closeModal()">X</button>
-                </div>
-                <div class="modal-name modal-item">
-                    <h2 class="name">${pokemon.name}</h2>
-                </div>
-                <div class="modal-id modal-item">#${pokemon.number}</div>
-                <div class="modal-types modal-item">
-                    <ul class="types">${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}</ul>
-                </div>
-                <div class="modal-text modal-item">
-                    <p>${pokemon.text}</p>
-                </div>
-                <div class="modal-img modal-item">
-                    <img src="${pokemon.image}" alt="Imagem de ${pokemon.name}">
-                </div>
-                <div class="modal-description modal-item">
-                    <div class="modal-stats">
-                        ${pokemon.stats.map((stat) => `<span class="stat">${stat.stat.name}:</span> <span class="stat-value">${stat.base_stat}</span>\n`).join('')}
-                    </div>
-                    <div class="modal-abilities">${pokemon.abilities.map((ability) => ability.ability.name).join(' ')}</div>
-                </div>
-            </div>`
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.classList.add(`${pokemon.type}`);
+    modal.innerHTML = `
+    <div class="modal-btn modal-item">
+        <button class="btn-close" onclick="closeModal()">X</button>
+    </div>
+    <div class="modal-name modal-item">
+        <h2 class="name">${pokemon.name}</h2>
+    </div>
+    <div class="modal-id modal-item">#${pokemon.number}</div>
+    <div class="modal-types modal-item">
+        <ul class="types">${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}</ul>
+    </div>
+    <div class="modal-text modal-item">
+        <p>${pokemon.text}</p>
+    </div>
+    <div class="modal-img modal-item">
+        <img src="${pokemon.image}" alt="Imagem de ${pokemon.name}">
+    </div>
+    <div class="modal-description modal-item">
+        <div class="modal-stats">
+            ${pokemon.stats.map((stat) => `<span class="stat">${stat.stat.name}:</span> <span class="stat-value">${stat.base_stat}</span>\n`).join('')}
+        </div>
+        <div class="modal-abilities">${pokemon.abilities.map((ability) => ability.ability.name).join(' ')}</div>
+    </div>`;
+    document.body.appendChild(modal);
 }
 
 // Fecha o modal ao ser invocada
@@ -55,7 +58,7 @@ function closeModal() {
 }
 
 // Abre o pokemon selecionado e visualiza seus detalhes
-function openDetails(event) {
+async function openDetails(event) {
     // Seleciona o elemento que ativou o evento
     let item = event.target;
     // Enquanto o elemento não ser uma LI e não conter a classe pokemon selecione o elemento pai
@@ -65,11 +68,8 @@ function openDetails(event) {
     const itemNumber = item.getElementsByClassName("number")[0].innerText.replace("#", "");
     const itemId = parseInt(itemNumber);
     // Requisitando as informações do pokemon selecionado e retornando um modal com os detalhes de pokemon
-    pokeApi.getPokemon(itemId)
-        .then((pokemon) => pokemon)
-        .then((pokemon) => createModal(pokemon))
-        .then((modal) => document.body.innerHTML += modal)
-        .catch((error) => console.log(error));
+    const pokemon = await pokeApi.getPokemon(itemId);
+    createModal(pokemon);
 }
 
 // Criando os elementos HTML dinamicamente após receber a lista de pokemons com o método
@@ -86,7 +86,6 @@ function loadPokemons(offset, limit) {
 loadPokemons(offset, limit);
 
 function loadMore() {
-    debugger
     offset += limit;
     // Checando se os próximos pokemons ultrapassam o máximo definido, remove o botão e retorna o restante até o limite se true
     const nextPokemons = offset + limit;
