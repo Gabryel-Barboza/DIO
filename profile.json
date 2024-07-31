@@ -1,0 +1,60 @@
+{
+  "name": "Gabryel Barboza",
+  "photo": "https://avatars.githubusercontent.com/u/73187678?v=4",
+  "job": "",
+  "location": "Valparaíso de Goiás - GO",
+  "phone": "(61) 98495-4248",
+  "email": "gabryelbuildbarboza@gmail.com",
+  "skills": {
+    "hardSkills": [
+      {
+        "name": "Python",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/python.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/javascript.png"
+      },
+      {
+        "name": "MySQL",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mysql.png"
+      },
+      {
+        "name": "Mongodb",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+      },
+      {
+        "name": "Java",
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+      }
+    ],
+    "softSkills": [
+      "Atenção aos detalhes",
+      "Bom trabalho em equipe",
+      "Comunicação objetiva",
+      "Proatividade"
+    ]
+  },
+  "languages": [
+    "Português BR",
+    "Inglês (intermediário)",
+  ],
+  "portfolio": [
+    {
+      "name": "Desenvolvimento de APIs utilizando Python",
+      "url": "https://github.com/Gabryel-Barboza/DIO",
+      "github": true
+    },
+    {
+      "name": "Criação de sites com CSS e Tailwind CSS",
+      "url": "https://github.com/Gabryel-Barboza/DIO/tree/CSS",
+      "github": true
+    },
+    {
+      "name": "Criação de páginas com interatividade através de JavaScript",
+      "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
+      "github": true
+    }
+  ],
+  "professionalExperience": []
+}
