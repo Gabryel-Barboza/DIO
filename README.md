@@ -19,7 +19,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Portifolio com Tailwind CSS](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Portifolio/src)
 
 ## Desafios JavaScript 💡
-
+[Pokedex com Detalhes](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Pokedex)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -40,6 +40,7 @@ Aprendendo a desenvolver com o JavaScript na web, construindo websites e aplican
 * [Construindo uma Pokedex](https://gabryel-barboza.github.io/DIO/web_developer/javascript/02_JavaScript%20Web/Criando%20uma%20Pokedex)
 
 ## Aprofundando os Conhecimentos em JavaScript
+Entendendo mais a fundo os conceitos vistos anteriormente.
 * [Variáveis e Escopo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Variáveis%20e%20Escopo)
 * [Tipos de Dados](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Tipos%20de%20Dados)
 * [Manipulação de Listas](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Manipulação%20de%20Listas)
