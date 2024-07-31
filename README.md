@@ -19,8 +19,8 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Portifolio com Tailwind CSS](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_CSS/Portifolio/src)
 
 ## Desafios JavaScript 💡
-[Pokedex com Detalhes](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Pokedex)
-[Portfolio com JavaScript](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Portfolio)
+* [Pokedex com Detalhes](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Pokedex)
+* [Portfolio com JavaScript](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Portfolio)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
