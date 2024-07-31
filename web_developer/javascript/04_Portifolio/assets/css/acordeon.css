@@ -1,0 +1,234 @@
+.acordeon {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    transition: .25s;
+}
+
+.acordeon:hover {
+    background-color: #55569e;
+    border-color: #55569e;
+}
+
+.open {
+    background-color: #55569e;
+}
+
+.acordeon-title {
+    font-size: 1em;
+    margin: .2rem;
+}
+
+.open .acordeon-title::after {
+    transform: rotate(0deg);
+    transition: .25s;
+}
+
+.trigger {
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 1rem 2rem .1rem;
+    border: none;
+}
+
+.acordeon-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-title::after {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../img/arrow.svg") center/contain no-repeat;
+    transform: rotate(180deg);
+    transition: .25s;
+}
+
+.content {
+    overflow: hidden;
+    max-height: 0;
+    padding: .5rem;
+    transition: max-height .25s;
+}
+
+.open .content {
+    display: block;
+    overflow: scroll;
+    max-height: 500px;
+    padding: 1rem;
+    transition: max-height .25s;
+}
+
+.work-skills {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: .675rem;
+    list-style: none;
+    max-height: 200px;
+    padding-left: .5rem;
+}
+
+.work-skills li {
+    width: 30%;
+}
+
+.work-skills img {
+    width: 40%;
+    min-width: 25px;
+    max-width: 4rem;
+    max-height: 4rem;
+}
+
+.personal-skills {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    list-style: none;
+    font-weight: 700;
+}
+
+:where(.personal-skills, .languages) li::before {
+    content: "";
+    display: inline-block;
+    width: .7rem;
+    height: .7rem;
+    margin-right: .5rem;
+    background: url('../img/check.svg') center/contain no-repeat;
+}
+
+.languages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    font-weight: 700;
+    padding-left: 0;
+}
+
+.education {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education li {
+    margin-bottom: .5rem;
+}
+
+.university {
+    font-weight: 700;
+}
+
+.education :nth-child(1) .university::before {
+    content: "";
+    display: inline-block;
+    background: url("../img/uniasselvi.ico") center/contain no-repeat;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+:where(.course span, .portfolio h3)::before {
+    content: "";
+    display: inline-block;
+    background: center/contain no-repeat;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+#course-1::before {
+    background-image: url("../img/javascript.svg");
+}
+
+#course-2::before {
+    background-image: url("../img/python.svg");
+}
+
+#course-3::before {
+    background-image: url("../img/mysql.svg");
+}
+
+#course-4::before {
+    background-image: url("../img/css.svg");
+}
+
+.portfolio {
+    list-style: none;
+    padding-left: .5rem;
+}
+
+.portifolio h3 {
+    font-size: 1.2rem;
+}
+
+.portfolio a {
+    font-weight: 300;
+}
+
+.portfolio .github::before {
+    background-image: url("../img/github.svg");
+}
+
+.credits {
+    text-align: center;
+    font-weight: 300;
+}
+
+.credits a {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .open .content {
+        overflow: visible;
+    }
+
+    .acordeon:first-of-type .content {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        gap: 20%;
+        padding: .5rem 1rem;
+    }
+
+    .work-skills {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: .5rem;
+        max-height: 250px;
+    }
+
+    .work-skills li {
+        width: fit-content;
+    }
+    
+    .work-skills img {
+        width: 70%;
+        max-height: 5rem;  
+    }
+
+    .work-skills img:hover {
+        width: 75%;
+    }
+
+    .skills-container {
+        max-width: 40%;
+    }
+}
