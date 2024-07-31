@@ -15,8 +15,8 @@
     top: 1rem;
     right: 1rem;
     background: url("../img/svg/menu.svg") center/contain no-repeat;
-    width: 2rem;
-    height: 2rem;
+    width: calc(1rem + 1%);
+    height: calc(1rem + 1%);
 }
 
 .photo {
