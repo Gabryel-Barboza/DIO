@@ -10,23 +10,27 @@
     "hardSkills": [
       {
         "name": "Python",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/python.png"
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/python.svg"
       },
       {
         "name": "JavaScript",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/javascript.png"
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/javascript.svg"
       },
       {
         "name": "MySQL",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mysql.png"
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mysql.svg"
       },
       {
         "name": "Mongodb",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mongodb.svg"
+      },
+      {
+        "name": "Git",
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/git.svg"
       },
       {
         "name": "Java",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/java.svg"
       }
     ],
     "softSkills": [
