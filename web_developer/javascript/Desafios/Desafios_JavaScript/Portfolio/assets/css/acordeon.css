@@ -77,7 +77,7 @@
     align-content: flex-start;
     gap: .675rem;
     list-style: none;
-    max-height: 200px;
+    max-height: 220px;
     padding-left: .5rem;
 }
 
@@ -189,6 +189,7 @@
 .credits {
     text-align: center;
     font-weight: 300;
+    padding: .5rem;
 }
 
 .credits a {
