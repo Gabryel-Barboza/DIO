@@ -44,6 +44,42 @@
     "Português BR",
     "Inglês (intermediário)"
   ],
+  "education": [
+    "collegges": [
+      {
+        "name": "Uniasselvi",
+        "course": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        "date": "2024-2026"
+      }
+    ],
+    "courses": [
+      {
+        "name": "Python Developer",
+        "institution": "Digital Innovation One",
+        "workload": "60h"
+      },
+      {
+        "name": "JavaScript Developer",
+        "institution": "Digital Innovation One",
+        "workload": "40h"
+      },
+      {
+        "name": "MySQL Database Specialist",
+        "institution": "Digital Innovation One",
+        "workload": "70h",
+      },
+      {
+        "name": "CSS Course",
+        "institution": "Digital Innovation One",
+        "workload": "40h",
+      },
+      {
+        "name": "Nivelamento em Cibersegurança",
+        "institution": "Hackers do Bem",
+        "workload": "80h",
+      }
+    ]
+  ],
   "portfolio": [
     {
       "name": "Desenvolvimento de APIs utilizando Python",
