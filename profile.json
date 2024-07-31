@@ -31,6 +31,10 @@
             {
                 "name": "Java",
                 "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/java.svg"
+            },
+            {
+                "name": "CSS",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/css.svg"
             }
         ],
         "softSkills": [
