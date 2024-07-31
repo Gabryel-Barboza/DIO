@@ -76,4 +76,4 @@ Para ver as páginas construídas, entre na **branch JavaScript** e acesse o [Gi
 * [Backgrounds](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/04_Background/src)
 * [Tamanhos e Espaçamento](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/05_Tamanho%20e%20Espaçamento/src)
 * [Tipografia](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/06_Tipografia/src)
-* [Portifolio](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/07_Projeto%20Final/src)
+* [Portfolio](https://github.com/Gabryel-Barboza/DIO/tree/CSS/web_developer/css/12_Tailwind/07_Projeto%20Final/src)
