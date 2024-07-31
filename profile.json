@@ -44,7 +44,7 @@
     "Português BR",
     "Inglês (intermediário)"
   ],
-  "education": [
+  "education": {
     "collegges": [
       {
         "name": "Uniasselvi",
@@ -79,7 +79,7 @@
         "workload": "80h",
       }
     ]
-  ],
+  },
   "portfolio": [
     {
       "name": "Desenvolvimento de APIs utilizando Python",
