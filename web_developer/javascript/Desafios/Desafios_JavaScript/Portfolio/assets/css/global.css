@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+    font-family: "Neue Machina";
+    src: url('../fonts/NeueMachina-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Neue Machina";
+    src: url('../fonts/NeueMachina-Light.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Neue Machina";
+    src: url('../fonts/NeueMachina-Ultrabold.otf');
+    font-weight: 900;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.main {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+}
+
+.main::before {
+    content:"";
+    display: block;
+    position: fixed;
+    top: -60vh;
+    left: -40vw;
+    z-index: -1;
+    background: linear-gradient(45deg, #e57daa 30%, #2b0e53 80%) center/100%;
+    width: 90vw;
+    height: 90vh;
+    transform: rotate(45deg);
+    filter: blur(60px);
+}
+
+.main::after {
+    content:"";
+    display: block;
+    position: fixed;
+    top: 50vh;
+    right: -30vw;
+    z-index: -1;
+    background: linear-gradient(20deg, #151559 40%, #5975c4 50%, #8053a9 60%,  #631922 60%) center/100%;
+    width: 90vw;
+    height: 90vh;
+    transform: rotate(45deg);
+    filter: blur(60px);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 500px) {
+    .main::after {
+        top: 70vh;
+        right: -40vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+
+    .main::before {
+        width: 70vw;
+    }
+
+    .main::after {
+        width: 100vw;
+        height: 100vh;
+        top: 80vh;
+        right: -60vw;
+        background-image: linear-gradient(0deg, #151559 40%, #5975c4 50%, #8053a9 60%,  #631922 60%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main::before {
+        height: 100vh;
+        left: -50vw;
+    }
+    .main::after {
+        top: 100vh;
+        right: -65vw;
+    }
+}
