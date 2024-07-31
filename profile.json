@@ -1,101 +1,101 @@
 {
-  "name": "Gabryel Barboza",
-  "photo": "https://avatars.githubusercontent.com/u/73187678?v=4",
-  "url": "https://www.github.com/gabryel-barboza",
-  "job": "",
-  "location": "Valparaíso de Goiás - GO",
-  "phone": "(61) 98495-4248",
-  "email": "gabryelbuildbarboza@gmail.com",
-  "skills": {
-    "hardSkills": [
-      {
-        "name": "Python",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/python.svg"
-      },
-      {
-        "name": "JavaScript",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/javascript.svg"
-      },
-      {
-        "name": "MySQL",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mysql.svg"
-      },
-      {
-        "name": "MongoDB",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mongodb.svg"
-      },
-      {
-        "name": "Git",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/git.svg"
-      },
-      {
-        "name": "Java",
-        "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/java.svg"
-      }
-    ],
-    "softSkills": [
-      "Atenção aos detalhes",
-      "Bom trabalho em equipe",
-      "Comunicação objetiva",
-      "Proatividade"
-    ]
-  },
-  "languages": [
-    "Português BR",
-    "Inglês (intermediário)"
-  ],
-  "education": {
-    "collegges": [
-      {
-        "name": "Uniasselvi",
-        "course": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-        "date": "2024-2026"
-      }
-    ],
-    "courses": [
-      {
-        "name": "Python Developer",
-        "institution": "Digital Innovation One",
-        "workload": "60h"
-      },
-      {
-        "name": "JavaScript Developer",
-        "institution": "Digital Innovation One",
-        "workload": "40h"
-      },
-      {
-        "name": "MySQL Database Specialist",
-        "institution": "Digital Innovation One",
-        "workload": "70h",
-      },
-      {
-        "name": "CSS Course",
-        "institution": "Digital Innovation One",
-        "workload": "40h",
-      },
-      {
-        "name": "Nivelamento em Cibersegurança",
-        "institution": "Hackers do Bem",
-        "workload": "80h",
-      }
-    ]
-  },
-  "portfolio": [
-    {
-      "name": "Desenvolvimento de APIs utilizando Python",
-      "url": "https://github.com/Gabryel-Barboza/DIO",
-      "github": true
+    "name": "Gabryel Barboza",
+    "photo": "https://avatars.githubusercontent.com/u/73187678?v=4",
+    "url": "https://www.github.com/gabryel-barboza",
+    "job": "",
+    "location": "Valparaíso de Goiás - GO",
+    "phone": "(61) 98495-4248",
+    "email": "gabryelbuildbarboza@gmail.com",
+    "skills": {
+        "hardSkills": [
+            {
+                "name": "Python",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/python.svg"
+            },
+            {
+                "name": "JavaScript",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/javascript.svg"
+            },
+            {
+                "name": "MySQL",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mysql.svg"
+            },
+            {
+                "name": "MongoDB",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/mongodb.svg"
+            },
+            {
+                "name": "Git",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/git.svg"
+            },
+            {
+                "name": "Java",
+                "logo": "https://raw.githubusercontent.com/Gabryel-Barboza/DIO/JavaScript/web_developer/javascript/04_Portifolio/assets/img/java.svg"
+            }
+        ],
+        "softSkills": [
+            "Atenção aos detalhes",
+            "Bom trabalho em equipe",
+            "Comunicação objetiva",
+            "Proatividade"
+        ]
     },
-    {
-      "name": "Criação de sites com CSS e Tailwind CSS",
-      "url": "https://github.com/Gabryel-Barboza/DIO/tree/CSS",
-      "github": true
+    "languages": [
+        "Português BR",
+        "Inglês (intermediário)"
+    ],
+    "education": {
+        "collegges": [
+            {
+                "name": "Uniasselvi",
+                "course": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+                "date": "2024-2026"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Python Developer",
+                "institution": "Digital Innovation One",
+                "workload": "60h"
+            },
+            {
+                "name": "JavaScript Developer",
+                "institution": "Digital Innovation One",
+                "workload": "40h"
+            },
+            {
+                "name": "MySQL Database Specialist",
+                "institution": "Digital Innovation One",
+                "workload": "70h"
+            },
+            {
+                "name": "CSS Course",
+                "institution": "Digital Innovation One",
+                "workload": "40h"
+            },
+            {
+                "name": "Nivelamento em Cibersegurança",
+                "institution": "Hackers do Bem",
+                "workload": "80h"
+            }
+        ]
     },
-    {
-      "name": "Criação de páginas com interatividade através de JavaScript",
-      "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
-      "github": true
-    }
-  ],
-  "professionalExperience": ""
+    "portfolio": [
+        {
+            "name": "Desenvolvimento de APIs utilizando Python",
+            "url": "https://github.com/Gabryel-Barboza/DIO",
+            "github": true
+        },
+        {
+            "name": "Criação de sites com CSS e Tailwind CSS",
+            "url": "https://github.com/Gabryel-Barboza/DIO/tree/CSS",
+            "github": true
+        },
+        {
+            "name": "Criação de páginas com interatividade através de JavaScript",
+            "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
+            "github": true
+        }
+    ],
+    "professionalExperience": ""
 }
