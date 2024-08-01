@@ -186,14 +186,19 @@
     background-image: url("../img/svg/github.svg");
 }
 
-.credits {
+footer {
     text-align: center;
     font-weight: 300;
     padding: .5rem;
 }
 
-.credits a {
+footer a {
     font-weight: 700;
+}
+
+footer img {
+    min-width: 4rem;
+    width: 10%;
 }
 
 @media screen and (min-width: 768px) {
