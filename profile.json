@@ -1,6 +1,6 @@
 {
     "name": "Gabryel Barboza",
-    "photo": "https://avatars.githubusercontent.com/u/73187678?v=4",
+    "photo": "https://media.licdn.com/dms/image/D4E03AQHuP3_U3rUpnA/profile-displayphoto-shrink_200_200/0/1718318632243?e=1727913600&v=beta&t=vQokbcgQRq4ULvrFfvQQtSxKYkyJSs9_qX4eMcRDuyg",
     "url": "https://www.github.com/gabryel-barboza",
     "job": "",
     "location": "Valparaíso de Goiás - GO",
@@ -88,17 +88,20 @@
         {
             "name": "Desenvolvimento de APIs utilizando Python",
             "url": "https://github.com/Gabryel-Barboza/DIO",
-            "github": true
+            "github": true,
+            "certificate": ""
         },
         {
             "name": "Criação de sites com CSS e Tailwind CSS",
             "url": "https://github.com/Gabryel-Barboza/DIO/tree/CSS",
-            "github": true
+            "github": true,
+            "certificate": ""
         },
         {
             "name": "Criação de páginas com interatividade através de JavaScript",
             "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
-            "github": true
+            "github": true,
+            "certificate": ""
         }
     ],
     "professionalExperience": ""
