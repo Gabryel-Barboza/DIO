@@ -69,6 +69,7 @@ function jsonToHTML(json) {
                         return `<li>
                             <h3 class="${project.github? 'github': ''}">${project.name}</h3>
                             <a href="${project.url}" target="_blank">${project.url}</a>
+                            ${project.certificate? `<p class="certificate"><a href="${project.certificate}" target="_blank" rel="external">Certificado</a></p>` : ''}
                         </li>`
                     }).join('')}
                 </ul>

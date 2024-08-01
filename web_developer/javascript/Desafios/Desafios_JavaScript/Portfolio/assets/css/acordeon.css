@@ -186,6 +186,15 @@
     background-image: url("../img/svg/github.svg");
 }
 
+.certificate a {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.certificate::before {
+    content:"> ";
+}
+
 footer {
     text-align: center;
     font-weight: 300;
