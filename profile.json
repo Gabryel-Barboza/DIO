@@ -91,17 +91,17 @@
             "github": true,
             "certificate": ""
         },
+         {
+            "name": "Criação de páginas com interatividade através de JavaScript",
+            "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
+            "github": true,
+            "certificate": "https://hermes.dio.me/certificates/cover/QHM2MYJR.jpg"
+        },
         {
             "name": "Criação de sites com CSS e Tailwind CSS",
             "url": "https://github.com/Gabryel-Barboza/DIO/tree/CSS",
             "github": true,
-            "certificate": ""
-        },
-        {
-            "name": "Criação de páginas com interatividade através de JavaScript",
-            "url": "https://github.com/Gabryel-Barboza/DIO/tree/JavaScript",
-            "github": true,
-            "certificate": ""
+            "certificate": "https://hermes.dio.me/certificates/cover/0CQPO5QR.jpg"
         }
     ],
     "professionalExperience": ""
