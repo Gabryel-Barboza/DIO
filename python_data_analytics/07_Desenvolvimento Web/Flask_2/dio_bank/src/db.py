@@ -4,7 +4,8 @@ import sqlite3
 import click
 from flask import current_app, g
 
-# g = variável global da aplicação Flask, adiciona o objeto do banco de dados 
+# g = variável global da aplicação Flask, adiciona o objeto do banco de dados
+
 
 def get_db():
     # Cria a conexão se db não existir em g
@@ -39,7 +40,6 @@ def init_db():
 @click.command('init-db')
 def init_db_command():
     """Clear the existing data and create new tables."""
-    init_db()
     click.echo('Initialized the database.')
 
 

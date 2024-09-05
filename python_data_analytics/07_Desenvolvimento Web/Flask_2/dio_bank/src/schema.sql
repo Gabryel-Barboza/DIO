@@ -1,4 +1,4 @@
--- schema da documentação Flask
+-- schema da documentação Flask, utilizado para criar o database manualmente na versão antiga da aplicação.
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS post;
 
