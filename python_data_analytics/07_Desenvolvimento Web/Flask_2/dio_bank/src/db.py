@@ -1,3 +1,4 @@
+# Versão antiga, utilizando ORM para criar o DB agora
 # Aplicação para conexão com o database da documentação Flask
 import sqlite3
 
