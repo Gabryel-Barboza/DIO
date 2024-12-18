@@ -2,9 +2,17 @@
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos.
 
+# Desafios
+* [Modelagem E-Commerce](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Modelagem%20E-commerce)
+
 # Modelagem de Dados 📝
 Para este tópico o foco está na interpretação de diagramas de Entidade Relacionamento Extendido, além da construção de projetos conceituais. <br>
 Com a utilização do MySQL Workbench foram realizados exercícios de modelagem de diferentes cenários, que podem ser visualizados na pasta [01_Modelagem_Dados](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/01_Modelagem_Dados). <br>
+* [Ordem de Serviço](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/01_Modelagem_Dados/Ordem%20de%20Serviço.png)
+* [Universidade](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/01_Modelagem_Dados/Universidade_refinado.png)
+
+<br>
+
 Como desafio para este módulo, foi feita a modelagem de um contexto de E-commerce apresentado na imagem a seguir. Este modelo pode ser acessado com o Worbench na pasta [Desafios](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Modelagem%20E-commerce).
 
 ![E-commerce](https://github.com/user-attachments/assets/d6387d4d-a280-492e-b7fe-4e73044fc443)
