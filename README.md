@@ -23,6 +23,6 @@ Para o produto é dado um fornecedor ou vendedor de terceiros, a quem determina 
 
 ## Oficina
 Para o segundo desafio temos um cenário de uma Oficina. <br>
-Um Cliente possui um ou mais veículos, esse veículo é analisado por mecânicos para determinar o tipo de serviço. Após a análise, é gerado uma OS com o orçamento do serviço, esse orçamento é feito a partir do valor de cada peça e serviço necessário para o trabalho.
+Um Cliente possui um ou mais veículos, esse veículo é analisado por mecânicos para determinar o tipo de serviço. Após a análise, é gerado uma OS com o orçamento do serviço, esse orçamento é feito a partir do valor de cada peça e serviço necessário para o trabalho. Uma equipe de mecânicos irá executar essa OS após a autorização do cliente.
 ![Oficina](https://github.com/user-attachments/assets/9d8efae0-eda2-4ed0-9c97-170123011751)
 
