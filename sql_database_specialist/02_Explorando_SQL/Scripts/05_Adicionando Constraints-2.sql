@@ -8,6 +8,9 @@ WHERE constraint_schema='company';
 
 SELECT * FROM information_schema.referential_constraints;
 
+-- Informações do esquema
+SELECT * FROM information_schema.schemata;
+
 DESC employee;
 
 -- Alterando tabelas
@@ -16,7 +19,6 @@ ALTER TABLE employee
 	ADD CONSTRAINT fk_employee_super FOREIGN KEY (Super_ssn) REFERENCES employee (ssn)
     ON DELETE SET NULL -- Quando deletado atribuir nulo
     ON UPDATE CASCADE; -- Quando atualizado o estado, refletir em tabelas filhas
-
 
 -- Alterando colunas existentes
 ALTER TABLE employee MODIFY Dno INT NOT NULL DEFAULT 1;
@@ -30,7 +32,6 @@ ALTER TABLE department
 	ADD CONSTRAINT fk_dept_employee 
 	FOREIGN KEY (Mgr_ssn) REFERENCES employee (Ssn)
 	ON UPDATE CASCADE;
-
 
 ALTER TABLE dept_locations DROP CONSTRAINT fk_dept_locations_department;
 
