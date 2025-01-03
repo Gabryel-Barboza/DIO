@@ -6,6 +6,8 @@ DROP DATABASE manipulation;
 CREATE DATABASE IF NOT EXISTS manipulation;
 USE manipulation;
 
+SHOW TABLES;
+
 CREATE TABLE bankAccounts(
 	Id_account INT AUTO_INCREMENT PRIMARY KEY,
     Ag_num INT NOT NULL,

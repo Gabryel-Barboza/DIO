@@ -2,7 +2,7 @@
 CREATE SCHEMA IF NOT EXISTS company;
 
 -- Recriando tabelas se já existirem
-DROP TABLE employee, department, dependent, dept_locations, project, works_on;
+DROP TABLE IF EXISTS employee, department, dependent, dept_locations, project, works_on;
 
 USE company;
 
