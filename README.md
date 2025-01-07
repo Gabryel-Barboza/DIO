@@ -57,7 +57,7 @@ Por fim, a criação de diversas consultas e exercícios:
 * [Junções I](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/02_Explorando_SQL/Scripts/15_JOIN%20entre%20tabelas.sql)
 * [Junções II](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/02_Explorando_SQL/Scripts/16_JOIN%20Statement.sql)
 
-Como desafio do módulo, foi feita a modelagem do seguinte banco de dados e implementado o esquema lógico com SQL: <br>
+Como desafio do módulo, foi feita a modelagem do seguinte banco de dados, e um posterior refinamento, e implementado o esquema lógico com SQL: <br>
 ![Modelagem%20E-commerce.png](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Modelagem%20E-commerce.png)
 <br>
 
