@@ -11,12 +11,15 @@ CREATE TABLE cliente(
 	id_cliente INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(15) NOT NULL,
     sobrenome VARCHAR(50) NOT NULL,
+    telefone CHAR(11),
     rua VARCHAR(15) NOT NULL,
     bairro VARCHAR(15) NOT NULL,
     complemento VARCHAR(15) NOT NULL,
     cidade VARCHAR(15) NOT NULL,
     estado VARCHAR(15) NOT NULL
 );
+
+ALTER TABLE cliente AUTO_INCREMENT=1;
 
 -- pessoa_fisica é generalização de cliente
 -- cpf deve ser único
@@ -36,22 +39,22 @@ CREATE TABLE pessoa_juridica(
     CONSTRAINT fk_pessoa_juridica_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
--- Entidade fraca, cartão depende de cliente
 CREATE TABLE cartao(
 	id_cliente INT,
-	id_cartao INT,
+	id_cartao INT PRIMARY KEY AUTO_INCREMENT,
     tipo_cartao ENUM("crédito", "débito") NOT NULL,
     nome_titular VARCHAR(50) NOT NULL,
     numeracao_cartao CHAR(16) NOT NULL,
     data_validade DATE NOT NULL,
-    PRIMARY KEY (id_cliente, id_cartao),
     CONSTRAINT unique_cartao UNIQUE (numeracao_cartao),
     CONSTRAINT fk_cartao_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente) 
 );
 
+ALTER TABLE cartao AUTO_INCREMENT=1;
+
 CREATE TABLE pedido(
+    id_cliente INT,
 	id_pedido INT PRIMARY KEY AUTO_INCREMENT,
-	id_cliente INT,
     status_pedido ENUM("Em andamento", "Processando", "Enviado", "Entregue") DEFAULT "Processando",
     descricao VARCHAR(50),
     tipo_pagamento ENUM("Boleto","Pix","Cartão","Dois Cartões"),
@@ -59,15 +62,17 @@ CREATE TABLE pedido(
     CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
--- Entidade fraca, entrega depende de pedido
+ALTER TABLE pedido AUTO_INCREMENT=1;
+
 CREATE TABLE entrega(
 	id_pedido INT,
-	id_entrega INT,
+	id_entrega INT PRIMARY KEY AUTO_INCREMENT,
     status_entrega VARCHAR(30) NOT NULL,
     codigo_rastreio VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id_pedido, id_entrega),
     CONSTRAINT fk_entrega_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
 );
+
+ALTER TABLE entrega AUTO_INCREMENT=1;
 
 CREATE TABLE produto(
 	id_produto INT PRIMARY KEY AUTO_INCREMENT,
@@ -77,10 +82,14 @@ CREATE TABLE produto(
     dimensionamento VARCHAR(12)
 );
 
+ALTER TABLE produto AUTO_INCREMENT=1;
+
 CREATE TABLE estoque(
 	id_estoque INT PRIMARY KEY AUTO_INCREMENT,
     local VARCHAR(30)
 );
+
+ALTER TABLE estoque AUTO_INCREMENT=1;
 
 CREATE TABLE fornecedor(
 	id_fornecedor INT PRIMARY KEY AUTO_INCREMENT,
@@ -89,12 +98,16 @@ CREATE TABLE fornecedor(
     cnpj CHAR(15)
 );
 
+ALTER TABLE fornecedor AUTO_INCREMENT=1;
+
 CREATE TABLE fornecedor_terceiro(
 	id_fornecedor_terceiro INT PRIMARY KEY AUTO_INCREMENT,
     razao_social VARCHAR(30),
     nome_fantasia VARCHAR(30),
     local VARCHAR(50)
 );
+
+ALTER TABLE fornecedor_terceiro AUTO_INCREMENT=1;
 
 -- Tabelas de relacionamentos
 CREATE TABLE pedido_x_produto(
