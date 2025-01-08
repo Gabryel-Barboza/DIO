@@ -5,8 +5,8 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 # Desafios
 * [Modelagem E-Commerce](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Modelagem%20E-commerce)
 * [Modelagem Oficina](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Modelagem%20Oficina)
-* [Esquema Lógico E-commerce](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Esquema%20do%20Banco%20de%20Dados%20E-commerce.sql)
-* [Recuperação de Dados do Esquema](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Recuperando%20Dados%20do%20Banco.sql)
+* [Esquema Lógico E-commerce](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce)
+* [Esquema Lógico Oficina](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina)
 
 # Modelagem de Dados 📝
 Para este tópico o foco está na interpretação de diagramas de Entidade Relacionamento Extendido, além da construção de projetos conceituais. <br>
@@ -57,6 +57,7 @@ Por fim, a criação de diversas consultas e exercícios:
 * [Junções I](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/02_Explorando_SQL/Scripts/15_JOIN%20entre%20tabelas.sql)
 * [Junções II](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/02_Explorando_SQL/Scripts/16_JOIN%20Statement.sql)
 
+## Esquema Lógico de E-commerce
 Como desafio do módulo, foi feita a modelagem do seguinte banco de dados, e um posterior refinamento, e implementado o esquema lógico com SQL: <br>
 ![Modelagem%20E-commerce.png](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Modelagem%20E-commerce.png)
 <br>
@@ -65,5 +66,15 @@ Logo após, criadas consultas com inserções e recuperações de dados para res
 * [Esquema Lógico E-commerce](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Esquema%20do%20Banco%20de%20Dados%20E-commerce.sql)
 * [Instância de Dados](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Inst%C3%A2ncia%20de%20Dados%20no%20E-commerce.sql)
 * [Recuperação de Dados](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce/Recuperando%20Dados%20do%20Banco.sql)
+
+## Esquema Lógico de Oficina
+Outro desafio realizado foi a modelagem e implementação de um esquema de oficina, seguindo o seguinte esquema conceitual: <br>
+![Oficina.png](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina/Oficina.png)
+<br>
+
+Etapas de implementação do banco de dados:
+* [Esquema Lógico de Oficina](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina/Esquema%20do%20Banco%20de%20Dados%20Oficina.sql)
+* [Instância de Dados no Esquema](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina/Inst%C3%A2ncia%20de%20Dados.sql)
+* [Recuperação de Dados com SELECT](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina/Recuperando%20Dados.sql)
 
 # Consultas SQL com Técnicas Avançadas ⁉️
