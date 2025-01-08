@@ -40,3 +40,22 @@ SELECT concat(m.nome, ' ', m.sobrenome) 'Nome do Mecânico', count(*) 'Serviços
 SELECT  tipo_peca 'Tipo de serviço', ROUND(AVG(valor),2) 'Média de preços'
 	FROM peca
     GROUP BY tipo_peca;
+
+-- Filtragem de dados por marca de veiculo
+SELECT id_cliente, nome, telefone, tipo_veiculo, marca_veiculo, modelo_veiculo 
+    FROM cliente INNER JOIN veiculo USING (id_cliente)
+    WHERE marca_veiculo='Honda' OR marca_veiculo='Toyota';
+
+-- Filtragem de dados por data de emissão da ordem de serviço
+SELECT id_cliente, nome, telefone, id_ordem_servico, data_emissao, data_prevista_conclusao, status_servico, descricao 
+    FROM cliente INNER JOIN ordem_servico USING (id_cliente)
+    WHERE data_emissao BETWEEN "2025-01-03" AND "2025-01-05";
+
+-- Contagem de veículos por marca
+SELECT marca_veiculo, count(*) 'Veículos' FROM veiculo GROUP BY marca_veiculo;
+
+-- Preço médio dos serviços por veículo com média maior que 300
+SELECT tipo_veiculo, AVG(valor_total) 'Média de preço por serviço'
+    FROM veiculo INNER JOIN cliente USING (id_cliente)
+    INNER JOIN ordem_servico USING (id_cliente)
+    GROUP BY tipo_veiculo HAVING AVG(valor_total)>300;

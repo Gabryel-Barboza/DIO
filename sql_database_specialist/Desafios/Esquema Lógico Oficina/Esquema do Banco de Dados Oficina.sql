@@ -33,6 +33,7 @@ CREATE TABLE ordem_servico(
     data_prevista_conclusao DATE,
     status_servico ENUM('Em espera', 'Peça faltando', 'Em andamento', 'Concluído') NOT NULL,
     descricao VARCHAR(100),
+    valor_total FLOAT,
     CONSTRAINT fk_ordem_servico_cliente FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
 );
 
