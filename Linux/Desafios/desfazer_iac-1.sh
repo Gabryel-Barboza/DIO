@@ -1,4 +1,5 @@
 #!/bin/bash
+# Desfaz todas as manipulações do arquivo iac-1.sh
 
 echo "Removendo diretórios"
 rm -r /publico /adm /ven /sec
