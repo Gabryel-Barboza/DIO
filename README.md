@@ -19,7 +19,7 @@ Tópicos incluem:
 * Grupos;
 * Comandos de ajuda;
 * Editores de Texto;
-* Scripts;
+* Scripts.
 
 Como desafio deste módulo, foi criado um script para provisionar uma estrutura de diretórios, grupos e usuários, além de adicionar as permissões apropriadas 
 para essa estrutura. [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
