@@ -6,7 +6,8 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
 
 # Aprendendo Comandos em Bash
-Iniciando com a linguagem Bash na distribuição Linux Ubuntu, isso através de uma máquina virtual instalada com Ubuntu Server. Tópicos incluem:
+Iniciando com a linguagem Bash na distribuição Linux Ubuntu, isso através de uma máquina virtual instalada com Ubuntu Server.<br>
+Tópicos incluem:
 * Conexão SSH no Linux e via Putty no Windows ao servidor remoto na máquina virtual;
 * Manipulação de arquivos e diretórios;
 * Comandos de listagem e procura de arquivos;
