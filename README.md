@@ -4,6 +4,7 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 
 # Desafios
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
+* [Infrastructure as Code II](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-2.sh)
 
 # Aprendendo Comandos em Bash
 Iniciando com a linguagem Bash na distribuição Linux Ubuntu, isso através de uma máquina virtual instalada com Ubuntu Server.<br>
