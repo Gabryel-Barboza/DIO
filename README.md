@@ -19,7 +19,10 @@ Tópicos incluem:
 * Grupos;
 * Comandos de ajuda;
 * Editores de Texto;
-* Scripts.
+* Gerenciadores de Pacotes;
+* Scripts;
+* Gerenciadores de Discos;
+* Ambientes gráficos.
 
 Como desafio deste módulo, foi criado um script para provisionar uma estrutura de diretórios, grupos e usuários, além de adicionar as permissões apropriadas 
 para essa estrutura. [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
@@ -42,3 +45,12 @@ para essa estrutura. [Infrastructure as Code I](https://github.com/Gabryel-Barbo
   GRP_SEC:x:1003:josefina,amanda,rogerio
 ```
 Também está disponibilizado um script para desfazer as alterações na pasta de desafios.
+
+## Desafio IaC II
+Para o segundo desafio, [Infrastructure as Code II](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-2.sh) está criado um script de provisionamento de um servidor web simples com Apache. O script atualiza o sistema e instala os pacotes necessários para
+subir o servidor web localmente. <br>
+A aplicação web provisionada após execução do script:
+![Screenshot 2025-01-18 at 15-53-11 Sparsh Architecture](https://github.com/user-attachments/assets/50700e6b-507e-42fb-a701-55eb8c865250) <br>
+
+Site disponibilizado pela DIO para realizar o desafio.
+
