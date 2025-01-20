@@ -11,11 +11,11 @@ USE company;
 CREATE OR REPLACE VIEW v_data(Data_hoje) AS
 	SELECT current_date();
 
-DROP VIEW v_data;
+-- DROP VIEW v_data;
 
 SELECT * FROM v_data;
 
-DESCRIBE v_data;
+DESC v_data;
 
 CREATE OR REPLACE VIEW employee_salary_27000_view AS
 	SELECT concat(Fname, ' ' , Minit) 'Name', Salary, Dno 'Department_number' FROM employee
