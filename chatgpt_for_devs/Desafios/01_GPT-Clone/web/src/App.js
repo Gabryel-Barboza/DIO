@@ -42,7 +42,7 @@ function App() {
 
         <div className='chat-log'>
           {chatlog.map((message, index) => {
-            <ChatMessage key={index} message={message}/>
+            return <ChatMessage key={index} message={message}/>
           })}
 
         </div>
