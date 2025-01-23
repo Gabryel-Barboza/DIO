@@ -1,0 +1,12 @@
+{
+  "name": "meu-primeiro-projeto",
+  "version": "1.0.0",
+  "description": "projeto de teste para o npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["primeiro projeto api", "aprendendo NodeJs"],
+  "author": "Gabryel",
+  "license": "ISC"
+}
