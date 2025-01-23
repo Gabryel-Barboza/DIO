@@ -1,7 +1,7 @@
 # Repositório com o matérial do bootcamp da [Digital Innovation One](https://web.dio.me)
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos. <br>
-Módulo com o foco em desenvolver a interatividade de sites com JavaScript. Veja outras branchs para ver sobre HTML e CSS. <br>
+Módulo com o foco em desenvolver o **front-end** e o **back-end** com JavaScript.<br>
 Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabryel-barboza.github.io/DIO/) deste repositório.
 
 ## Desafios HTML 📄
@@ -21,6 +21,9 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 ## Desafios JavaScript 💡
 * [Pokedex com Detalhes](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Pokedex)
 * [Portfolio com JavaScript](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Portfolio)
+
+## Desafios Node.Js 💡
+* 
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -48,3 +51,6 @@ Entendendo mais a fundo os conceitos vistos anteriormente.
 * [Funções](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Funções)
 * [Prototype](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Prototype)
 * [Assincronismo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Assincronismo)
+
+## Aprofundando em Node.Js
+
