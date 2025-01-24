@@ -250,11 +250,11 @@ async function declareWinner(players) {
   // Spread operator ... - rest parameter
   // Ifs ternários
   let players = [];
-  players = await startRace(5);
+  players = await startRace(8);
 
-  if (players) {
+  if (players.length > 0) {
     // Functions chains
-    await playRaceEngine(players);
+    players = await playRaceEngine(players);
     console.log('Fim!');
     declareWinner(players);
   }
