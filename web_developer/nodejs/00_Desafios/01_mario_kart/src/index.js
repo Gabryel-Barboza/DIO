@@ -41,7 +41,6 @@ const characters = [
 ];
 
 // Asynchronous functions
-
 async function sleep(ms) {
   return new Promise((p) => setTimeout(p, ms));
 }
@@ -300,6 +299,10 @@ async function playRaceEngine(players) {
   }
 }
 
+/**
+ * Check the players object list and validate the winner with most points.
+ * @param {object} players
+ */
 async function declareWinner(players) {
   console.log('Resultado final:');
 
