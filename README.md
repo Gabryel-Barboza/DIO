@@ -23,7 +23,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Portfolio com JavaScript](https://gabryel-barboza.github.io/DIO/web_developer/javascript/Desafios/Desafios_JavaScript/Portfolio)
 
 ## Desafios Node.Js 💡
-* 
+* [Mario Kart Console][https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart]
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -53,4 +53,6 @@ Entendendo mais a fundo os conceitos vistos anteriormente.
 * [Assincronismo](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/javascript/03_Aprofundando%20Conceitos/Assincronismo)
 
 ## Aprofundando em Node.Js
-
+Conhecendo e entendendo projetos Node.Js, através de desafios de código.
+* [Iniciando Projetos Node.Js](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/02_meu-primeiro-projeto)
+* [Criando um projeto de Mario Kart](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
