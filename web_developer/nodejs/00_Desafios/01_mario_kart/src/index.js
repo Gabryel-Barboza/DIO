@@ -40,21 +40,34 @@ const characters = [
   },
 ];
 
-// User inputs
+// Asynchronous functions
+/**
+ * Prints a query message, read an input line and return the result.
+ * @param {number} message the message to be printed
+ * @returns {*} the user input
+ */
 async function readInput(message) {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
+  // User inputs
   const result = new Promise((resolve) => rl.question(message, resolve));
   await result;
   rl.close();
+
   return result;
 }
 
+/**
+ * Receives the total number of players and assign each to a character
+ * @param {int} numPlayers the number of players
+ * @returns {list} a list containing the players object
+ */
 async function startRace(numPlayers) {
   let players = [];
+
   // Se players maior que 8 cancela a corrida
   if (numPlayers > 8) {
     console.log('Quantidade máxima ultrapassada, até 8 players permitidos!');
@@ -80,12 +93,20 @@ async function startRace(numPlayers) {
   }
 }
 
-// Async functions
+/**
+ * Rolls a random dice number.
+ * @returns {int} the number landed
+ */
 async function rollDice() {
   // Métodos builtin
   return Math.floor(Math.random() * 6) + 1;
 }
 
+/**
+ * Receives the object type and choose one of that type, {blocks == challenges}.
+ * @param {*} type the type of object to return
+ * @returns {string} the object name
+ */
 async function getRandomObject(type) {
   let random = Math.random();
   let result;
@@ -102,30 +123,39 @@ async function getRandomObject(type) {
       default:
         result = 'Confronto';
     }
-  } else { // Map
+  } else {
+    // Map
     switch (true) {
       case random < 0.16:
         result = 'Luigi Raceway';
         break;
-      case random < .32:
+      case random < 0.32:
         result = 'Moo Moo Farm';
         break;
-      case random < .48:
+      case random < 0.48:
         result = 'Donut Plains 1';
         break;
-      case random < .72:
+      case random < 0.72:
         result = 'Bowser Castle 1';
         break;
-      case random < .88:
+      case random < 0.88:
         result = 'Peach Beach';
         break;
       default:
         result = 'Yoshi Falls';
     }
   }
+
   return result;
 }
 
+/**
+ * Log the player resulting points in that block.
+ * @param {*} characterName the object name of the player
+ * @param {str} block a string with the name of the attribute of the block. {SPEED|MANEUVERS|POWER}.
+ * @param {int} diceResult the rollDice() result.
+ * @param {int} attribute the player's character attribute of the block;
+ */
 // Encapsulate
 async function logRollResult(characterName, block, diceResult, attribute) {
   // Expressões em JavaScript
@@ -136,20 +166,44 @@ async function logRollResult(characterName, block, diceResult, attribute) {
   );
 }
 
-async function checkRoundWinner(pointsList) {
-  let maxPoints = 0;
-  let indexPlayer;
+async function setPlayerPoints(players, block) {}
 
-  for (let c = 0; c < pointsList.length; c++) {
-    if (pointsList[c] > maxPoints) {
-      maxPoints = pointsList[c];
-      indexPlayer = c;
+/**
+ * Check points lists to get the index with most points. Players list should follow the same index.
+ * @param {list<int>} pointsList the list to get the maximum value from. {playerPoints|powerPoints}
+ * @returns {list<int>} the list of indexes to search the players list
+ */
+async function checkRoundWinner(pointsList) {
+  let maxPoints = Math.max(pointsList);
+  let indexPlayers = [];
+
+  // Para cada elemento recupera o indice
+  for (let c in pointsList) {
+    if (pointsList[c] === maxPoints) {
+      indexPlayers.push(c);
     }
   }
 
-  return indexPlayer;
+  return indexPlayers;
 }
 
+/**
+ * Prints the leaderboard with the players scores.
+ * @param {list} players the list of players
+ */
+async function checkLeaderboard(players) {
+  console.log('================== Leaderboard ===================');
+  for (let c of players) {
+    console.log(`\t${c.nome} -- ${c.pontos} ponto(s)`);
+    // TODO: Add sorting by points
+  }
+  console.log('==================================================');
+}
+
+/**
+ * Starts the race and get the winners for each round.
+ * @param {list} players the list of players
+ */
 async function playRaceEngine(players) {
   // Bloco de repetição for
   for (let round = 1; round <= 5; round++) {
@@ -164,9 +218,13 @@ async function playRaceEngine(players) {
       const diceNumber = await rollDice();
       diceRolls.push(diceNumber);
     }
-
+    // Prevenir array undefined para somas
     let playerPoints = [];
     let powerPoints = [];
+    playerPoints.length = players.length;
+    powerPoints.length = players.length;
+    playerPoints.fill(0);
+    powerPoints.fill(0);
 
     // Recebendo os pontos de habilidade para cada jogador
     for (let c = 0; c < players.length; c++) {
@@ -200,34 +258,28 @@ async function playRaceEngine(players) {
 
     if (block === 'Confronto') {
       // Verificando quem marcou mais pontos em confronto
-      const indexPlayer = await checkRoundWinner(powerPoints);
-      // Verificando o vencedor do desafio
-      for (let c = 0; c < players.length; c++) {
-        // Clean ifs - pode retirar as chaves se possuir a seguinte estrutura
-        if (c === indexPlayer)
-          console.log(
-            `${players[c].nome} ganhou o confronto! Menos um ponto para os jogadores restantes`
-          );
-        else if (players[c].pontos > 0) players[c].pontos--;
-      }
-    } else {
-      // Verificando quem ganhou os outros desafios.
-      const indexPlayer = await checkRoundWinner(playerPoints);
+      const indexPlayers = await checkRoundWinner(powerPoints);
 
-      for (let c = 0; c < players.length; c++) {
-        if (c === indexPlayer) {
+      // Verificando quem está na lista de ganhadores
+      for (let c in players) {
+        // Clean ifs - pode retirar as chaves se possuir a seguinte estrutura
+        if (c === indexPlayers.filter((index) => index === c)[0])
           console.log(
-            `${players[c].nome} ganhou o desafio! Mais um ponto adicionado ao jogador.`
+            `${players[c].nome} obteve o máximo de pontos! Menos um ponto para os jogadores restantes.`
           );
-          players[c].pontos++;
-        }
+        else players[c].pontos--;
+      }
+      // Verificando quem ganhou os outros desafios.
+    } else {
+      const indexPlayers = await checkRoundWinner(playerPoints);
+      let playerList = indexPlayers.map((index) => players[index]);
+      for (let p of playerList){
+        console.log(`${p.nome} ganhou o desafio! Mais um ponto.`);
+        p.pontos++;
       }
     }
-
-    console.log('==================================================');
+    checkLeaderboard(players);
   }
-
-  return players;
 }
 
 async function declareWinner(players) {
@@ -235,13 +287,18 @@ async function declareWinner(players) {
 
   let maxPoints = 0;
   let player;
-  for (let c = 0; c < players.length; c++) {
-    if (players[c].pontos > maxPoints) {
-      maxPoints = players[c].pontos;
-      player = players[c];
+  for (let p of players) {
+    if (p.pontos > maxPoints) {
+      maxPoints = p.pontos;
+      player = p;
     }
   }
-  console.log(`${player.nome} é o vencedor! Parabéns!!`);
+
+  if (player) {
+    console.log(`\t${player.nome} ganhou a competição! Parabéns!!`);
+  } else {
+    console.log('\tEmpate!');
+  }
 }
 
 // Auto-invoke functions
@@ -250,11 +307,11 @@ async function declareWinner(players) {
   // Spread operator ... - rest parameter
   // Ifs ternários
   let players = [];
-  players = await startRace(8);
+  players = await startRace(5);
 
   if (players.length > 0) {
     // Functions chains
-    players = await playRaceEngine(players);
+    await playRaceEngine(players);
     console.log('Fim!');
     declareWinner(players);
   }
