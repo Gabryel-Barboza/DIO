@@ -1,19 +1,84 @@
-const player1 = {
-  nome: 'Mario',
-  velocidade: 4,
-  manobrabilidade: 3,
-  poder: 3,
-  pontos: 0,
-};
+// Imports
+const readline = require('node:readline');
 
-// Objetos
-const player2 = {
-  nome: 'Luigi',
-  velocidade: 3,
-  manobrabilidade: 4,
-  poder: 4,
-  pontos: 0,
-};
+// Objects
+const characters = [
+  {
+    nome: 'Mario',
+    velocidade: 4,
+    manobrabilidade: 3,
+    poder: 3,
+  },
+  {
+    nome: 'Peach',
+    velocidade: 3,
+    manobrabilidade: 4,
+    poder: 2,
+  },
+  {
+    nome: 'Yoshi',
+    velocidade: 2,
+    manobrabilidade: 4,
+    poder: 4,
+  },
+  {
+    nome: 'Bowser',
+    velocidade: 5,
+    manobrabilidade: 2,
+    poder: 5,
+  },
+  {
+    nome: 'Luigi',
+    velocidade: 3,
+    manobrabilidade: 4,
+    poder: 4,
+  },
+  {
+    nome: 'Donkey Kong',
+    velocidade: 2,
+    manobrabilidade: 2,
+    poder: 5,
+  },
+];
+
+// User inputs
+function readInput(message, callback) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  const result = rl.question(message, callback);
+  rl.close();
+
+  return result;
+}
+
+async function startRace(numPlayers) {
+  let players = [];
+  // Se players maior que 8 cancela a corrida
+  if (numPlayers > 8) {
+    console.log('Quantidade máxima ultrapassada, até 8 players permitidos!');
+    return players;
+  } else {
+    for (let c = 1; c < numPlayers; c++) {
+      // Escolhendo personagem - array começa em 0 então indice -1
+      // Interpolação de strings|Template strings
+      const characterPlayer = readInput(
+        `P${c} escolha seu personagem: 1 - Mario | 6 - Donkey Kong: `,
+        (index) => characters[index - 1]
+      );
+
+      const player = {
+        nome: `P${c}:${characterPlayer.nome}`,
+        pontos: 0,
+      };
+      players.push(player);
+    }
+
+    return players;
+  }
+}
 
 // Async functions
 async function rollDice() {
@@ -96,12 +161,14 @@ async function playRaceEngine(character1, character2) {
         player2.manobrabilidade
       );
     } else {
+      // Confronto
       let powerResult1 = diceResult1 + character1.poder;
       let powerResult2 = diceResult2 + character2.poder;
 
       logRollResult(player1.nome, 'PODER', diceResult1, player1.poder);
       logRollResult(player2.nome, 'PODER', diceResult2, player2.poder);
 
+      // Verificando quem marcou pontos em confronto
       if (powerResult1 < powerResult2 && character1.pontos > 0) {
         console.log(
           `${character2.nome} ganhou! ${character1.nome} perdeu um ponto.`
@@ -146,10 +213,13 @@ async function declareWinner(character1, character2) {
 
 // Auto-invoke functions
 (async function main() {
-  // Interpolação de strings|Template strings
-  console.log(`Corrida começando entre ${player1.nome} e ${player2.nome}...`);
+  // Funções anonimas e arrow functions
+  let players = [];
+  players = await startRace(5);
 
-  // Functions chains
-  await playRaceEngine(player1, player2);
-  console.log('Fim!');
+  // if (players) {
+  //   // Functions chains
+  //   await playRaceEngine(player1, player2);
+  //   console.log('Fim!');
+  // }
 })();

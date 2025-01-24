@@ -107,5 +107,13 @@ Simulador de corrida do Mario Kart com Node.Js.
 
 <h3>Desafio extra:</h3>
 
-<input type="checkbox" id="mais-jogadores">
-<label for="mais-jogadores">Adicionar a possibilidade de mais jogadores participarem</label>
+<ul>
+    <li><input type="checkbox" id="mais-jogadores">
+    <label for="mais-jogadores">Adicionar a possibilidade de mais jogadores participarem.</label>
+    <li><input type="checkbox" id="mais-dano-confronto">
+    <label for="mais-dano-confronto">Adicionar mais tipos de dano no desafio de confronto: Casco (-1), Bomba (-2).</label>
+    <li><input type="checkbox" id="mais-detalhes-pista" />
+    <label for="mais-detalhes-pista">Adicionar o nome da pista em desafios de corrida (Reta e Curva).</label>
+    <li><input type="checkbox" id="mais-escolher-personagem">
+    <label for="mais-escolher-personagem">Adicionar a possibilidade de escolher os personagens.</label>
+</ul>
