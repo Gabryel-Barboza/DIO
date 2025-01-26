@@ -31,7 +31,7 @@ async function calculateTotal(userCart) {
 }
 // Display cart items
 async function displayCart(userCart, cartName) {
-  console.log(`\nMy ${cartName}`)
+  console.log(`\nMy ${cartName}`);
   userCart.forEach((item, index) => {
     console.log(
       `${index + 1}. ${item.name} | ${item.price} | ${item.quantity} | Subtotal: ${item.subtotal}`
