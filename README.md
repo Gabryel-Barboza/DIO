@@ -24,6 +24,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 
 ## Desafios Node.Js 💡
 * [Mario Kart Console](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
+* [Carrinho de Compras](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/02_carrinho_shopee)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -55,4 +56,7 @@ Entendendo mais a fundo os conceitos vistos anteriormente.
 ## Aprofundando em Node.Js
 Conhecendo e entendendo projetos Node.Js, através de desafios de código.
 * [Iniciando Projetos Node.Js](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/02_meu-primeiro-projeto)
-* [Criando um projeto de Mario Kart](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
+* [Criando um Projeto de Mario Kart](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
+* [Entendendo o Common JS Modules](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/03_common-js-modules)
+* [Modularização com ESM](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/04-esm-modules)
+* [Criando um Carrinho de Compras](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/02_carrinho_shopee)
