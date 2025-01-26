@@ -1,5 +1,5 @@
 // Promises e Assincronismo
-// É a execução de um comando de forma assincrona, em paralelo ao código e que retornará em algum momento não determinado.
+// É a execução de um comando de forma assincrona, executa  o código até esperar por algo e que retornará em algum momento não determinado.
 
 const randomNumber = new Promise((resolve, reject) => {
     // Executando o código depois de um segundo, simulando um atraso de execução
