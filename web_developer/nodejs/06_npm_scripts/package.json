@@ -1,0 +1,15 @@
+{
+  "name": "06_npm_scripts",
+  "version": "1.0.0",
+  "description": "project to study npm scripts and productivity",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:watch": "node --watch src/index.js",
+    "prebuild": "npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
