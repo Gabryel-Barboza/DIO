@@ -1,3 +1,10 @@
 node_modules
 .env*
 .vscode
+bin/
+obj/
+.metadata/
+lib
+.env/
+__pycache__/
+*.pdf
