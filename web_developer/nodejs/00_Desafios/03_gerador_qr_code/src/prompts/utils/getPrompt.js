@@ -5,10 +5,9 @@ async function getPromptResult(promptSchema, callback) {
   prompt.get(promptSchema, async (err, result) => {
     if (err) {
       console.log(chalk.red(`Error: ${promptSchema.name}`));
-      return ''
+      return '';
     } else return callback(result);
   });
-  prompt.start();
 }
 
 export default getPromptResult;
