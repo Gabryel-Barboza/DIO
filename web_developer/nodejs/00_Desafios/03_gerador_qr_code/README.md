@@ -91,6 +91,15 @@ Após a conclusão do curso/projeto, os estudantes estarão aptos a:
 - Adicionar nova função de exportação do QrCode como arquivo de imagem
 - Permitir escolher as características do gerador de senha
 
+## Como utilizar:
+- O gerador de Qr Code é executado no terminal, retornando opções ao usuário para realizar as tarefas. O usuário pode exportar a imagem do Qr Code para a pasta "exports" ou visualizar no terminal.
+- O gerador de senhas precisa de um arquivo .env fora da pasta "src", com os campos de configuração:
+  * UPPERCASE_LETTERS=true
+  * LOWERCASE_LETTERS=true
+  * NUMBERS=true
+  * SPECIAL_CHARACTERS=true
+  * PASSWORD_LENGTH=8
+
 <!--START_SECTION:footer-->
 
 <br />
