@@ -88,7 +88,6 @@ Após a conclusão do curso/projeto, os estudantes estarão aptos a:
 
 ## Desafios Extras:
 
-- Adicionar nova funcionalidade ao toolkit (calcular taxas de entrega por país ou outras funcionalidades)
 - Adicionar nova função de exportação do QrCode como arquivo de imagem
 - Permitir escolher as características do gerador de senha
 
