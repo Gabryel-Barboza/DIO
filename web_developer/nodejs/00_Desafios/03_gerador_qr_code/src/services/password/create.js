@@ -3,8 +3,10 @@ import handlePassword from './handle.js';
 
 async function createPassword() {
   const password = await handlePassword();
-  console.log(chalk.green('password:'));
-  console.log(password);
+  if (password) {
+    console.log(chalk.green('password:'));
+    console.log(password);
+  }
 }
 
 export default createPassword;

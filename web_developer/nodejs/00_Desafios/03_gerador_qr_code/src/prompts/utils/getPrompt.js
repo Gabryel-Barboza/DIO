@@ -1,13 +1,15 @@
 import prompt from 'prompt';
-import chalk from 'chalk';
 
-async function getPromptResult(promptSchema, callback) {
-  prompt.get(promptSchema, async (err, result) => {
-    if (err) {
-      console.log(chalk.red(`Error: ${promptSchema.name}`));
-      return '';
-    } else return callback(result);
-  });
+// Prompt the user with a prompt schema and return the result/callback
+async function getPromptResult(promptSchema, callback = '') {
+  prompt.start();
+  const result = await prompt.get(promptSchema);
+
+  if (result.err) {
+    console.log(result.err);
+    return '';
+  } else if (callback) return callback(result);
+  else return result;
 }
 
 export default getPromptResult;
