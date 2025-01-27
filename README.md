@@ -25,6 +25,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 ## Desafios Node.Js 💡
 * [Mario Kart Console](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
 * [Carrinho de Compras](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/02_carrinho_shopee)
+* [Gerador de Qr Code](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/03_gerador_qr_code)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -60,3 +61,7 @@ Conhecendo e entendendo projetos Node.Js, através de desafios de código.
 * [Entendendo o Common JS Modules](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/03_common-js-modules)
 * [Modularização com ESM](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/04-esm-modules)
 * [Criando um Carrinho de Compras](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/02_carrinho_shopee)
+* [Pacotes e Dependências Node](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/05_packages-basic)
+* [NPM Scripts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/06_npm_scripts)
+* [Variáveis Ambiente](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/07_npm-environment)
+* [Criando um Gerador de QrCode](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/03_gerador_qr_code)
