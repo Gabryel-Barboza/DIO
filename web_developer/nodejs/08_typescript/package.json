@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "project to study typescript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dist:tsc": "tsc",
+    "dist:tsup": "tsup src",
+    "start:dist:dev": "tsx watch src/index.ts",
+    "start:dev": "npm run dist && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
