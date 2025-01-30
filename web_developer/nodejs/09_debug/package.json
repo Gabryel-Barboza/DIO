@@ -1,0 +1,21 @@
+{
+  "name": "09_debug",
+  "version": "1.0.0",
+  "description": "project to learn about debugging programs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dist": "tsup src",
+    "start": "tsx src/index.ts",
+    "start:dev": "tsx watch src/index.ts",
+    "start:build": "npm run dist && node dist/index.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
