@@ -8,6 +8,7 @@ import { PodcastTransferModel } from '../models/podcast-transfer-model';
 // Recupera a lista de episódios, retornando uma string json com a resposta
 // Trocar números mágicos e textos flutuantes por objetos auxilia na legibilidade
 export const getListEpisodes = async (req: IncomingMessage, res: ServerResponse) => {
+  // Modelos para tipos de dados, restringe a inicialização
   const content: PodcastTransferModel = await serviceListEpisodes();
 
   res.writeHead(content.statusCode, { 'content-type': ContentType.JSON });

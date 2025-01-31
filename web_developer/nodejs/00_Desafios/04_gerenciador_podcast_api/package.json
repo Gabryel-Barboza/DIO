@@ -1,7 +1,7 @@
 {
   "name": "04_gerenciador_podcast_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "project to create a podcast manager api without the help of frameworks",
   "main": "index.js",
   "scripts": {
     "start": "tsx src/server.ts",

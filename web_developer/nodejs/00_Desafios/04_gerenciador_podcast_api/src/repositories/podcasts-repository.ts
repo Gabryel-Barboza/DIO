@@ -10,14 +10,13 @@ const pathData = path.join(__dirname, 'podcasts.json');
 // Lê o repositório de podcasts (podcasts.json)
 // Parâmetro opcional com ?
 export const repoPodcast = async (podcastName?: string): Promise<PodcastModel[]> => {
-  const charset = 'utf-8'
+  const charset = 'utf-8';
   const rawData = fs.readFileSync(pathData, charset);
   let jsonFile = JSON.parse(rawData);
 
   // Retorna elementos de acordo com o filtro, se disponível
-  if (podcastName) {
+  if (podcastName)
     jsonFile = jsonFile.filter((podcast: PodcastModel) => podcast.podcastName === podcastName);
-  }
 
   return jsonFile;
 };
