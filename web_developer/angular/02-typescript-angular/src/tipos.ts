@@ -74,10 +74,14 @@ function addNumbers(x: number, y: number): number {
   return x + y;
 }
 
-// Inferência de tipo
-function addToHello(name: string) {
-  return `Hello, ${name}!`;
+// Inferência de tipo do retorno
+function addToHello(name?: string) {
+  return `Hello${name ? ' ' + name : ''}!`;
 }
+
+// Retorna a mensagem "Hello", o operador para variáveis é um if ternário e
+// para parâmetros um indicativo de opcional
+console.log(addToHello());
 
 let soma: number = addNumbers(10, 10);
 
@@ -97,5 +101,5 @@ async function getDatabase(id: number) {
 }
 
 async function insertDatabase(value: string): Promise<number | string> {
-  return 'sucess'
+  return 'sucess';
 }
