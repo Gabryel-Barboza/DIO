@@ -1,5 +1,5 @@
 import { PodcastTransferModel } from '../models/podcast-transfer-model';
-import { repoPodcast } from '../repositories/podcasts-repository';
+import { getRepoPodcast } from '../repositories/podcasts-repository';
 import { StatusCode } from '../utils/status-code';
 
 export const serviceListEpisodes = async (): Promise<PodcastTransferModel> => {
@@ -8,7 +8,7 @@ export const serviceListEpisodes = async (): Promise<PodcastTransferModel> => {
     body: [],
   };
 
-  const data = await repoPodcast();
+  const data = await getRepoPodcast();
 
   responseFormat.statusCode = data.length > 0 ? StatusCode.OK : StatusCode.NO_CONTENT;
   responseFormat.body = data;

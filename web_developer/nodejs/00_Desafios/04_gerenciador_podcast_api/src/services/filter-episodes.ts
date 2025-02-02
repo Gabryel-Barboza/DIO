@@ -1,5 +1,5 @@
 import { PodcastTransferModel } from '../models/podcast-transfer-model';
-import { repoPodcast } from '../repositories/podcasts-repository';
+import { getRepoPodcast } from '../repositories/podcasts-repository';
 import { StatusCode } from '../utils/status-code';
 
 export const serviceFilterEpisodes = async (
@@ -11,7 +11,7 @@ export const serviceFilterEpisodes = async (
   };
 
   const queryString = url?.split('?p=')[1] ?? '';
-  const data = await repoPodcast(queryString);
+  const data = await getRepoPodcast(queryString);
 
   responseFormat.statusCode = data.length > 0 ? StatusCode.OK : StatusCode.NO_CONTENT;
   responseFormat.body = data;

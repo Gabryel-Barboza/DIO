@@ -1,6 +1,10 @@
 import http from 'http';
 // Organização de importes -> import terceiros - import local
-import { getFilterEpisodes, getListEpisodes } from './controllers/podcast-controller';
+import {
+  getFilterEpisodes,
+  getListEpisodes,
+  getNewEpisode,
+} from './controllers/podcast-controller';
 import { Routes } from './routes/routes';
 import { HttpMethod } from './utils/http-methods';
 
@@ -22,6 +26,7 @@ export const app = async (request: http.IncomingMessage, response: http.ServerRe
     // Função do Controller
     await getListEpisodes(request, response);
   else if (request.method === HttpMethod.GET && baseUrl === Routes.EPISODE)
-    // Função do Controller
     await getFilterEpisodes(request, response);
+  else if (request.method === HttpMethod.POST && baseUrl === Routes.EPISODE)
+    await getNewEpisode(request, response);
 };

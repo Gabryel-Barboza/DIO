@@ -2,6 +2,7 @@ import { IncomingMessage, ServerResponse } from 'http';
 
 import { serviceListEpisodes } from '../services/list-episodes';
 import { serviceFilterEpisodes } from '../services/filter-episodes';
+import { serviceCreateEpisode, serviceGetRequestBody } from '../services/insert-episodes';
 import { ContentType } from '../utils/content-type';
 import { PodcastTransferModel } from '../models/podcast-transfer-model';
 
@@ -22,4 +23,19 @@ export const getFilterEpisodes = async (req: IncomingMessage, res: ServerRespons
 
   res.writeHead(content.statusCode, { 'content-type': ContentType.JSON });
   res.end(JSON.stringify(content.body));
+};
+
+// Recebe um JSON da request e insere um novo podcast
+export const getNewEpisode = async (req: IncomingMessage, res: ServerResponse) => {
+  // Recebendo o corpo da request
+  const jsonArray: JSON[] = await serviceGetRequestBody(req);
+  
+  // Inserindo dados no repositório
+  const content = await serviceCreateEpisode(jsonArray);
+  console.log(content.body);
+
+  // Retornando uma resposta ao cliente
+  res.writeHead(content.statusCode, { 'content-type': ContentType.JSON });
+  res.write(JSON.stringify(content.body));
+  res.end();
 };
