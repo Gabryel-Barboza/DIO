@@ -1,9 +1,7 @@
 import fs from 'fs';
-import readLine from 'readline';
 import path from 'path';
 
 import { PodcastModel } from '../models/podcast-model';
-import { Readline } from 'readline/promises';
 
 // __dirname não definido em módulos ESM, retire o campo "type" do package.json
 // O funcionamento da sintaxe de import continua a mesma com TypeScript.
@@ -25,22 +23,25 @@ export const getRepoPodcast = async (podcastName?: string): Promise<PodcastModel
 
 export const insertRepoPodcast = async (json: string) => {
   try {
-    // Recriando o arquivo corretamente
-    fs.readFile(pathData, charset, (err, file) => {
-      if (err) throw new Error();
-      else {
-        const lines = file.split('\n');
-        console.log(lines);
-        let newLines = lines.filter((line) => !line.includes(']'));
-        newLines = newLines.concat(',', json);
-        
-        const newFile = newLines.join('\n');
+    // Ler arquivo
+    const file = fs.readFileSync(pathData, charset);
 
-        fs.writeFile(pathData, newFile, charset, (err) => {
-          if (err) throw new Error();
-        });
-      }
-    });
+    if (file.length !== 0) {
+      // Separar linhas
+      let lines = file.split('\n');
+      // Concatenar vírgula ao último JSON
+      // Remover último caractere ] e Adicionar o novo JSON
+      lines.splice(-2, 2, '},', json);
+      // Fechar o vetor com ]
+      lines = lines.concat(']');
+      // Reescrever o arquivo
+      const newFile = lines.join('\n');
+      fs.writeFileSync(pathData, newFile, charset);
+    } else {
+      // Criar estrutura se arquivo vazio
+      let newFile = `[\n${json}\n]`;
+      fs.writeFileSync(pathData, newFile, charset);
+    }
 
     return json;
   } catch (err) {

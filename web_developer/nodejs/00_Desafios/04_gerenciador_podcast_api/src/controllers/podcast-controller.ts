@@ -32,7 +32,6 @@ export const getNewEpisode = async (req: IncomingMessage, res: ServerResponse) =
   
   // Inserindo dados no repositório
   const content = await serviceCreateEpisode(jsonArray);
-  console.log(content.body);
 
   // Retornando uma resposta ao cliente
   res.writeHead(content.statusCode, { 'content-type': ContentType.JSON });

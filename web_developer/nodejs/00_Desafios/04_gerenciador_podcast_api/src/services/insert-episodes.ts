@@ -48,16 +48,16 @@ export const serviceCreateEpisode = async (jsonArray: JSON[]) => {
     let isPodcast = podcastkeys.every((key) => jsonKeys.includes(key));
 
     if (isPodcast) {
-      console.log('entrou!');
-      // Inserindo os dados
+      // Inserindo os dados formatados
       let jsonStr: string = `{
-        "podcastName": ${json.podcastName},
-        "episode": ${json.episode},
-        "videoId": ${json.videoId},
-        "categories": ${json.categories}
-      }`;
+    "podcastName": "${json.podcastName}",
+    "episode": "${json.episode}",
+    "videoId": "${json.videoId}",
+    "categories": [${json.categories.map((category: string) => `"${category}"`)}]
+}`;
 
       let sucess = await insertRepoPodcast(jsonStr);
+
       if (sucess) {
         content.statusCode = StatusCode.CREATED;
         content.body.push(json);
