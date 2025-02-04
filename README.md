@@ -26,7 +26,8 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Mario Kart Console](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/01_mario_kart)
 * [Carrinho de Compras](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/02_carrinho_shopee)
 * [Gerador de Qr Code](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/03_gerador_qr_code)
-* [API Gerenciador de Podcasts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/04_gerenciador_podcast_api)
+* [API Sem Framework - Gerenciador de Podcasts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/04_gerenciador_podcast_api)
+* [Minimal API com Fastify](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/05_fastify_formula1_api)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -69,7 +70,7 @@ Conhecendo e entendendo projetos Node.Js, através de desafios de código.
 * [Um Pouco de Typescript](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/08_typescript)
 * [Debugging Tools](https://github.com/Gabryel-Barboza/DIO/blob/JavaScript/web_developer/nodejs/09_debug/src/index.ts)
 * [API Gerenciador de Podcasts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/04_gerenciador_podcast_api)
-* []()
+* [Minimal API com Fastify](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/05_fastify_formula1_api)
 * []()
 
 ## Front-end Framework Angular
