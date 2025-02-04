@@ -48,8 +48,9 @@ export const serviceCreateEpisode = async (jsonArray: JSON[]) => {
     let isPodcast = podcastkeys.every((key) => jsonKeys.includes(key));
 
     if (isPodcast) {
-      // Inserindo os dados formatados
-      let jsonStr: string = `{
+        // Inserindo os dados formatados
+      let jsonStr: string = `
+{
     "podcastName": "${json.podcastName}",
     "episode": "${json.episode}",
     "videoId": "${json.videoId}",

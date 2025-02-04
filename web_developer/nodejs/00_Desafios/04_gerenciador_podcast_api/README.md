@@ -23,16 +23,12 @@ O Podcast Manager é uma aplicação inspirada no estilo da Netflix, que permite
     "podcastName": "flow",
     "episode": "CBUM - Flow #319",
     "videoId": "pQSuQmUfS30",
-    "cover": "https://i.ytimg.com/vi/pQSuQmUfS30/maxresdefault.jpg",
-    "link": "https://www.youtube.com/watch?v=pQSuQmUfS30",
     "categories": ["saúde", "esporte", "bodybuilder"]
   },
   {
     "podcastName": "flow",
     "episode": "RUBENS BARRICHELLO - Flow #339",
     "videoId": "4KDGTdiOV4I",
-    "cover": "https://i.ytimg.com/vi/4KDGTdiOV4I/maxresdefault.jpg",
-    "link": "https://www.youtube.com/watch?v=4KDGTdiOV4I",
     "categories": ["esporte", "corrida"]
   }
 ]
@@ -43,6 +39,23 @@ O Podcast Manager é uma aplicação inspirada no estilo da Netflix, que permite
 - **Endpoint:** `GET /episode?podcastName={nome}`
 - **Descrição:** Retorna uma lista de episódios de podcast com base no nome do podcast fornecido.
 - **Exemplo de requisição:** `GET /episode?podcastName=flow`
+
+### Inserir novo episódio no repositório
+
+- **Endpoint:** `POST /api/episode`
+- **Descrição:** Insere um JSON válido de podcast no repositório. Retorna o próprio JSON se êxito na operação
+- **Modelo JSON:**
+
+```json
+  {
+    "podcastName": "podcastName",
+    "episode": "episode",
+    "videoId": "videoid",
+    "categories": [...]
+  }
+```
+TODO: Implementar feature para prevenir episódios duplicados e modularizar serviço de inserção.
+Ps: Por algum motivo a modularização quebra o sistema de inserção, impedindo-o de retornar o status code
 
 ## Tecnologias Utilizadas
 
