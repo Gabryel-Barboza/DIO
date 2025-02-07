@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "FC Barcelona",
+    "country": "Spain",
+    "foundation": 1899,
+    "president": "Joan Laporta",
+    "website": "https://www.fcbarcelona.com",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+  },
+  {
+    "id": 2,
+    "name": "Manchester United",
+    "country": "England",
+    "foundation": 1878,
+    "president": "Joel Glazer",
+    "website": "https://www.manutd.com",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg"
+  },
+  {
+    "id": 3,
+    "name": "Bayern Munich",
+    "country": "Germany",
+    "foundation": 1900,
+    "president": "Herbert Hainer",
+    "website": "https://fcbayern.com",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_München_logo_%282017%29.svg"
+  },
+  {
+    "id": 4,
+    "name": "Juventus",
+    "country": "Italy",
+    "foundation": 1897,
+    "president": "Andrea Agnelli",
+    "website": "https://www.juventus.com",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/3e/Juventus_FC_2017_logo.svg"
+  }
+]
