@@ -28,6 +28,7 @@ Para visualizar as páginas desenvolvidas, entre no [GitHub Pages](https://gabry
 * [Gerador de Qr Code](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/03_gerador_qr_code)
 * [API Sem Framework - Gerenciador de Podcasts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/04_gerenciador_podcast_api)
 * [Minimal API com Fastify](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/05_fastify_formula1_api)
+* [Express - Champions League API](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/06_champions_league_api)
 
 # Exercícios 🅰
 Todos os exercícios realizados nas aulas estão dispostos a seguir.
@@ -71,7 +72,7 @@ Conhecendo e entendendo projetos Node.Js, através de desafios de código.
 * [Debugging Tools](https://github.com/Gabryel-Barboza/DIO/blob/JavaScript/web_developer/nodejs/09_debug/src/index.ts)
 * [API Gerenciador de Podcasts](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/04_gerenciador_podcast_api)
 * [Minimal API com Fastify](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/05_fastify_formula1_api)
-* []()
+* [Express - Champions League API](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/nodejs/00_Desafios/06_champions_league_api)
 
 ## Front-end Framework Angular
 Aprendendo a criar SPAs e desenvolver com o framework do Google, Angular.
