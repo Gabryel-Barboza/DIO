@@ -8,11 +8,13 @@ import {
   serviceDeletePlayer,
 } from '../services/players-service';
 
+// Retorna uma resposta com a lista de jogadores
 export const getPlayers = async (req: Request, res: Response) => {
   const response = await serviceGetPlayers();
   res.status(response.statusCode).json(response.body);
 };
 
+// Retorna uma resposta com um jogador específico
 export const getPlayer = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const response = await serviceGetPlayer(id);
@@ -20,6 +22,7 @@ export const getPlayer = async (req: Request, res: Response) => {
   res.status(response.statusCode).json(response.body);
 };
 
+// Cria um jogador e retorna uma resposta
 export const createPlayer = async (req: Request, res: Response) => {
   const data = req.body;
   const response = await serviceCreatePlayer(data);
@@ -27,6 +30,7 @@ export const createPlayer = async (req: Request, res: Response) => {
   res.status(response.statusCode).json(response.body);
 };
 
+// Atualiza um jogador e retorna uma resposta
 export const updatePlayer = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const data = req.body;
@@ -35,6 +39,7 @@ export const updatePlayer = async (req: Request, res: Response) => {
   res.status(response.statusCode).json(response.body);
 };
 
+// Atualiza parcialmente um jogador e retorna uma resposta
 export const partialUpdatePlayer = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const data = req.body;
@@ -43,6 +48,7 @@ export const partialUpdatePlayer = async (req: Request, res: Response) => {
   res.status(response.statusCode).json(response.body);
 };
 
+// Deleta um jogador e retorna uma resposta
 export const deletePlayer = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const response = await serviceDeletePlayer(id);

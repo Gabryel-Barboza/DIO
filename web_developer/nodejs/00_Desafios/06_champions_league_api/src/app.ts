@@ -13,10 +13,12 @@ function createApp() {
   // Prefixo das rotas
   app.use('/api', router);
 
+  // Configuração do CORS, opcional se não for bloquear requisições
   const corsOptions = {
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   };
+
   // Middleware para habilitar o CORS (Cross-Origin Resource Sharing)
   // Permite que a API seja acessada por qualquer domínio
   app.use(cors());

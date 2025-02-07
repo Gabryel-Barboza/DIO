@@ -8,6 +8,7 @@ import {
   deletePlayerInRepository,
 } from '../repositories/player-repository';
 
+// Recupera a lista de jogadores do repositório
 export const serviceGetPlayers = async (): Promise<HttpResponse> => {
   const data = await getPlayersRepository();
   let response = null;
@@ -18,6 +19,7 @@ export const serviceGetPlayers = async (): Promise<HttpResponse> => {
   return response;
 };
 
+// Recupera um jogador específico do repositório
 export const serviceGetPlayer = async (id: number): Promise<HttpResponse> => {
   const data = await getPlayerById(id);
 
@@ -26,6 +28,7 @@ export const serviceGetPlayer = async (id: number): Promise<HttpResponse> => {
   return await getHTTPResponse('NOT_FOUND', data);
 };
 
+// Cria um jogador no repositório
 export const serviceCreatePlayer = async (json: any): Promise<HttpResponse> => {
   let response = null;
 
@@ -45,6 +48,7 @@ export const serviceCreatePlayer = async (json: any): Promise<HttpResponse> => {
   return response;
 };
 
+// Atualiza um jogador, parcialmente ou completamente, no repositório
 export const serviceUpdatePlayer = async (
   id: number,
   json: any,
@@ -62,6 +66,7 @@ export const serviceUpdatePlayer = async (
   return response;
 };
 
+// Deleta um jogador do repositório
 export const serviceDeletePlayer = async (id: number): Promise<HttpResponse> => {
   const player = await getPlayerById(id);
 
