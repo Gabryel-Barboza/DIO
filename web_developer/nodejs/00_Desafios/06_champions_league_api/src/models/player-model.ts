@@ -1,5 +1,5 @@
 export interface PlayerModel {
-  id: number;
+  id?: number;
   name: string;
   club: string;
   nationality: string;

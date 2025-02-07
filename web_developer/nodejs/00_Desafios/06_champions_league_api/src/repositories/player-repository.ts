@@ -2,12 +2,13 @@ import { PlayerModel } from '../models/player-model';
 import fs from 'fs/promises';
 import path from 'path';
 
-let database: PlayerModel[];
+let database: PlayerModel[] = [];
 const pathData = path.resolve(__dirname, '../data/players.json');
 
 export const getPlayersRepository = async (): Promise<PlayerModel[]> => {
   const data = await fs.readFile(pathData, 'utf-8');
-  database = JSON.parse(data);
+  if (data.length > 0) database = JSON.parse(data);
+
   return database;
 };
 
@@ -17,7 +18,15 @@ export const getPlayerById = async (id: number): Promise<PlayerModel | undefined
 };
 
 export const insertPlayerInRepository = async (player: PlayerModel): Promise<boolean> => {
+  database = await getPlayersRepository();
   database.push(player);
+
+  // Salvar o novo array no arquivo JSON
+  try {
+    await fs.writeFile(pathData, JSON.stringify(database), 'utf-8');
+  } catch (err) {
+    return false;
+  }
 
   return true;
 };
@@ -26,22 +35,44 @@ export const updatePlayerInRepository = async (
   id: number,
   data: any,
   partialUpdate?: boolean
-): Promise<Object | undefined> => {
+): Promise<boolean> => {
+  database = await getPlayersRepository();
   const index = database.findIndex((player) => player.id === id);
 
+  // Atualizar o objeto parcialmente, trocando as propriedades especificadas por data
   if (partialUpdate) {
     let player = database[index];
+    Object.keys(player).forEach((pKey) => {
+      Object.keys(data).forEach((dKey) => {
+        if (dKey === pKey) (player as any)[pKey] = data[dKey];
+      });
+    });
+    database.splice(index, 1, player);
   } else {
+    // Atualizar o objeto completamente, trocando o objeto inteiro por data
     database.splice(index, 1, data);
   }
 
-  return { message: 'Player updated successfully' };
+  try {
+    await fs.writeFile(pathData, JSON.stringify(database), 'utf-8');
+  } catch (err) {
+    return false;
+  }
+
+  return true;
 };
 
-export const deletePlayerInRepository = async (id: number): Promise<Object | undefined> => {
+export const deletePlayerInRepository = async (id: number): Promise<boolean> => {
+  database = await getPlayersRepository();
   const index = database.findIndex((player) => player.id === id);
 
   database.splice(index, 1);
 
-  return { message: 'Player deleted successfully' };
+  try {
+    await fs.writeFile(pathData, JSON.stringify(database), 'utf-8');
+  } catch (err) {
+    return false;
+  }
+
+  return true;
 };
