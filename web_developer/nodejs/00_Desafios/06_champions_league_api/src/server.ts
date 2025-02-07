@@ -8,5 +8,5 @@ const app = createApp();
 const port = process.env.PORT;
 // Recebendo requisições
 app.listen(port, () => {
-  console.log(`Server running at port: ${port}`);
+  console.log(`Server running at port: http://localhost:${port}`);
 });

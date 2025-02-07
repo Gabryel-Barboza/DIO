@@ -47,7 +47,7 @@ export const serviceCreatePlayer = async (json: any): Promise<HttpResponse> => {
     }
   } catch (err) {
     if (err instanceof Error) response = await getHTTPResponse('BAD_REQUEST', err.message);
-    else response = await getHTTPResponse('INTERNAL_SERVER_ERROR', 'Unknown error');
+    else response = await getHTTPResponse('INTERNAL_SERVER_ERROR', []);
   }
 
   return response;
@@ -57,10 +57,9 @@ export const serviceCreatePlayer = async (json: any): Promise<HttpResponse> => {
 export const serviceUpdatePlayer = async (
   id: number,
   json: any,
-  partialUpdate?: boolean
+  partialUpdate: boolean = false
 ): Promise<HttpResponse> => {
   const player = await getPlayerById(id);
-  let response = null;
   let success: boolean = false;
   let isPlayerModel: boolean = false;
 
@@ -69,20 +68,18 @@ export const serviceUpdatePlayer = async (
   if ('id' in json) json.id = player.id; // ID não pode ser atualizado
 
   // Se atualização parcial, verificação parcial do modelo
-  if (partialUpdate) {
-    isPlayerModel = await checkIsPlayerModel(json, partialUpdate);
+  if (partialUpdate) isPlayerModel = await checkIsPlayerModel(json, partialUpdate);
+  else isPlayerModel = await checkIsPlayerModel(json);
 
-    if (isPlayerModel) success = await updatePlayerInRepository(id, json, partialUpdate);
-  } else {
-    isPlayerModel = await checkIsPlayerModel(json);
+  if (isPlayerModel) {
+    // Se atualização deve ser parcial ou não
+    success = partialUpdate
+      ? await updatePlayerInRepository(id, json, partialUpdate)
+      : await updatePlayerInRepository(id, json);
+  } else return await getHTTPResponse('BAD_REQUEST', { message: 'Invalid data received' });
 
-    if (isPlayerModel) success = await updatePlayerInRepository(id, json);
-  }
-
-  if (success) response = await getHTTPResponse('OK', { message: 'Player updated successfully' });
-  else response = await getHTTPResponse('BAD_REQUEST', 'Invalid data received');
-
-  return response;
+  if (success) return await getHTTPResponse('OK', { message: 'Player updated successfully' });
+  else return await getHTTPResponse('INTERNAL_SERVER_ERROR', []);
 };
 
 // Deleta um jogador do repositório
