@@ -31,24 +31,24 @@ As funcionalidades da API separadas por tipo de objeto.
   - Atualizar parcialmente o registro de club
   - Deletar um club
 
-![Captura de tela de 2025-02-06 23-55-25](https://github.com/user-attachments/assets/331cf956-da69-4454-86c5-5f218383017d)
+<img width="200px" height="400px" alt="Requisições no ThunderClient" src="https://github.com/user-attachments/assets/331cf956-da69-4454-86c5-5f218383017d" />
 
 Os dados são armazenados em um repositório de arquivos JSON para cada tipo de objeto.
 
 ## Implementação
 
 O jogador é criado ou atualizado seguindo o modelo: <br>
-![player-model-api](https://github.com/user-attachments/assets/750ae3b7-ce9c-4e5c-9fc8-68964fdd0148)
+<img width="300px" height="300px" src="https://github.com/user-attachments/assets/750ae3b7-ce9c-4e5c-9fc8-68964fdd0148" />
 <br>
 
 O club é criado ou atualizado seguindo o modelo: <br>
-![club-model-api](https://github.com/user-attachments/assets/d63e1da1-cc90-4ae3-b8ff-9927ce68d12d)
+<img width="300px" height="300px" src="https://github.com/user-attachments/assets/d63e1da1-cc90-4ae3-b8ff-9927ce68d12d" />
 <br>
 
 As requisições suportam apenas o formato JSON. <br>
 
 A arquitetura do projeto é a seguinte: <br>
-![Captura de tela de 2025-02-07 00-07-11](https://github.com/user-attachments/assets/b000d7f0-cd69-47b5-96a2-a893be8fdc29)
+<img width="300px" height="300px" src="https://github.com/user-attachments/assets/b000d7f0-cd69-47b5-96a2-a893be8fdc29"/>
 
 <br>
 
@@ -57,7 +57,7 @@ O arquivo `.env` armazena a configuração da porta.
 ## Endpoints
 
 Os endpoints para manipular jogadores: <br>
-![endpoints-player](https://github.com/user-attachments/assets/63c9eb1f-ea8a-4f21-b149-4aa764f25ccd)
+<img width="400px" height="300px" src="https://github.com/user-attachments/assets/63c9eb1f-ea8a-4f21-b149-4aa764f25ccd"/>
 
 <br>
 
