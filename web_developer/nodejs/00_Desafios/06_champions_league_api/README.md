@@ -4,7 +4,7 @@ Uma API para controlar o registro de jogadores e clubs da Champions League. <br>
 Foi implementada com as operações básicas de um sistema CRUD, seguindo um modelo de arquitetura N-layers.
 
 <div style="max-width: 400px; max-height: 300px; margin: 10px auto;">
-  <img alt="GIF de um jogador da Champions League" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGsydzBvbjh0bTQ0bm9yenRhaHhpYXFkM3E5bGtvM3Z3Z2V2MjdzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9oRLF9WCYHhkY/giphy.gif" />
+  <img width="400px" height="300px" alt="GIF de um jogador da Champions League" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGsydzBvbjh0bTQ0bm9yenRhaHhpYXFkM3E5bGtvM3Z3Z2V2MjdzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9oRLF9WCYHhkY/giphy.gif" />
 </div>
 
 ## Features
@@ -12,7 +12,7 @@ Foi implementada com as operações básicas de um sistema CRUD, seguindo um mod
 As funcionalidades da API separadas por tipo de objeto.
 
 <div style="max-width: 300px; max-height: 300px;">
-  <img alt="GIF de um jogador de futebol animado" src="https://media.giphy.com/media/l2SqbkmCEv70lavCg/giphy.gif?cid=790b7611c6z6qk9kai1j3ch8grpzy655oyq0dql6fhns4ipe&ep=v1_gifs_search&rid=giphy.gif&ct=g"  />
+  <img width="300px" height="300px" alt="GIF de um jogador de futebol animado" src="https://media.giphy.com/media/l2SqbkmCEv70lavCg/giphy.gif?cid=790b7611c6z6qk9kai1j3ch8grpzy655oyq0dql6fhns4ipe&ep=v1_gifs_search&rid=giphy.gif&ct=g"  />
 </div>
 <br>
 

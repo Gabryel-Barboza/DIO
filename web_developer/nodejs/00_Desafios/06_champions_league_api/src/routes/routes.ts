@@ -24,3 +24,6 @@ router.delete('/players/:id', deletePlayer);
 router.get('/clubs', getClubs);
 
 export default router;
+
+"http://localhost:3333/api/players" // GET, POST
+"http://localhost:3333/api/players/:id" // GET, PUT, PATCH, DELETE
