@@ -47,8 +47,8 @@ Os dados são armazenados em um repositório de arquivos JSON para cada tipo de 
 
 ## Implementação  ⚙️
 
-O ID é atribuído dinamicamente, não sendo possível defini-lo ou altera-lo com qualquer requisição, a requisição é aceita mas o ID permanece dinâmico. 
-O jogador é criado ou atualizado seguindo o modelo. <br>
+O ID é atribuído dinamicamente, não sendo possível defini-lo ou altera-lo com qualquer requisição, a requisição é aceita mas o ID permanece dinâmico. <br>
+O jogador é criado ou atualizado seguindo o modelo.
 <br><br>
 
 <img width="300px" height="300px" src="https://github.com/user-attachments/assets/750ae3b7-ce9c-4e5c-9fc8-68964fdd0148" />
