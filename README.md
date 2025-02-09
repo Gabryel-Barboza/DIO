@@ -78,3 +78,4 @@ Conhecendo e entendendo projetos Node.Js, através de desafios de código.
 Aprendendo a criar SPAs e desenvolver com o framework do Google, Angular.
 * [Web Components](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/angular/01-primeiro-componente)
 * [TypeScript para Angular](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/angular/02-typescript-angular)
+* [Introdução ao Angular](https://github.com/Gabryel-Barboza/DIO/tree/JavaScript/web_developer/angular/03-introducao-ao-angular)
