@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Estilos globais, são aplicados a qualquer componente. Os estilos scoped de componentes possuem prioridade */
+body {
+  background-color: #000;
+}
+
+h1 {
+  color: yellow;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,18 @@
+<!--Local para inserção dos componentes, este arquivo é injetado no index.html como app-root-->
+<header>
+  <img src="" />
+</header>
+<main>
+  <!--Data Binding-->
+
+  <!--Valor textual-->
+  <hello name="Gabryel"></hello>
+
+  <!--Atribuindo variáveis de componentes pais para filhos com []-->
+  <!--Necessário o pai possuir a variável e o filho possuir um atributo de mesmo nome que aceite inputs com @Input()-->
+  <menu-component [name]="name"></menu-component> <!--recebendo variável com data binding-->
+  <button-component [label]="buttonLabel"></button-component>
+  <button-component label="{{ buttonSecond }}"></button-component> <!--Outra maneira com interpolação-->
+  <button-component [label]="'buttonSecond'"></button-component> <!--Recebendo texto literal com ''-->
+</main>
+<router-outlet />

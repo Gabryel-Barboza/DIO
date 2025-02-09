@@ -48,3 +48,4 @@ obj/
 lib
 __pycache__/
 *.pdf
+.angular*
