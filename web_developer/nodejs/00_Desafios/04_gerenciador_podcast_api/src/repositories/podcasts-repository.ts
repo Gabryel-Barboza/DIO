@@ -39,7 +39,7 @@ export const insertRepoPodcast = async (json: string) => {
       fs.writeFileSync(pathData, newFile, charset);
     } else {
       // Criar estrutura se arquivo vazio
-      let newFile = `[\n${json}\n]`;
+      const newFile = `[\n${json}\n]`;
       fs.writeFileSync(pathData, newFile, charset);
     }
 

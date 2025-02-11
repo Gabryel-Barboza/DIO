@@ -5,7 +5,7 @@ import { StatusCode } from '../utils/status-code';
 export const serviceFilterEpisodes = async (
   url: string | undefined
 ): Promise<PodcastTransferModel> => {
-  let responseFormat: PodcastTransferModel = {
+  const responseFormat: PodcastTransferModel = {
     statusCode: 0,
     body: [],
   };
