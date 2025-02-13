@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 -- Eventos em SQL
 
 USE company;
@@ -21,7 +20,6 @@ SHOW VARIABLES WHERE variable_name LIKE '%event%';
 SET GLOBAL event_scheduler = ON; -- event_scheduler = 1;
 
 DESC project;
-
 
 -- Criando eventos
 
@@ -112,6 +110,3 @@ SHOW DATABASES;
 -- Movendo entre databases
 ALTER EVENT company.call_f
   RENAME TO conjuntos.call_f;
-=======
--- Eventos em SQL
->>>>>>> Stashed changes
