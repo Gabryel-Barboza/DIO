@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 -- Eventos em SQL
 
 USE company;
@@ -111,3 +112,6 @@ SHOW DATABASES;
 -- Movendo entre databases
 ALTER EVENT company.call_f
   RENAME TO conjuntos.call_f;
+=======
+-- Eventos em SQL
+>>>>>>> Stashed changes
