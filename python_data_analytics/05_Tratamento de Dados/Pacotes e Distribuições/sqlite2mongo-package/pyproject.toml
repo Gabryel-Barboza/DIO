@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sqlite2mongo-package"
+version = "0.1.0"
+description = "project to know how to build and deploy to PyPi using Python's default"
+authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymongo = "^4.11.1"
+sqlalchemy = "^2.0.38"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
