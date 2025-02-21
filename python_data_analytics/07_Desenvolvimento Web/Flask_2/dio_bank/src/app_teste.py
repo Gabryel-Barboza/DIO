@@ -7,6 +7,7 @@ from flask import Flask, request, url_for
 # Aplicação flask para o arquivo app.py
 app = Flask(__name__)
 
+
 # Rotas de URI para a execução da função ou endpoints
 @app.route('/')
 def hello_world():
@@ -41,6 +42,7 @@ def about():
 
 
 # Nesse caso se a barra for inserida no caminho, a página não é encontrada. É obrigado inserir o caminho corretamente sem a barra ao final.
+# Permite identificar recursos
 @app.route('/project')
 def project():
     return 'Página do projeto'
@@ -55,7 +57,7 @@ with app.test_request_context():
 
 # Métodos HTTP
 # Utilize o Postman ou Insomnia para outros métodos além de GET
-# methods=['GET', 'POST', 'PUT', 'PATCH'], por padrão apenas GET. 
+# methods=['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], por padrão apenas GET.
 @app.route('/metodos/', methods=['GET', 'POST'])
 def metodos():
     # Verificando tipo de método recebido na rota com request
@@ -65,10 +67,9 @@ def metodos():
         return {'status': 'sucesso', 'mensagem': 'Olá, mundo!'}
     elif request.method == 'POST':
         return {'status': 'sucesso', 'mensagem': 'Olá, POST!'}
-    
+
 
 # Rodando a aplicação com o botão run ou poetry run flask --app src.app run --debug. O caminho é definido por '.'
 # Código pin para terminal na aplicação web quando erro
 
-# Criando a aplicação com o padrão de arquitetura MVC com 4 camadas: controller, model, view e repository (opcional)
-
+# Criando a aplicação com o padrão de arquitetura MVC com 4 camadas: controller, model, view e repository

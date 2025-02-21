@@ -1,15 +1,19 @@
 [tool.poetry]
 name = "dio-bank"
 version = "0.1.0"
-description = ""
+description = "project to study the framework Flask"
 authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-flask = "*"
+python = "^3.12"
+flask = "^3.1.0"
+flask-migrate = "^4.1.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.format]
+quote-style = "single"

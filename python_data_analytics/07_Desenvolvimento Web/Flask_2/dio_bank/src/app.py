@@ -4,7 +4,7 @@
 from datetime import datetime
 
 import click
-import sqlalchemy as sa
+import sqlalchemy as sqla
 from flask import Flask, current_app
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -24,25 +24,31 @@ migrate = Migrate()
 # Implementando os modelos de tabelas, o Flask adiciona automaticamente algumas características como __tablename__ e relationship()
 class User(db.Model):
     # Utilizando estruturas de dados com a classe Mapped, versão moderna do SQLAlchemy
-    id: Mapped[int] = mapped_column(sa.Integer, primary_key=True)
-    username: Mapped[str] = mapped_column(sa.String, unique=True, nullable=False)
-    active: Mapped[bool] = mapped_column(sa.Boolean, default=True)
+    id: Mapped[int] = mapped_column(sqla.Integer, primary_key=True)
+    username: Mapped[str] = mapped_column(sqla.String, unique=True, nullable=False)
+    active: Mapped[bool] = mapped_column(sqla.Boolean, default=True)
 
     # O método de representação da classe para prints, !r para o formatador chamar o método __repr__ antes de exibir o atributo. Outras flags como !s para __str__ e !a para ascii
     def __repr__(self):
-        return f"User(id={self.id!r}, username={self.username!r}, active={self.active!r})"
+        return (
+            f'User(id={self.id!r}, username={self.username!r}, active={self.active!r})'
+        )
 
 
 class Post(db.Model):
-    id: Mapped[int] = mapped_column(sa.Integer, primary_key=True)
-    title: Mapped[str] = mapped_column(sa.String, nullable=False)
-    body: Mapped[str] = mapped_column(sa.String, nullable=False)
+    id: Mapped[int] = mapped_column(sqla.Integer, primary_key=True)
+    title: Mapped[str] = mapped_column(sqla.String, nullable=False)
+    body: Mapped[str] = mapped_column(sqla.String, nullable=False)
     # Utiliza o tipo de dados datetime e recebe uma coluna com a hora atual. Func são as funções utilitárias do SQLAlchemy.
-    created: Mapped[datetime] = mapped_column(sa.DateTime, server_default=sa.func.now())
-    author_id: Mapped[int] = mapped_column(sa.ForeignKey('user.id'))
+    created: Mapped[datetime] = mapped_column(
+        sqla.DateTime, server_default=sqla.func.now()
+    )
+    author_id: Mapped[int] = mapped_column(sqla.ForeignKey('user.id'))
 
     def __repr__(self):
-        return f"Post(id={self.id!r}, title={self.title!r}, author_id={self.author_id!r})"
+        return (
+            f'Post(id={self.id!r}, title={self.title!r}, author_id={self.author_id!r})'
+        )
 
 
 # Registrando o comando init-db para inicialização do banco de dados
@@ -62,7 +68,7 @@ def create_app(test_config=None):
     # Configura variáveis de ambiente e o caminho do database
     app.config.from_mapping(
         SECRET_KEY='dev',
-        SQLALCHEMY_DATABASE_URI="sqlite:///blog.sqlite",
+        SQLALCHEMY_DATABASE_URI='sqlite:///blog.sqlite',
     )
 
     if test_config is None:
@@ -75,7 +81,7 @@ def create_app(test_config=None):
     # Adiciona o CLI à aplicação e inicializa o app com a extensão do db
     app.cli.add_command(init_db_command)
     db.init_app(app)
-    
+
     # Inicializa o migrate na aplicação, para criar o diretório migrations utilize flask --app src.app db init
     migrate.init_app(app, db)
     # Criando o versionamento com flask --app src.app db migrate -m "msg commit"
@@ -84,6 +90,7 @@ def create_app(test_config=None):
 
     # Registrando controladores e blueprints
     from src.controllers import post, user
+
     app.register_blueprint(user.app)
     app.register_blueprint(post.app)
 
@@ -94,4 +101,3 @@ def create_app(test_config=None):
 # poetry run flask --app src.app init-db
 # Inicialize a aplicação:
 # poetry run flask --app src.app run --debug
-

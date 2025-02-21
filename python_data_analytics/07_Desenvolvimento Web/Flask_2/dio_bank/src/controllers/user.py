@@ -6,6 +6,7 @@ from http import HTTPStatus
 # Blueprints no Flask
 from flask import Blueprint, request
 from sqlalchemy import inspect
+
 from src.app import User, db
 
 # Instanciando uma blueprint com o identificador user, caminho de importação ao arquivo atual e a rota em users
@@ -26,17 +27,16 @@ def _list_users():
 
     # Retorna um objeto de scalars, apenas com os valores do objeto pai e não uma tupla de objetos
     users = db.session.execute(query).scalars()
-    #print(list(results))
+    # print(list(results))
 
     # Para a lista ser serializável, é necessário pegar os valores do objeto. O jsonify não consegue extrair os valores automaticamente
     return [
         {
             'id': user.id,
             'username': user.username,
-         }
+        }
         for user in users
     ]
-    # Status code padrão 200
 
 
 # Se a rota da blueprint já possui o prefixo /users, então podemos definir apenas um / no decorador, ficando /users/ na rota final'
@@ -48,7 +48,7 @@ def handle_user():
         # Retornando um status code para o cliente, hardcoded 201 ou com o módulo http
         return {'message': 'User created'}, HTTPStatus.CREATED
     else:
-        return {'users': _list_users()}
+        return {'users': _list_users()}  # Status code padrão 200
 
 
 # Rota de requisição de usuário por id
@@ -64,7 +64,7 @@ def get_user(user_id):
 # Rota para alteração de usuário por id, método PATCH é mais utilizado para alterações, pois são alterações parciais de um elemento e não completas
 @app.route('/<int:user_id>', methods=['PATCH'])
 def update_user(user_id):
-    user = db.get_or_404(User, user_id)
+    user = db.get_or_404(User, user_id)  # Adiciona o user a sessão do db
     data = request.json
 
     # Atualizando as colunas dinamicamente
@@ -81,7 +81,7 @@ def update_user(user_id):
         db.session.commit()
     """
     return {'message': 'User patched'}
-    
+
 
 # Rota para exclusão de usuário por id
 @app.route('/<int:user_id>', methods=['DELETE'])
