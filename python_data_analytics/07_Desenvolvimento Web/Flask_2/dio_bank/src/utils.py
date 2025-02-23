@@ -20,3 +20,8 @@ def requires_role(role_name, *args):
         return wrapped
 
     return decorator
+
+
+# Função para primeiros testes unitários
+def square_number(num):
+    return num**2

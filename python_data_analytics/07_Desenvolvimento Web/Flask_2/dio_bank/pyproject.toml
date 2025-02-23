@@ -10,7 +10,12 @@ python = "^3.12"
 flask = "^3.1.0"
 flask-migrate = "^4.1.0"
 flask-jwt-extended = "^4.7.1"
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
 
+[tool.pytest.ini_options]
+addopts = "-ra -vvv"
+testpaths = ["tests"]
 
 [build-system]
 requires = ["poetry-core"]
