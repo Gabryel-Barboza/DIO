@@ -2,7 +2,8 @@
 # o app Flask vai estar disponível para os testes de integração
 import pytest
 
-from src.app.app import Role, User, create_app, db
+from src.app.app import create_app
+from src.models import Role, User, db
 
 
 # Fixtures são funções que podem ser detectadas em runtime e anexadas para outras funções

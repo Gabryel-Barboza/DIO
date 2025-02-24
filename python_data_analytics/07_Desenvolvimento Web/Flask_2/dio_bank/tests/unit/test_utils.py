@@ -7,7 +7,7 @@ from unittest.mock import Mock, patch
 import pytest
 from pytest_mock import mocker
 
-from src.utils.utils import requires_role, square_number
+from src.utils import requires_role, square_number
 
 
 # Teste para casos de sucesso da função
@@ -50,9 +50,9 @@ def test_requires_role_success():
     user_mock.role.name = 'admin'
 
     # Criando mocks para simular objetos ou métodos
-    mock_get_jwt_identity = patch('src.utils.get_jwt_identity')
+    mock_get_jwt_identity = patch('src.utils.utils.get_jwt_identity')
     # Argumento return_value define o tipo de retorno de determinado mock
-    mock_get_or_404 = patch('src.utils.db.get_or_404', return_value=user_mock)
+    mock_get_or_404 = patch('src.utils.utils.db.get_or_404', return_value=user_mock)
 
     # Iniciando simulação
     mock_get_jwt_identity.start()
@@ -76,8 +76,8 @@ def test_requires_role_fail_unit():
 
     # Usando bloco de contexto para omitir start e stop dos mocks
     with (
-        patch('src.utils.get_jwt_identity'),
-        patch('src.utils.db.get_or_404', return_value=user_mock),
+        patch('src.utils.utils.get_jwt_identity'),
+        patch('src.utils.utils.db.get_or_404', return_value=user_mock),
     ):
         decorated_function = requires_role('admin')(lambda: 'success')
         result = decorated_function()
@@ -90,8 +90,8 @@ def test_requires_role_fail(mocker):
     user_mock = mocker.Mock()
     user_mock.role.name = 'user'
 
-    mocker.patch('src.utils.get_jwt_identity')
-    mocker.patch('src.utils.db.get_or_404', return_value=user_mock)
+    mocker.patch('src.utils.utils.get_jwt_identity')
+    mocker.patch('src.utils.utils.db.get_or_404', return_value=user_mock)
     decorated_function = requires_role('admin')(lambda: 'success')
 
     # When

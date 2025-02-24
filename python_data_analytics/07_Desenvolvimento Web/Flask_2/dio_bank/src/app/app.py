@@ -16,9 +16,10 @@ jwt = JWTManager()
 
 
 # Método para criação da aplicação, App Factory
-def create_app(environment: str = os.environ(['ENVIRONMENT'])):
+def create_app(environment: str = os.getenv('ENVIRONMENT')):
     # instância da aplicação flask, procura por um arquivo de configuração na pasta raiz do arquivo atual.
     app = Flask(__name__, instance_relative_config=True)
+
     app.config.from_object(f'src.config.{environment.title()}Config')
 
     # Inicializa o app com a extensão do db
