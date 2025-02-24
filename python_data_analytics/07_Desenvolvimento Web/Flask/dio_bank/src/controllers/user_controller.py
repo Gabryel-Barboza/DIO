@@ -72,6 +72,25 @@ def handle_user():
 @app.route('/<int:user_id>')
 @jwt_required()
 def get_user(user_id):
+    """User detail view.
+    ---
+    get:
+      tags:
+        - user
+      summary: Gets a user
+      description: get a user
+      parameters:
+        - in: path
+          name: user_id
+          schema: UserIDParameter
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema: UserSchema
+    """
+    # ^ Docstring da API, visualize com o swagger. É retornado com o apispec em /docs
     user = db.get_or_404(User, user_id)
     return {
         'id': user.id,
@@ -106,6 +125,23 @@ def update_user(user_id):
 @jwt_required()
 @requires_role('admin')
 def remove_user(user_id):
+    """User delete view.
+    ---
+    delete:
+      tags:
+        - user
+      summary: Deletes a user
+      description: delete a user
+      parameters:
+        - in: path
+          name: user_id
+          schema: UserIDParameter
+      responses:
+        204:
+          description: Successful operation
+        404:
+          description: Not found user
+    """
     user = db.get_or_404(User, user_id)
     db.session.delete(user)
     db.session.commit()

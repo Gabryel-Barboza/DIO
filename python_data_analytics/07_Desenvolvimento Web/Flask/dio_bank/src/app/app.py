@@ -3,6 +3,9 @@
 
 import os
 
+from apispec import APISpec
+from apispec.ext.marshmallow import MarshmallowPlugin
+from apispec_webframeworks.flask import FlaskPlugin
 from flask import Flask, json
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
@@ -20,6 +23,15 @@ jwt = JWTManager()
 bcrypt = Bcrypt()
 # Instancia um sistema de serialização de dados
 ma = Marshmallow()
+
+# Criando Documentação da API do Swagger
+spec = APISpec(
+    title='DIO Bank',
+    version='1.0.0',
+    openapi_version='3.0.3',
+    info={'description': 'A API to test the Flask framework and extensions'},
+    plugins=[FlaskPlugin(), MarshmallowPlugin()],
+)
 
 
 # Método para criação da aplicação, App Factory
@@ -56,6 +68,14 @@ def create_app(environment: str = os.getenv('ENVIRONMENT')):
     app.register_blueprint(post_controller.app)
     app.register_blueprint(auth_controller.app)
     app.register_blueprint(role_controller.app)
+
+    @app.route('/docs')
+    def docs():
+        return (
+            spec.path(view=user_controller.get_user)
+            .path(view=user_controller.remove_user)
+            .to_dict()
+        )
 
     @app.errorhandler(HTTPException)
     def handle_exception(e):
