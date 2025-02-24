@@ -7,7 +7,7 @@ from unittest.mock import Mock, patch
 import pytest
 from pytest_mock import mocker
 
-from src.utils import requires_role, square_number
+from src.utils.utils import requires_role, square_number
 
 
 # Teste para casos de sucesso da função

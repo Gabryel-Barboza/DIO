@@ -2,7 +2,7 @@
 # o app Flask vai estar disponível para os testes de integração
 import pytest
 
-from src.app import Role, User, create_app, db
+from src.app.app import Role, User, create_app, db
 
 
 # Fixtures são funções que podem ser detectadas em runtime e anexadas para outras funções
@@ -11,13 +11,7 @@ from src.app import Role, User, create_app, db
 @pytest.fixture()
 def app():
     # Configurando app com banco de dados em memória
-    app = create_app(
-        {
-            'SECRET_KEY': 'test',
-            'SQLALCHEMY_DATABASE_URI': 'sqlite://',
-            'JWT_SECRET_KEY': 'test',
-        }
-    )
+    app = create_app(environment='testing')
     with app.app_context():
         # Criando modelos definidos
         db.create_all()

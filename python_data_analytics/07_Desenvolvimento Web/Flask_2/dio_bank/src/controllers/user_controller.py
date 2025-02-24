@@ -8,8 +8,8 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from sqlalchemy import inspect
 
-from src.app import User, db
-from src.utils import requires_role
+from src.models import User, db
+from src.utils.utils import requires_role
 
 # Instanciando uma blueprint com o identificador user, caminho de importação ao arquivo atual e a rota em users
 # No padrão REST as rotas são nomeadas no plural

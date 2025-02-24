@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 from sqlalchemy import func
 
-from src.app import User, db
+from src.app.app import User, db
 
 
 # Usando fixtures definidas em conftest.py
