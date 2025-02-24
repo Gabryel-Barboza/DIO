@@ -3,22 +3,32 @@
 
 from http import HTTPStatus
 
-# Blueprints no Flask
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
+from marshmallow import ValidationError
 from sqlalchemy import inspect
 
 from src.app.app import bcrypt
 from src.models import User, db
 from src.utils import requires_role
+from src.views.user_schema import CreateUserSchema, UserSchema
 
+# Blueprints no Flask, construtores para complexos de rotas
 # Instanciando uma blueprint com o identificador user, caminho de importação ao arquivo atual e a rota em users
 # No padrão REST as rotas são nomeadas no plural
 app = Blueprint('user', __name__, url_prefix='/users')
 
 
 def _create_user():
-    data = request.json
+    user_schema = CreateUserSchema()
+
+    # Deserializando objetos de requisições e validando dados
+    try:
+        data = user_schema.load(request.json)
+    except ValidationError as err:
+        return err.messages, HTTPStatus.UNPROCESSABLE_ENTITY
+
+    # Instanciando um user no db
     user = User(
         username=data['username'],
         password=bcrypt.generate_password_hash(
@@ -29,39 +39,29 @@ def _create_user():
     db.session.add(user)
     db.session.commit()
 
+    # Retornando um status code para o cliente, hardcoded 201 ou descritivo com o objeto de http
+    return {'message': 'User created'}, HTTPStatus.CREATED
 
+
+@jwt_required()  # Precisa estar autenticado para acessar
+@requires_role('admin')  # Precisa possuir a determinada permissão
 def _list_users():
     # Realiza a query no database e retorna um objeto cursor iterável
     query = db.select(User)
 
     # Retorna um objeto de scalars, apenas com os valores do objeto pai e não uma tupla de objetos
     users = db.session.execute(query).scalars()
-    # print(list(results))
-
-    # Para a lista ser serializável, é necessário pegar os valores do objeto. O jsonify não consegue extrair os valores automaticamente
-    return [
-        {
-            'id': user.id,
-            'username': user.username,
-            'role': {
-                'id': user.role_id,
-                'role': user.role.name,
-            },
-        }
-        for user in users
-    ]
+    # Retorna um esquema padronizado de User
+    users_schema = UserSchema(many=True)
+    return users_schema.dump(users)
 
 
 # Se a rota da blueprint já possui o prefixo /users, então podemos definir apenas um / no decorador, ficando /users/ na rota final'
 # Rota para listar ou criar usuários
 @app.route('/', methods=['GET', 'POST'])
-@jwt_required()  # Precisa estar autenticado para acessar
-@requires_role('admin')  # Precisa possuir a determinada permissão
 def handle_user():
     if request.method == 'POST':
-        _create_user()
-        # Retornando um status code para o cliente, hardcoded 201 ou descritivo com o objeto de http
-        return {'message': 'User created'}, HTTPStatus.CREATED
+        return _create_user()
     else:
         return {
             'users': _list_users(),
@@ -98,12 +98,6 @@ def update_user(user_id):
             setattr(user, column.key, data[column.key])
     db.session.commit()
 
-    # Atualizando as colunas hardcoded:
-    """if 'username' in data:
-        user.username = data['username']
-        #db.session.add(user) # Não é necessário um add para objetos já na sessão
-        db.session.commit()
-    """
     return {'message': 'User patched'}
 
 
@@ -118,4 +112,4 @@ def remove_user(user_id):
     return {}, HTTPStatus.NO_CONTENT
 
 
-# Registrando blueprint no módulo principal
+# Registrar blueprint no módulo principal

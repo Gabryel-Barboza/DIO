@@ -6,17 +6,20 @@ import os
 from flask import Flask, json
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
+from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from werkzeug.exceptions import HTTPException
 
 from src.models import db
 
-# Instancia um objeto do Flask Migrate, sistema de versionamento para BD
+# Instancia um sistema de versionamento para BD
 migrate = Migrate()
-# Instancia um objeto do Flask-JWT, sistema de autenticação
+# Instancia um sistema de autenticação
 jwt = JWTManager()
-# Instancia um objeto do Flask-Bcrypt, sistema de criptografias
+# Instancia um sistema de criptografias
 bcrypt = Bcrypt()
+# Instancia um sistema de serialização de dados
+ma = Marshmallow()
 
 
 # Método para criação da aplicação, App Factory
@@ -38,6 +41,8 @@ def create_app(environment: str = os.getenv('ENVIRONMENT')):
     jwt.init_app(app)
     # Inicializando B-crypt
     bcrypt.init_app(app)
+    # Inicializando Marshmallow
+    ma.init_app(app)
 
     # Importando controladores e registrando blueprints
     from src.controllers import (

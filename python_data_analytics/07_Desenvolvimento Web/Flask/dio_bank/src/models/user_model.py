@@ -1,3 +1,5 @@
+# Criando os modelos
+
 from sqlalchemy import Boolean, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -8,9 +10,8 @@ import src.models.role_model
 
 from . import db
 
+
 # Implementando os modelos de tabelas, o Flask adiciona automaticamente algumas características como __tablename__ e relationship()
-
-
 class User(db.Model):
     # Utilizando estruturas de dados com a classe Mapped, versão moderna do SQLAlchemy
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
