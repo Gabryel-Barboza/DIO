@@ -1,0 +1,20 @@
+<!--Criando uma template com Django Template Engine-->
+{% if latest_question_list %}
+<!--Se a variável tiver conteúdo, retorne este elemento HTML-->
+<ul>
+  {% for question in latest_question_list %}
+  <!--Para cada questão dentro da lista, faça isso-->
+  <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+  <!--Retorne uma lista com um link em /polls/question.id e o texto de question-->
+  <!--\{{ }\} indica um data binding ou acesso a uma variável-->
+
+  <!--Também pode ser feito com a tag especial do Django-->
+  <!--<a href={\% url 'polls:detail' question.id %\}>{\{ question.question_text \}}</a>-->
+  <!--Usa o atributo name dos métodos para construir a url-->
+  {% endfor %}
+  <!--Fim do loop-->
+</ul>
+{% else %}
+<p>polls are not available</p>
+{% endif %}
+<!--Fim do if-->

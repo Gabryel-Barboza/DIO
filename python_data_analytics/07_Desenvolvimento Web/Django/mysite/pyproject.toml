@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mysite"
+version = "0.1.0"
+description = "project to learn and create Django apps"
+authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.1.6"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.format]
+quote-style = "single"

@@ -1,0 +1,10 @@
+<p>ID: {{ question.id }}</p>
+<p>Questão: {{ question.question_text }}</p>
+<p>Data de Publicação: {{ question.pub_date }}</p>
+<p>Escolhas: 
+  <ul>
+    {% for choice in question.choice_set.all %}
+    <li> {{choice}} </li>
+    {% endfor %}
+  </ul>
+</p>
