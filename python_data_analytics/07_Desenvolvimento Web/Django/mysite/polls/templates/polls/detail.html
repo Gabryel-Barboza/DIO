@@ -1,4 +1,6 @@
+<!--Formulário que envia os resultados para o endpoint vote, com método POST-->
 <form action="{% url 'polls:vote' question.id %}" method="post">
+  <!--Previne ataques CSRF-->
   {% csrf_token %}
   <fieldset>
     <legend><h1>{{ question.question_text }}</h1></legend>
@@ -8,7 +10,9 @@
     {% endif %} {% for choice in question.choice_set.all %}
 
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+    <br />
+
     {% endfor %}
   </fieldset>
   <input type="submit" value="vote" />

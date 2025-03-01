@@ -1,0 +1,6 @@
+<form action="{% url 'contacts:create' %}" method="post">
+  {% csrf_token %}
+  <!--as_p para formatar como parágrafos os campos, as_table para tabelas, as_ul para listas e as_div para divs-->
+  {{form.as_div}}
+  <input type="submit" value="Enviar" />
+</form>

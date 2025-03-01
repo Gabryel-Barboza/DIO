@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',  # Registrando apps no Django
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     # 'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
