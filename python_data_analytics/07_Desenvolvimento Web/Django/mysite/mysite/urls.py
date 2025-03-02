@@ -19,7 +19,6 @@ Including another URLconf
 from django.urls import include, path
 
 # from polls.views import index as index
-
 from .admin import admin_site
 
 urlpatterns = [
@@ -29,7 +28,8 @@ urlpatterns = [
     # path('polls/', index),
     # Recupera as rotas em polls
     path('polls/', include('polls.urls')),
-    path('contacts/', include('contacts.urls'))
+    path('contacts/', include('contacts.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 # Criando superusuário para rota admin/

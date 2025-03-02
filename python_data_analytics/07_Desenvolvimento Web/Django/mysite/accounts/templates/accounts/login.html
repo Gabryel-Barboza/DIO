@@ -1,0 +1,11 @@
+<h1>Login</h1>
+<a href="{% url 'accounts:logout' %}"></a>
+<form action="{% url 'accounts:login' %}" , method="post">
+  {% csrf_token %} {% if error_message %}
+  <p><strong>{{ error_message }}</strong></p>
+  {% endif %}
+  <input type="text" name="username" id="username" />
+  <input type="password" name="password" id="password" />
+  <label></label>
+  <input type="submit" value="Entrar" />
+</form>
