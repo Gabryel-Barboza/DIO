@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
@@ -8,9 +9,16 @@ from .forms import ContactForm, NameForm
 # Create your views here.
 
 
+# Adicionando sistema de autenticação
+# @login_required
+# app_label.op - verifique no banco de dados as permissões disponíveis
+@permission_required(
+    'contacts.add_contact'
+)  # Requer autenticação antes de verificar permissão
 def create(request):
-    if not request.user.is_authenticated:
-        return redirect(f'{settings.LOGIN_URL}?next={request.path}')
+    # if not request.user.is_authenticated:
+    #     return redirect(f'{settings.LOGIN_URL}?next={request.path}')
+    # Substituído pelo decorador
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
