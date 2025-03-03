@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dio-blog"
+version = "0.1.0"
+description = "project to create and learn FastAPI"
+authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.11"
+uvicorn = {extras = ["standard"], version = "^0.34.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.format]
+quote-style = "single"

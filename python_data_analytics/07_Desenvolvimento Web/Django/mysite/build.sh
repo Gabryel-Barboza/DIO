@@ -8,3 +8,7 @@ poetry install --no-root --without dev
 python manage.py collectstatic --no-input
 
 python manage.py migrate
+
+# Criar superuser de variáveis ambiente
+# DJANGO_SUPERUSER_{EMAIL|PASSWORD|USERNAME}
+# -> python manage.py createsuperuser --no-input
