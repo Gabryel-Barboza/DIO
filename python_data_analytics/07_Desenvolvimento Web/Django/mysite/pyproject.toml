@@ -8,6 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^5.1.6"
+dj-database-url = "^2.3.0"
+psycopg2-binary = "^2.9.10"
+whitenoise = {extras = ["brotli"], version = "^6.9.0"}
+gunicorn = "^23.0.0"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "mysite.settings"
