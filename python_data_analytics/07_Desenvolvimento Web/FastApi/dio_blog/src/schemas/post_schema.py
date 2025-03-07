@@ -1,4 +1,4 @@
-from datetime import UTC, datetime
+from datetime import datetime
 
 from pydantic import BaseModel
 
@@ -6,9 +6,13 @@ from pydantic import BaseModel
 # Modelo de objeto para ser recebido de uma rota com método POST
 class PostIn(BaseModel):
     title: str
-    date_published: datetime = datetime.now(UTC)
+    content: str
+    published_on: datetime | None = None
     published: bool = False
 
 
-class Foo(BaseModel):
-    bar: str
+class PostUpdateIn(BaseModel):
+    title: str | None = None
+    content: str | None = None
+    published_on: datetime | None = None
+    published: bool | None = None
