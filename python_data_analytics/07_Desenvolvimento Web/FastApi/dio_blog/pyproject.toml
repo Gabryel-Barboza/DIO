@@ -9,8 +9,11 @@ readme = "README.md"
 python = "^3.11"
 fastapi = "^0.115.11"
 uvicorn = {extras = ["standard"], version = "^0.34.0"}
-databases = {extras = ["aiosqlite"], version = "^0.9.0"}
+databases = {extras = ["aiosqlite", "asyncpg"], version = "^0.9.0"}
 pyjwt = "^2.10.1"
+pydantic-settings = "^2.8.1"
+alembic = "^1.15.1"
+psycopg2-binary = "^2.9.10"
 
 
 [tool.poetry.group.dev.dependencies]

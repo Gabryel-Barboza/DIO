@@ -1,5 +1,4 @@
 import asyncio
-import os
 
 # Módulo de compatibilidade com paradigma assíncrono do Pytest
 import pytest_asyncio
@@ -8,14 +7,16 @@ import pytest_asyncio
 # FastAPI possui um cliente síncrono
 from httpx import ASGITransport, AsyncClient
 
-os.environ.setdefault('DATABASE_URL', 'sqlite:///testes.db')
+from src.config import settings
+
+settings.database_url = 'sqlite:///testes.db'
 
 
 # Fixtures para criar namespaces de funções para serem utilizadas em outros módulos
 @pytest_asyncio.fixture
 async def db(request):
     from src.databases.database import database, engine, metadata
-    from src.models.post_model import posts
+    from src.models.post_model import posts  # noqa
 
     await database.connect()
     metadata.create_all(engine)

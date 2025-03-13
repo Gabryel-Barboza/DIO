@@ -1,16 +1,20 @@
 from src.databases.database import database
 from src.models.post_model import posts
 from src.schemas.post_schema import PostIn, PostUpdate
+from src.utils.exceptions import NotFoundPostError
 from src.views.post_view import PostOut
 
 
 class PostService:
     @staticmethod
-    async def read_post(id: int):
+    async def read_post(id: int) -> PostOut:
         post = posts.select().where(posts.c.id == id)
         post = await database.fetch_one(post)
 
-        return post if post else None
+        if not post:
+            raise NotFoundPostError
+
+        return post
 
     @staticmethod
     async def read_posts(
@@ -37,13 +41,16 @@ class PostService:
     async def change_post(id: int, post: PostUpdate) -> None:
         post = post.model_dump(exclude_unset=True)
         statement = posts.update().where(posts.c.id == id).values(**post)
-        await database.execute(statement)
+        id = await database.execute(statement)
+
+        if not id:
+            raise NotFoundPostError
 
         return
 
     @staticmethod
     async def remove_post(id: int) -> None:
         statement = posts.delete().where(posts.c.id == id)
-        await database.execute(statement)
+        id = await database.execute(statement)
 
         return
