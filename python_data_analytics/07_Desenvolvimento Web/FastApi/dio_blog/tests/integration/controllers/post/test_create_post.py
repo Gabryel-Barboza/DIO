@@ -56,4 +56,3 @@ async def test_create_post_not_authenticated_fail(client: AsyncClient):
 
     # Then
     assert response.status_code == status.HTTP_401_UNAUTHORIZED
-

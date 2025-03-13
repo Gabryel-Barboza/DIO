@@ -11,7 +11,7 @@ class PostIn(BaseModel):
     published: bool = False
 
 
-class PostUpdateIn(BaseModel):
+class PostUpdate(BaseModel):
     title: str | None = None
     content: str | None = None
     published_on: datetime | None = None
