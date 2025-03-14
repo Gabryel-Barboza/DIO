@@ -1,23 +1,8 @@
-from contextlib import asynccontextmanager
-
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from .controllers import auth_controller, post_controller
-from .databases.database import database, engine, metadata
-
-
-# FastAPI usa o paradigma assíncrono
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    from src.models import post_model  # noqa
-
-    await database.connect()  # Executado na inicialização
-    metadata.create_all(engine)
-    yield
-    await database.disconnect()  # Executado antes de encerrar
-
 
 # Criando metadados manualmente
 tags_metadata = [
@@ -51,7 +36,6 @@ app = FastAPI(
     openapi_tags=tags_metadata,
     servers=servers,
     # openapi_url=None,  # Desabilita as rotas padrão /docs e /redoc da documentação automática
-    lifespan=lifespan,
 )
 
 # Importando rotas e definindo tags para documentação
