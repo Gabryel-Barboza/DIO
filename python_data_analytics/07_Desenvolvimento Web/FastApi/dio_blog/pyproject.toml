@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dio-blog"
+name = "fastapi-dio-blog"
 version = "0.1.0"
 description = "project to create and learn FastAPI"
 authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]

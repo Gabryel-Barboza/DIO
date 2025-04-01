@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mysite"
+name = "django_mysite"
 version = "0.1.0"
 description = "project to learn and create Django apps"
 authors = ["Gabryel_Brz <gabrielbarbosa.alternativa@gmail.com>"]
