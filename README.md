@@ -106,10 +106,11 @@ O objetivo deste módulo foi desenvolver algumas ferramentas para compreender co
 [06_Segurança da Informação](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/06_Segurança%20da%20Informação)
 
 ## Desenvolvimento Web 📲
-Neste tópico foram desenvolvidas APIs, isso através de três dos frameworks mais populares do Python. Em primeiro modo é utilizado o <br>
-Flask para aprender os conceitos de frameworks web, criando uma API simples para postagem de blogs. Depois, com o Django está desenvolvido <br>
-um projeto fullstack simples, com o foco voltado para o back end da aplicação. Por fim, o FastAPI para criar uma API de <br>
-sistema bancário com documentação automática e outras funcionalidades.
+Neste tópico foram desenvolvidas APIs, isso através de três dos frameworks mais populares do Python. <br>
+Em primeiro modo é utilizado o Flask para aprender os conceitos de frameworks web, criando uma API simples para postagem de blogs. <br>
+Depois, com o Django está desenvolvido um projeto fullstack simples, com o foco voltado para o back end da aplicação. <br>
+Por fim, o FastAPI para criar uma API de sistema bancário com documentação automática e outras funcionalidades.
+
 * Conceitos de frameworks e [desenvolvimento web](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask)
 * [Projeto de API completo para blog de postagens](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask/dio_bank)
 * [Projeto Fullstack para aprender Django](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Django/mysite)
