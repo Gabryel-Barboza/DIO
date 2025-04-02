@@ -14,7 +14,10 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 <br> <br> 
 [Integração SQLite e MongoDB](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/04_Bancos%20de%20Dados/Desafios/Integracao_SQLite_MongoDB) -
 [ProjetoPandas](https://github.com/Gabryel-Barboza/DIO/blob/main/python_data_analytics/05_Tratamento%20de%20Dados/Desafio/ProjetoPandas.ipynb) -
-[Distribuições no PyPi](https://test.pypi.org/project/sqlite2mongo/)
+[Distribuições no PyPi](https://test.pypi.org/project/sqlite2mongo/) -
+[Flask DIO](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask) -
+[Django FullStack](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Django/) -
+[FastAPI dio_bank](https://github.com/gabryel-barboza/dio_bank)
 <br> <br>
 Abaixo está a documentação de cada projeto:
 
@@ -135,4 +138,5 @@ app = FastAPI(
 * [Projeto FastAPI assíncrono](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/FastApi/dio_blog)
 
 Todos os projetos utilizam instâncias guardadas no banco de dados SQLite, além de terem sido aprimorados para realizar o deploy na plataforma [Render](https://render.com/).
+
 Por fim, o desafio deste módulo é um projeto que está em constante desenvolvimento, com o propósito de simular operações bancárias no repositório [dio_bank](https://github.com/gabryel-barboza/dio_bank)
