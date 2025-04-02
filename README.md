@@ -108,10 +108,31 @@ O objetivo deste módulo foi desenvolver algumas ferramentas para compreender co
 ## Desenvolvimento Web 📲
 Neste tópico foram desenvolvidas APIs, isso através de três dos frameworks mais populares do Python. <br>
 Em primeiro modo é utilizado o Flask para aprender os conceitos de frameworks web, criando uma API simples para postagem de blogs. <br>
+```python
+def create_app(environment: str = os.getenv('ENVIRONMENT')):
+    app = Flask(__name__, instance_relative_config=True)
+```
 Depois, com o Django está desenvolvido um projeto fullstack simples, com o foco voltado para o back end da aplicação. <br>
-Por fim, o FastAPI para criar uma API de sistema bancário com documentação automática e outras funcionalidades.
 
-* Conceitos de frameworks e [desenvolvimento web](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask)
+
+
+Por fim, o FastAPI para criar uma API assíncrona de blog de postagens com documentação automática e outras funcionalidades.
+```python
+app = FastAPI(
+    title='DIO Blog API',
+    summary='API para recuperar posts de blog.',
+    version='1.0.0',
+    description=""" """,
+    openapi_tags=tags_metadata,
+    servers=servers,
+    # openapi_url=None,  # Desabilita as rotas padrão /docs e /redoc da documentação automática
+)
+```
+
+* [Conceitos de frameworks e desenvolvimento web](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask)
 * [Projeto de API completo para blog de postagens](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Flask/dio_bank)
 * [Projeto Fullstack para aprender Django](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/Django/mysite)
 * [Projeto FastAPI assíncrono](https://github.com/Gabryel-Barboza/DIO/tree/main/python_data_analytics/07_Desenvolvimento%20Web/FastApi/dio_blog)
+
+Todos os projetos utilizam instâncias guardadas no banco de dados SQLite, além de terem sido aprimorados para realizar o deploy na plataforma [Render](https://render.com/).
+Por fim, o desafio deste módulo é um projeto que está em constante desenvolvimento, com o propósito de simular operações bancárias no repositório [dio_bank](https://github.com/gabryel-barboza/dio_bank)
