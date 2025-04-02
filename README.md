@@ -139,4 +139,4 @@ app = FastAPI(
 
 Todos os projetos utilizam instâncias guardadas no banco de dados SQLite, além de terem sido aprimorados para realizar o deploy na plataforma [Render](https://render.com/).
 
-Por fim, o desafio deste módulo é um projeto que está em constante desenvolvimento, com o propósito de simular operações bancárias no repositório [dio_bank](https://github.com/gabryel-barboza/dio_bank)
+Por fim, o desafio deste módulo é um projeto que está em constante desenvolvimento, com o propósito de simular operações bancárias e presente no repositório [dio_bank](https://github.com/gabryel-barboza/dio_bank)
