@@ -92,11 +92,11 @@ A criação de visualizações para determinados cenários, exploração do SQL 
 * [Triggers](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/06_Triggers.sql)
 * [Index](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/07_indices.sql)
 
-Como adicional para realização do desafio, um novo banco de dados para universidade foi criado e modelado da maneira disposta a seguir:
+Como adicional para realização do desafio, um novo banco de dados para universidade foi criado e modelado da maneira disposta a seguir, utilizando a ferramenta Draw.io:
 
 ![Modelagem Universidade](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Indexes%20%26%20Procedures/modelagem/Modelagem%20Universidade.drawio.png)
 
-# Transações
+# Transações 📜
 Por fim, para este tema é abordada as transações e suas propriedades, tais como mecanismos de locking, COMMIT e ROLLBACK, SAVEPOINTS, isolamento e concorrência do banco de dados. 
 
 Além destes, a ferramenta de backup `mysqldump` é usada para gerar um [dump](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/04_Transa%C3%A7%C3%B5es/Scripts/company_backup.sql), ou script SQL para criar novamente o banco de dados company.
