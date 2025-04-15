@@ -7,6 +7,9 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 * [Modelagem Oficina](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Modelagem%20Oficina)
 * [Esquema Lógico E-commerce](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20E-commerce)
 * [Esquema Lógico Oficina](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina)
+* [Criando índices e SQL dinâmico](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Indexes%20%26%20Procedures)
+* [Controle de Acesso e Automatização de Dados](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Views%20%26%20Triggers)
+* [Transações no MySQL]()
 
 # Modelagem de Dados 📝
 Para este tópico o foco está na interpretação de diagramas de Entidade Relacionamento Extendido, além da construção de projetos conceituais. <br>
@@ -78,3 +81,25 @@ Etapas de implementação do banco de dados:
 * [Recuperação de Dados com SELECT](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina/Recuperando%20Dados.sql)
 
 # Consultas SQL com Técnicas Avançadas ⁉️
+Neste tópico foram abordadas diversas técnicas que facilitam a manipulação do banco de dados e permitem maior complexidade. Portanto, os temas aprendidos incluem:
+
+A criação de visualizações para determinados cenários, exploração do SQL dinâmico com rotinas, automatização do banco de dados com gatilhos e eventos, indexação de bancos de dados.
+* [Views](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/01_Views_MySQL.sql)
+* [Tabelas padrão MySQL](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/02_Explorando_MySQL.sql)
+* [SQL dinâmico](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/03_Functions_Procedures.sql)
+* [Mais rotinas](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/03_Functions_Procedures.sql)
+* [Events](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/05_Events.sql)
+* [Triggers](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/06_Triggers.sql)
+* [Index](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/03_T%C3%A9cnicas_Avan%C3%A7adas_SQL/Scripts/07_indices.sql)
+
+Como adicional para realização do desafio, um novo banco de dados para universidade foi criado e modelado da maneira disposta a seguir:
+
+![Modelagem Universidade](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/Desafios/Indexes%20%26%20Procedures/modelagem/Modelagem%20Universidade.drawio.png)
+
+# Transações
+Por fim, para este tema é abordada as transações e suas propriedades, tais como mecanismos de locking, COMMIT e ROLLBACK, SAVEPOINTS, isolamento e concorrência do banco de dados. 
+
+Além destes, a ferramenta de backup `mysqldump` é usada para gerar um [dump](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/04_Transa%C3%A7%C3%B5es/Scripts/company_backup.sql), ou script SQL para criar novamente o banco de dados company.
+
+* [Criando transações](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/04_Transa%C3%A7%C3%B5es/Scripts/01_Criando_Transa%C3%A7%C3%B5es.sql)
+* [Bloqueio de transações](https://github.com/Gabryel-Barboza/DIO/blob/SQL/sql_database_specialist/04_Transa%C3%A7%C3%B5es/Scripts/02_Locking.sql)
