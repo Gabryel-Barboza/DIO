@@ -9,7 +9,7 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 * [Esquema Lógico Oficina](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Esquema%20L%C3%B3gico%20Oficina)
 * [Criando índices e SQL dinâmico](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Indexes%20%26%20Procedures)
 * [Controle de Acesso e Automatização de Dados](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Views%20%26%20Triggers)
-* [Transações no MySQL]()
+* [Transações e Backup no MySQL](https://github.com/Gabryel-Barboza/DIO/tree/SQL/sql_database_specialist/Desafios/Transactions)
 
 # Modelagem de Dados 📝
 Para este tópico o foco está na interpretação de diagramas de Entidade Relacionamento Extendido, além da construção de projetos conceituais. <br>
