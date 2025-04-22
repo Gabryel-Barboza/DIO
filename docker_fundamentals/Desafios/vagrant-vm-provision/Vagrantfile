@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+machines = {
+  "master" => {"memory" => "1024", "cpu" => "1", "ip" => "200", "image" => "bento/ubuntu-22.04"},
+  "node02" => {"memory" => "1024", "cpu" => "1", "ip" => "201", "image" => "bento/ubuntu-22.04"},
+  "node03" => {"memory" => "1024", "cpu" => "1", "ip" => "202", "image" => "bento/ubuntu-22.04"}
+}
+
+Vagrant.configure("2") do |config|
+  # Itere para cada máquina, recebendo os valores em name, conf
+	machines.each do |name, conf|
+		# Atribuindo a vm o nome da máquina atual
+		config.vm.define "#{name}" do |machine|
+			# Atribuindo a máquina a box especificada
+			machine.vm.box = "#{conf["image"]}"
+			# Atribuindo a máquina o nome
+			machine.vm.hostname = "#{name}"
+			# Atribuindo a máquina uma rede bridge/pública e um IP fixo
+			machine.vm.network "public_network", ip: "192.168.1.#{conf["ip"]}"
+			# Iterando sobre as configs para virtualbox
+			machine.vm.provider "virtualbox" do |vb|
+				# Atribuindo configs
+				vb.name = "#{name}"
+				vb.memory = conf["memory"]
+				vb.cpus = conf["cpu"]
+			end
+			# Após instalada, executar os comandos a seguir
+			machine.vm.provision "shell", inline: <<-SHELL
+        sudo apt-get update && apt-get install -y curl
+        curl -fsSL https://get.docker.com -o get-docker.sh
+        sudo sh get-docker.sh
+				# Definindo clusters
+				if [[ $HOSTNAME == "master" ]] 
+                                then
+					sudo docker swarm init --advertise-addr 192.168.1.200
+					sudo docker swarm join-token worker | grep docker > /vagrant/token-worker.sh
+				else
+					sudo $(cat /vagrant/token-worker.sh)
+				fi
+      SHELL
+    end
+  end
+end
