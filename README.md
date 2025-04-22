@@ -1,6 +1,7 @@
 # Repositório com o matérial do bootcamp da [Digital Innovation One](https://web.dio.me)
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos.
+
 # Índice
 1. [Aprendendo Comandos em Bash](https://github.com/Gabryel-Barboza/DIO/tree/Bash#aprendendo-comando-em-bash)
 2. [Fundamentos do Docker](https://github.com/Gabryel-Barboza/DIO/tree/Bash#fundamentos-do-docker)
@@ -8,6 +9,7 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 # Desafios
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
 * [Infrastructure as Code II](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-2.sh)
+* [Apache App com Docker Compose](https://github.com/Gabryel-Barboza/DIO/tree/Bash/docker_fundamentals/Desafios/docker-compose-web-app)
 
 # Aprendendo Comandos em Bash
 Iniciando com a linguagem Bash na distribuição Linux Ubuntu, isso através de uma máquina virtual instalada com Ubuntu Server.<br>
