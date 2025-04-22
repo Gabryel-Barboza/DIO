@@ -4,7 +4,10 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 
 # Índice
 1. [Aprendendo Comandos em Bash](https://github.com/Gabryel-Barboza/DIO/tree/Bash#aprendendo-comando-em-bash)
-2. [Fundamentos do Docker](https://github.com/Gabryel-Barboza/DIO/tree/Bash#fundamentos-do-docker)
+   * [Desafio IaC II](https://github.com/Gabryel-Barboza/DIO/tree/Bash#desafio-iac-ii)
+3. [Fundamentos do Docker](https://github.com/Gabryel-Barboza/DIO/tree/Bash#fundamentos-do-docker)
+   * [Docker Compose Apache Web](https://github.com/Gabryel-Barboza/DIO/tree/Bash#docker-compose-apache-web)
+   * [Clusters Swarm Provisionados com Vagrant](https://github.com/Gabryel-Barboza/DIO/tree/Bash#clusters-swarm-provisionados-com-vagrant)
 
 # Desafios
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
@@ -70,14 +73,14 @@ Este tópico foi desenvolvido no curso de **Docker Fundamentals** e fornece a ba
 
 ## Docker Compose Apache Web
 O primeiro desafio do módulo possui os seguintes requisitos:
-* Criar um documento ´docker-compose.yaml´ com as configurações para construir um servidor web com Apache
+* Criar um documento `docker-compose.yaml` com as configurações para construir um servidor web com Apache
 * Criar uma aplicação web para o contêiner provisionado com o Docker Compose
 Além desses requerimentos, o desafio é elevado ao usar um ´dockerfile´ para construir o contêiner e copiar a aplicação automaticamente para o servidor.
 
-Estrutura do documento usado no Docker Compose
-´´´
+Estrutura do documento usado no Docker Compose:
+```yaml
 
-´´´
+```
 ## Clusters Swarm Provisionados com Vagrant
 O segundo desafio do módulo consiste em criar um arquivo para provisionamento de máquinas virtuais com o software Vagrant. O arquivo possui as seguintes funcionalidades:
 * Três máquinas virtuais com Ubuntu Server 22.04 provisionadas
