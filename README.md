@@ -1,6 +1,9 @@
 # Repositório com o matérial do bootcamp da [Digital Innovation One](https://web.dio.me)
 Estão inclusos os projetos feitos nos diretórios de desafios. <br>
 Altere a **Branch** atual para alguma das opções disponíveis para visualizar outros cursos.
+# Índice
+1. [Aprendendo Comandos em Bash](https://github.com/Gabryel-Barboza/DIO/tree/Bash#aprendendo-comando-em-bash)
+2. [Fundamentos do Docker](https://github.com/Gabryel-Barboza/DIO/tree/Bash#fundamentos-do-docker)
 
 # Desafios
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
@@ -54,4 +57,7 @@ A aplicação web provisionada após execução do script:
 ![Screenshot 2025-01-18 at 15-53-11 Sparsh Architecture](https://github.com/user-attachments/assets/50700e6b-507e-42fb-a701-55eb8c865250) <br>
 
 Site disponibilizado pela DIO para realizar o desafio.
+
+# Fundamentos do Docker
+Este tópico foi desenvolvido no curso de **Docker Fundamentals** e fornece a base para criar contêineres Docker, arquivos Dockerfile, automações com Docker Compose, clusteres com Docker Swarm e outros conhecimentos.
 
