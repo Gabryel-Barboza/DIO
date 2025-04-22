@@ -10,7 +10,7 @@ Altere a **Branch** atual para alguma das opções disponíveis para visualizar 
 * [Infrastructure as Code I](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-1.sh)
 * [Infrastructure as Code II](https://github.com/Gabryel-Barboza/DIO/blob/Bash/Linux/Desafios/iac-2.sh)
 * [Apache App com Docker Compose](https://github.com/Gabryel-Barboza/DIO/tree/Bash/docker_fundamentals/Desafios/docker-compose-web-app)
-* [Script de provisionamento com Vagrant][https://github.com/Gabryel-Barboza/DIO/tree/Bash/docker_fundamentals/Desafios/vagrant-vm-provision]
+* [Script de provisionamento com Vagrant](https://github.com/Gabryel-Barboza/DIO/tree/Bash/docker_fundamentals/Desafios/vagrant-vm-provision)
 
 # Aprendendo Comandos em Bash
 Iniciando com a linguagem Bash na distribuição Linux Ubuntu, isso através de uma máquina virtual instalada com Ubuntu Server.
