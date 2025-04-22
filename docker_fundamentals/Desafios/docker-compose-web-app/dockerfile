@@ -1,0 +1,9 @@
+FROM httpd:2.4-alpine AS apache
+
+LABEL description="Apache Web Server"
+
+ADD site.tar /usr/local/apache2/htdocs/
+
+RUN chmod -R 755 /usr/local/apache2/htdocs/*
+
+CMD ["-D", "FOREGROUND"]
